@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import RecipeDetailPage from './pages/RecipeDetailPage'
 import CategoryPage from './pages/CategoryPage'
 import RecipeVariationsPage from './pages/RecipeVariationsPage'
+import { searchRecipeByName } from './services/searchApi'
 import './App.css'
 
 function App() {
@@ -11,12 +12,29 @@ function App() {
   const navigate = useNavigate();
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/?search=${encodeURIComponent(searchQuery.trim())}`);
-      setShowSearch(false);
+    if (searchQuery.trim() && !isSearching) {
+      setIsSearching(true);
+      try {
+        const recipe = await searchRecipeByName(searchQuery.trim());
+        if (recipe) {
+          // Navigate directly to recipe details page
+          navigate(`/recipe/${recipe.id}`);
+        } else {
+          // If no recipe found, show an alert or navigate to search results
+          alert(`No recipe found for "${searchQuery.trim()}". Please try another search.`);
+        }
+      } catch (error) {
+        console.error('Search error:', error);
+        alert('Search failed. Please try again.');
+      } finally {
+        setIsSearching(false);
+        setShowSearch(false);
+        setSearchQuery('');
+      }
     }
   };
 
@@ -26,6 +44,7 @@ function App() {
       dropdownItems: [
         { name: 'Creamy Pasta Delight', id: '1' },
         { name: 'Creamy Fettuccine', id: '7' },
+        { name: 'Spiced Rice Bowl', id: '10' },
         { name: 'Avocado Toast', id: '15' }
       ]
     },
@@ -34,21 +53,30 @@ function App() {
       dropdownItems: [
         { name: 'Spicy Grilled Chicken', id: '2' },
         { name: 'Creamy Butter Chicken', id: '9' },
-        { name: 'Fish Tacos', id: '11' }
+        { name: 'Grilled Salmon', id: '11' },
+        { name: 'Chicken Chettinad', id: '207' }
       ]
     },
     { 
       name: 'VEGETARIAN', 
       dropdownItems: [
-        { name: 'Caesar Salad', id: '5' },
-        { name: 'Mediterranean Bowl', id: '8' }
+        { name: 'Caesar Salad', id: '3' },
+        { name: 'Greek Salad', id: '6' },
+        { name: 'Quinoa Buddha Bowl', id: '12' },
+        { name: 'Beans Poriyal', id: '216' }
       ]
     },
     { 
-      name: 'HEALTHY & DIET', 
+      name: 'TAMIL CUISINE', 
       dropdownItems: [
-        { name: 'Greek Salad', id: '10' },
-        { name: 'Avocado Toast', id: '15' }
+        { name: 'Sambar', id: '201' },
+        { name: 'Rasam', id: '202' },
+        { name: 'Idli', id: '205' },
+        { name: 'Dosa', id: '206' },
+        { name: 'Filter Coffee', id: '210' },
+        { name: 'Chicken Chettinad', id: '207' },
+        { name: 'Curd Rice', id: '203' },
+        { name: 'Lemon Rice', id: '204' }
       ]
     },
     { 
@@ -56,7 +84,10 @@ function App() {
       dropdownItems: [
         { name: 'Crispy Samosa', id: '101' },
         { name: 'Pani Puri', id: '102' },
-        { name: 'Pav Bhaji', id: '103' }
+        { name: 'Pav Bhaji', id: '103' },
+        { name: 'Murukku', id: '208' },
+        { name: 'Vada (Medu Vada)', id: '211' },
+        { name: 'Jigarthanda', id: '217' }
       ]
     },
   ];
@@ -81,15 +112,27 @@ function App() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search for recipes..."
-                className="bg-gray-800 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-400 w-64"
+                disabled={isSearching}
+                className="bg-gray-800 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-400 w-64 disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="bg-orange-400 hover:bg-orange-500 text-black px-4 py-2 rounded-r-md transition-colors"
+                disabled={isSearching || !searchQuery.trim()}
+                className="bg-orange-400 hover:bg-orange-500 text-black px-4 py-2 rounded-r-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+                {isSearching ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span className="sr-only">Searching...</span>
+                  </>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                )}
               </button>
             </form>
           </div>

@@ -348,82 +348,1671 @@
       ]
     },
     {
-      "id": "101",
-      "title": "Crispy Samosa",
-      "image": "/images/snack-1.webp",
-      "category": "Snacks",
+      "id": "201",
+      "title": "Sambar",
+      "image": "/images/sambar.webp",
+      "category": "Tamil Cuisine",
       "cookingTime": 45,
-      "servings": 12,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Toor dal", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Tamarind paste", "amount": "2", "unit": "tbsp" },
+        { "id": "3", "name": "Drumsticks", "amount": "4", "unit": "pieces" },
+        { "id": "4", "name": "Brinjal", "amount": "2", "unit": "medium" },
+        { "id": "5", "name": "Tomato", "amount": "1", "unit": "large" },
+        { "id": "6", "name": "Sambar powder", "amount": "2", "unit": "tbsp" },
+        { "id": "7", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "8", "name": "Curry leaves", "amount": "10", "unit": "leaves" }
+      ],
+      "instructions": [
+        "Cook toor dal in pressure cooker until soft and mushy",
+        "Extract tamarind juice and boil with vegetables",
+        "Add cooked dal and sambar powder",
+        "Simmer until vegetables are tender",
+        "Temper with mustard seeds, curry leaves in oil",
+        "Add tempering to sambar and simmer for 10 minutes",
+        "Garnish with fresh coriander and serve hot"
+      ]
+    },
+    {
+      "id": "202",
+      "title": "Rasam",
+      "image": "/images/rasam.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Tomato", "amount": "2", "unit": "large" },
+        { "id": "2", "name": "Tamarind juice", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Rasam powder", "amount": "1", "unit": "tbsp" },
+        { "id": "4", "name": "Turmeric powder", "amount": "1/2", "unit": "tsp" },
+        { "id": "5", "name": "Jaggery", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
+        { "id": "7", "name": "Black pepper", "amount": "1", "unit": "tsp" },
+        { "id": "8", "name": "Ghee", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Boil chopped tomatoes until soft and mash well",
+        "Add tamarind juice, rasam powder and turmeric",
+        "Add salt and jaggery, bring to boil",
+        "In a pan, roast cumin and pepper, powder it",
+        "Add the powder to rasam and simmer",
+        "Temper with ghee, mustard seeds and curry leaves",
+        "Garnish with coriander and serve hot"
+      ]
+    },
+    {
+      "id": "203",
+      "title": "Curd Rice (Thayir Sadam)",
+      "image": "/images/curd-rice.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Cooked rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Fresh curd", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Milk", "amount": "1/4", "unit": "cup" },
+        { "id": "4", "name": "Ginger", "amount": "1", "unit": "inch" },
+        { "id": "5", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "6", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "7", "name": "Urad dal", "amount": "1", "unit": "tsp" },
+        { "id": "8", "name": "Pomegranate seeds", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Mash cooked rice when slightly warm",
+        "Add curd and milk, mix well",
+        "Add salt and chopped ginger, green chilies",
+        "Heat oil, add mustard seeds and urad dal",
+        "When they splutter, add curry leaves",
+        "Pour tempering over curd rice",
+        "Garnish with pomegranate seeds and serve"
+      ]
+    },
+    {
+      "id": "204",
+      "title": "Lemon Rice",
+      "image": "/images/lemon-rice.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Cooked rice", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Lemon juice", "amount": "3", "unit": "tbsp" },
+        { "id": "3", "name": "Turmeric powder", "amount": "1/2", "unit": "tsp" },
+        { "id": "4", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Chana dal", "amount": "1", "unit": "tbsp" },
+        { "id": "6", "name": "Urad dal", "amount": "1", "unit": "tbsp" },
+        { "id": "7", "name": "Peanuts", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Dry red chilies", "amount": "3", "unit": "pieces" }
+      ],
+      "instructions": [
+        "Heat oil in a pan, add mustard seeds",
+        "Add chana dal, urad dal and let them brown",
+        "Add peanuts, red chilies and curry leaves",
+        "Add turmeric powder and cooked rice",
+        "Mix gently without breaking rice grains",
+        "Add salt and fresh lemon juice",
+        "Garnish with fresh coriander and serve"
+      ]
+    },
+    {
+      "id": "205",
+      "title": "Idli",
+      "image": "/images/idli.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 480,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.9,
+      "ingredients": [
+        { "id": "1", "name": "Idli rice", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Urad dal", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Fenugreek seeds", "amount": "1/2", "unit": "tsp" },
+        { "id": "4", "name": "Salt", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Oil", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Soak rice and urad dal separately for 4-6 hours",
+        "Grind urad dal to smooth fluffy batter",
+        "Grind rice to slightly coarse batter",
+        "Mix both batters, add salt and ferment 8-10 hours",
+        "Grease idli molds with oil",
+        "Pour batter into molds and steam for 10-12 minutes",
+        "Serve hot with sambar and chutney"
+      ]
+    },
+    {
+      "id": "206",
+      "title": "Dosa",
+      "image": "/images/dosa.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Dosa batter", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Oil", "amount": "2", "unit": "tbsp" },
+        { "id": "3", "name": "Salt", "amount": "1/2", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Heat non-stick tawa on medium flame",
+        "Pour a ladle of batter in center",
+        "Spread in circular motion to make thin crepe",
+        "Drizzle oil around edges",
+        "Cook until bottom turns golden brown",
+        "Fold and remove from tawa",
+        "Serve hot with sambar and coconut chutney"
+      ]
+    },
+    {
+      "id": "207",
+      "title": "Chicken Chettinad",
+      "image": "/images/chicken-chettinad.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 60,
+      "servings": 4,
+      "difficulty": "Hard",
+      "rating": 4.9,
+      "ingredients": [
+        { "id": "1", "name": "Chicken", "amount": "500", "unit": "g" },
+        { "id": "2", "name": "Coconut", "amount": "1/2", "unit": "cup" },
+        { "id": "3", "name": "Poppy seeds", "amount": "1", "unit": "tbsp" },
+        { "id": "4", "name": "Fennel seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Coriander seeds", "amount": "2", "unit": "tbsp" },
+        { "id": "6", "name": "Red chilies", "amount": "8", "unit": "pieces" },
+        { "id": "7", "name": "Onions", "amount": "2", "unit": "large" },
+        { "id": "8", "name": "Tomatoes", "amount": "2", "unit": "medium" }
+      ],
+      "instructions": [
+        "Dry roast coconut, poppy seeds, fennel, coriander seeds and red chilies",
+        "Grind to fine paste with little water",
+        "Marinate chicken with turmeric, salt for 30 minutes",
+        "Heat oil, fry chicken pieces until half cooked",
+        "In same oil, sauté onions until golden",
+        "Add tomatoes and ground spice paste",
+        "Add chicken and cook covered for 20 minutes",
+        "Garnish with curry leaves and serve hot"
+      ]
+    },
+    {
+      "id": "208",
+      "title": "Murukku",
+      "image": "/images/murukku.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 45,
+      "servings": 6,
       "difficulty": "Medium",
       "rating": 4.6,
       "ingredients": [
-        { "id": "1", "name": "All-purpose flour", "amount": "2", "unit": "cups" },
-        { "id": "2", "name": "Potatoes", "amount": "4", "unit": "medium" },
-        { "id": "3", "name": "Green peas", "amount": "1/2", "unit": "cup" },
-        { "id": "4", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
-        { "id": "5", "name": "Ginger", "amount": "1", "unit": "tbsp" },
-        { "id": "6", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "1", "name": "Rice flour", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Urad dal flour", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
+        { "id": "4", "name": "Asafoetida", "amount": "1/4", "unit": "tsp" },
+        { "id": "5", "name": "Sesame seeds", "amount": "1", "unit": "tbsp" },
+        { "id": "6", "name": "Butter", "amount": "2", "unit": "tbsp" },
+        { "id": "7", "name": "Salt", "amount": "1", "unit": "tsp" },
+        { "id": "8", "name": "Oil for frying", "amount": "2", "unit": "cups" }
+      ],
+      "instructions": [
+        "Mix rice flour, urad dal flour, salt, asafoetida",
+        "Add cumin seeds, sesame seeds and melted butter",
+        "Add water gradually to make smooth dough",
+        "Fill murukku maker with dough",
+        "Heat oil for deep frying",
+        "Press murukku in spiral shape directly into hot oil",
+        "Fry until golden and crisp",
+        "Store in airtight container when cool"
+      ]
+    },
+    {
+      "id": "209",
+      "title": "Mysore Pak",
+      "image": "/images/mysore-pak.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 30,
+      "servings": 8,
+      "difficulty": "Hard",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Besan (Gram flour)", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Sugar", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Ghee", "amount": "3/4", "unit": "cup" },
+        { "id": "4", "name": "Water", "amount": "1/4", "unit": "cup" },
+        { "id": "5", "name": "Cardamom powder", "amount": "1/4", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Roast besan in 2 tbsp ghee until aromatic",
+        "Make sugar syrup with water until one string consistency",
+        "Add roasted besan to syrup, mix continuously",
+        "Add remaining ghee little by little while stirring",
+        "Cook until mixture leaves pan sides",
+        "Add cardamom powder and mix",
+        "Pour into greased tray and cut when cool",
+        "Store in airtight container"
+      ]
+    },
+    {
+      "id": "210",
+      "title": "Filter Coffee",
+      "image": "/images/filter-coffee.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 15,
+      "servings": 2,
+      "difficulty": "Easy",
+      "rating": 4.9,
+      "ingredients": [
+        { "id": "1", "name": "Coffee powder", "amount": "2", "unit": "tbsp" },
+        { "id": "2", "name": "Hot water", "amount": "1/2", "unit": "cup" },
+        { "id": "3", "name": "Milk", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Sugar", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Add coffee powder to filter top compartment",
+        "Pour hot water over coffee powder",
+        "Let it drip slowly for 10-15 minutes",
+        "Boil milk with sugar in a pot",
+        "Mix 2-3 tbsp coffee decoction with hot milk",
+        "Pour from height between two tumblers for froth",
+        "Serve hot in traditional steel tumbler and davara"
+      ]
+    },
+    {
+      "id": "211",
+      "title": "Vada (Medu Vada)",
+      "image": "/images/vada.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 45,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Urad dal", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Green chilies", "amount": "3", "unit": "pieces" },
+        { "id": "3", "name": "Ginger", "amount": "1", "unit": "inch" },
+        { "id": "4", "name": "Curry leaves", "amount": "10", "unit": "leaves" },
+        { "id": "5", "name": "Asafoetida", "amount": "1/4", "unit": "tsp" },
+        { "id": "6", "name": "Salt", "amount": "1", "unit": "tsp" },
         { "id": "7", "name": "Oil for frying", "amount": "2", "unit": "cups" }
       ],
       "instructions": [
-        "Make dough with flour, salt, and water. Rest for 30 minutes.",
-        "Boil and mash potatoes. Mix with peas and spices.",
-        "Roll dough into small circles and cut in half.",
-        "Form cone shape and fill with potato mixture.",
-        "Seal edges with water and deep fry until golden brown.",
-        "Serve hot with mint chutney and tamarind sauce."
+        "Soak urad dal for 3-4 hours, drain completely",
+        "Grind to fluffy batter without adding water",
+        "Add salt, chopped chilies, ginger, curry leaves",
+        "Add asafoetida and mix well",
+        "Heat oil for deep frying",
+        "Wet hands, take batter and shape into donut with hole",
+        "Fry until golden brown and crispy",
+        "Serve hot with sambar and coconut chutney"
       ]
     },
     {
-      "id": "102",
-      "title": "Pani Puri",
-      "image": "/images/snack-3.webp",
-      "category": "Snacks",
-      "cookingTime": 30,
+      "id": "212",
+      "title": "Vegetable Biryani",
+      "image": "/images/veg-biryani.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 90,
       "servings": 6,
-      "difficulty": "Easy",
-      "rating": 4.8,
+      "difficulty": "Hard",
+      "rating": 4.6,
       "ingredients": [
-        { "id": "1", "name": "Puri shells", "amount": "30", "unit": "pieces" },
-        { "id": "2", "name": "Boiled potatoes", "amount": "2", "unit": "medium" },
-        { "id": "3", "name": "Chickpeas", "amount": "1/2", "unit": "cup" },
-        { "id": "4", "name": "Mint leaves", "amount": "1", "unit": "cup" },
-        { "id": "5", "name": "Tamarind paste", "amount": "2", "unit": "tbsp" },
-        { "id": "6", "name": "Chaat masala", "amount": "1", "unit": "tsp" }
+        { "id": "1", "name": "Basmati rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Mixed vegetables", "amount": "2", "unit": "cups" },
+        { "id": "3", "name": "Yogurt", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Biryani masala", "amount": "2", "unit": "tbsp" },
+        { "id": "5", "name": "Saffron", "amount": "1/4", "unit": "tsp" },
+        { "id": "6", "name": "Ghee", "amount": "3", "unit": "tbsp" },
+        { "id": "7", "name": "Fried onions", "amount": "1/2", "unit": "cup" },
+        { "id": "8", "name": "Mint leaves", "amount": "1/4", "unit": "cup" }
       ],
       "instructions": [
-        "Prepare mint water by blending mint, cilantro, and spices.",
-        "Boil and dice potatoes into small cubes.",
-        "Make tamarind chutney with tamarind paste and jaggery.",
-        "Carefully crack a hole in each puri.",
-        "Fill with potato, chickpeas, and chutneys.",
-        "Dip in mint water and eat immediately in one bite."
+        "Soak saffron in warm milk",
+        "Parboil rice with whole spices until 70% cooked",
+        "Marinate vegetables with yogurt and biryani masala",
+        "Cook marinated vegetables until tender",
+        "Layer rice and vegetables alternately",
+        "Sprinkle fried onions, mint, saffron milk",
+        "Cover and cook on dum for 45 minutes",
+        "Serve with raita and boiled eggs"
       ]
     },
     {
-      "id": "103",
-      "title": "Pav Bhaji",
-      "image": "/images/snack.jpg",
-      "category": "Snacks",
+      "id": "213",
+      "title": "Tamarind Rice (Puli Sadam)",
+      "image": "/images/tamarind-rice.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 35,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Cooked rice", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Tamarind paste", "amount": "3", "unit": "tbsp" },
+        { "id": "3", "name": "Jaggery", "amount": "2", "unit": "tbsp" },
+        { "id": "4", "name": "Sambar powder", "amount": "1", "unit": "tbsp" },
+        { "id": "5", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Peanuts", "amount": "2", "unit": "tbsp" },
+        { "id": "7", "name": "Sesame oil", "amount": "3", "unit": "tbsp" },
+        { "id": "8", "name": "Curry leaves", "amount": "15", "unit": "leaves" }
+      ],
+      "instructions": [
+        "Heat sesame oil, add mustard seeds",
+        "Add peanuts, red chilies, curry leaves",
+        "Add tamarind paste and cook for 2 minutes",
+        "Add jaggery, sambar powder and salt",
+        "Cook until thick consistency",
+        "Add cooked rice and mix gently",
+        "Cook for 5 minutes on low heat",
+        "Garnish with fresh coriander and serve"
+      ]
+    },
+    {
+      "id": "214",
+      "title": "Coconut Rice",
+      "image": "/images/coconut-rice.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Cooked rice", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Fresh coconut", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Green chilies", "amount": "3", "unit": "pieces" },
+        { "id": "4", "name": "Ginger", "amount": "1", "unit": "inch" },
+        { "id": "5", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Urad dal", "amount": "1", "unit": "tbsp" },
+        { "id": "7", "name": "Chana dal", "amount": "1", "unit": "tbsp" },
+        { "id": "8", "name": "Cashews", "amount": "10", "unit": "pieces" }
+      ],
+      "instructions": [
+        "Grind coconut, green chilies, ginger to coarse paste",
+        "Heat oil, add mustard seeds",
+        "Add urad dal, chana dal, let them brown",
+        "Add cashews and curry leaves",
+        "Add ground coconut paste and salt",
+        "Add cooked rice and mix gently",
+        "Cook for 5 minutes until well combined",
+        "Serve warm or at room temperature"
+      ]
+    },
+    {
+      "id": "215",
+      "title": "Pongal (Ven Pongal)",
+      "image": "/images/pongal.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 40,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Rice", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Moong dal", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Water", "amount": "4", "unit": "cups" },
+        { "id": "4", "name": "Ghee", "amount": "3", "unit": "tbsp" },
+        { "id": "5", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Black pepper", "amount": "1", "unit": "tsp" },
+        { "id": "7", "name": "Ginger", "amount": "1", "unit": "inch" },
+        { "id": "8", "name": "Cashews", "amount": "10", "unit": "pieces" }
+      ],
+      "instructions": [
+        "Dry roast rice and moong dal separately",
+        "Boil water, add roasted rice and dal",
+        "Cook until soft and mushy like khichdi",
+        "Heat ghee, add cumin seeds and black pepper",
+        "Add chopped ginger and cashews",
+        "When cashews turn golden, add curry leaves",
+        "Pour this tempering over cooked pongal",
+        "Mix well, add salt and serve hot"
+      ]
+    },
+    {
+      "id": "216",
+      "title": "Beans Poriyal",
+      "image": "/images/beans-poriyal.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.3,
+      "ingredients": [
+        { "id": "1", "name": "Green beans", "amount": "500", "unit": "g" },
+        { "id": "2", "name": "Coconut", "amount": "1/2", "unit": "cup" },
+        { "id": "3", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "4", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Urad dal", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Turmeric", "amount": "1/4", "unit": "tsp" },
+        { "id": "7", "name": "Oil", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Curry leaves", "amount": "10", "unit": "leaves" }
+      ],
+      "instructions": [
+        "Cut beans into small pieces",
+        "Grate coconut and keep aside",
+        "Heat oil, add mustard seeds and urad dal",
+        "Add green chilies and curry leaves",
+        "Add beans, turmeric and salt",
+        "Cover and cook until beans are tender",
+        "Add grated coconut and mix",
+        "Cook for 2 minutes and serve hot"
+      ]
+    },
+    {
+      "id": "217",
+      "title": "Jigarthanda",
+      "image": "/images/jigarthanda.webp",
+      "category": "Tamil Cuisine",
+      "cookingTime": 20,
+      "servings": 2,
+      "difficulty": "Medium",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Milk", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Badam pisin", "amount": "1", "unit": "tbsp" },
+        { "id": "3", "name": "China grass", "amount": "2", "unit": "g" },
+        { "id": "4", "name": "Sugar", "amount": "3", "unit": "tbsp" },
+        { "id": "5", "name": "Vanilla ice cream", "amount": "2", "unit": "scoops" },
+        { "id": "6", "name": "Almonds", "amount": "10", "unit": "pieces" },
+        { "id": "7", "name": "Nannari syrup", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Soak badam pisin in water for 2 hours",
+        "Boil china grass in water until dissolved",
+        "Boil milk with sugar until thick",
+        "Add dissolved china grass to milk",
+        "Cool and refrigerate until set",
+        "Blend half the set mixture with ice",
+        "Layer with ice cream, almonds, nannari syrup",
+        "Serve chilled in tall glasses"
+      ]
+    },
+    {
+      "id": "301",
+      "title": "Lemon Rice",
+      "image": "/images/lemon-rice.webp",
+      "category": "Staple Rice",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Cooked rice", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Lemon juice", "amount": "3", "unit": "tbsp" },
+        { "id": "3", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "4", "name": "Curry leaves", "amount": "8-10", "unit": "leaves" },
+        { "id": "5", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "6", "name": "Turmeric powder", "amount": "1/4", "unit": "tsp" },
+        { "id": "7", "name": "Oil", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Salt", "amount": "to taste", "unit": "" }
+      ],
+      "instructions": [
+        "Heat oil in a pan",
+        "Add mustard seeds and let them splutter",
+        "Add curry leaves and green chilies",
+        "Add turmeric powder and mix",
+        "Add cooked rice and salt",
+        "Mix gently without breaking rice",
+        "Add lemon juice and mix well",
+        "Serve hot or at room temperature"
+      ]
+    },
+    {
+      "id": "302",
+      "title": "Tamarind Rice (Puli Sadam)",
+      "image": "/images/tamarind-rice.webp",
+      "category": "Staple Rice",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Cooked rice", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Tamarind paste", "amount": "2", "unit": "tbsp" },
+        { "id": "3", "name": "Sambar powder", "amount": "2", "unit": "tbsp" },
+        { "id": "4", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Fenugreek seeds", "amount": "1/4", "unit": "tsp" },
+        { "id": "6", "name": "Red chilies", "amount": "3", "unit": "pieces" },
+        { "id": "7", "name": "Curry leaves", "amount": "10", "unit": "leaves" },
+        { "id": "8", "name": "Sesame oil", "amount": "3", "unit": "tbsp" },
+        { "id": "9", "name": "Jaggery", "amount": "1", "unit": "tsp" },
+        { "id": "10", "name": "Salt", "amount": "to taste", "unit": "" }
+      ],
+      "instructions": [
+        "Heat sesame oil in a heavy-bottomed pan",
+        "Add mustard seeds and fenugreek seeds",
+        "Add red chilies and curry leaves",
+        "Add tamarind paste and cook for 2 minutes",
+        "Add sambar powder and jaggery",
+        "Add salt and cook until thick",
+        "Add cooked rice and mix gently",
+        "Let it rest for 30 minutes before serving"
+      ]
+    },
+    {
+      "id": "303",
+      "title": "Coconut Rice",
+      "image": "/images/coconut-rice.webp",
+      "category": "Staple Rice",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.3,
+      "ingredients": [
+        { "id": "1", "name": "Cooked rice", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Fresh coconut", "amount": "1", "unit": "cup grated" },
+        { "id": "3", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "4", "name": "Urad dal", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Chana dal", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "7", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "8", "name": "Oil", "amount": "2", "unit": "tbsp" },
+        { "id": "9", "name": "Salt", "amount": "to taste", "unit": "" }
+      ],
+      "instructions": [
+        "Heat oil in a pan",
+        "Add mustard seeds, urad dal, chana dal",
+        "Add green chilies and curry leaves",
+        "Add grated coconut and salt",
+        "Saute for 2-3 minutes",
+        "Add cooked rice and mix gently",
+        "Garnish with more coconut",
+        "Serve warm"
+      ]
+    },
+    {
+      "id": "304",
+      "title": "Tomato Rice",
+      "image": "/images/tomato-rice.webp",
+      "category": "Staple Rice",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Basmati rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Tomatoes", "amount": "4", "unit": "large" },
+        { "id": "3", "name": "Onions", "amount": "2", "unit": "medium" },
+        { "id": "4", "name": "Ginger-garlic paste", "amount": "1", "unit": "tbsp" },
+        { "id": "5", "name": "Red chili powder", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Turmeric powder", "amount": "1/2", "unit": "tsp" },
+        { "id": "7", "name": "Garam masala", "amount": "1/2", "unit": "tsp" },
+        { "id": "8", "name": "Oil", "amount": "3", "unit": "tbsp" },
+        { "id": "9", "name": "Salt", "amount": "to taste", "unit": "" }
+      ],
+      "instructions": [
+        "Cook rice with salt and keep aside",
+        "Heat oil and saute onions until golden",
+        "Add ginger-garlic paste and cook",
+        "Add chopped tomatoes and spices",
+        "Cook until tomatoes are mushy",
+        "Add cooked rice and mix gently",
+        "Garnish with coriander leaves",
+        "Serve hot"
+      ]
+    },
+    {
+      "id": "305",
+      "title": "Vegetable Biryani",
+      "image": "/images/veg-biryani.webp",
+      "category": "Staple Rice",
+      "cookingTime": 60,
+      "servings": 6,
+      "difficulty": "Hard",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Basmati rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Mixed vegetables", "amount": "2", "unit": "cups" },
+        { "id": "3", "name": "Yogurt", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Biryani masala", "amount": "2", "unit": "tbsp" },
+        { "id": "5", "name": "Mint leaves", "amount": "1/4", "unit": "cup" },
+        { "id": "6", "name": "Coriander leaves", "amount": "1/4", "unit": "cup" },
+        { "id": "7", "name": "Fried onions", "amount": "1/2", "unit": "cup" },
+        { "id": "8", "name": "Ghee", "amount": "3", "unit": "tbsp" },
+        { "id": "9", "name": "Saffron", "amount": "pinch", "unit": "" }
+      ],
+      "instructions": [
+        "Soak rice for 30 minutes",
+        "Cook vegetables with biryani masala",
+        "Mix yogurt with fried onions",
+        "Parboil rice with whole spices",
+        "Layer rice and vegetables alternately",
+        "Top with mint, coriander, saffron",
+        "Cook on dum for 45 minutes",
+        "Serve with raita and pickle"
+      ]
+    },
+    {
+      "id": "306",
+      "title": "Chicken Biryani",
+      "image": "/images/chicken-biryani.webp",
+      "category": "Staple Rice",
+      "cookingTime": 90,
+      "servings": 6,
+      "difficulty": "Hard",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Basmati rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Chicken", "amount": "1", "unit": "kg" },
+        { "id": "3", "name": "Yogurt", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Biryani masala", "amount": "3", "unit": "tbsp" },
+        { "id": "5", "name": "Red chili powder", "amount": "2", "unit": "tsp" },
+        { "id": "6", "name": "Turmeric", "amount": "1/2", "unit": "tsp" },
+        { "id": "7", "name": "Garam masala", "amount": "1", "unit": "tsp" },
+        { "id": "8", "name": "Mint leaves", "amount": "1/2", "unit": "cup" },
+        { "id": "9", "name": "Coriander leaves", "amount": "1/2", "unit": "cup" },
+        { "id": "10", "name": "Fried onions", "amount": "1", "unit": "cup" }
+      ],
+      "instructions": [
+        "Marinate chicken with yogurt and spices for 2 hours",
+        "Cook marinated chicken until tender",
+        "Soak rice for 30 minutes",
+        "Parboil rice with whole spices",
+        "Layer chicken and rice alternately",
+        "Top with fried onions, mint, coriander",
+        "Cook on dum for 1 hour",
+        "Serve hot with boiled eggs and raita"
+      ]
+    },
+    {
+      "id": "307",
+      "title": "Mutton Biryani",
+      "image": "/images/mutton-biryani.webp",
+      "category": "Staple Rice",
+      "cookingTime": 120,
+      "servings": 6,
+      "difficulty": "Hard",
+      "rating": 4.9,
+      "ingredients": [
+        { "id": "1", "name": "Basmati rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Mutton", "amount": "1", "unit": "kg" },
+        { "id": "3", "name": "Yogurt", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Ginger-garlic paste", "amount": "2", "unit": "tbsp" },
+        { "id": "5", "name": "Red chili powder", "amount": "2", "unit": "tsp" },
+        { "id": "6", "name": "Biryani masala", "amount": "3", "unit": "tbsp" },
+        { "id": "7", "name": "Mint leaves", "amount": "1/2", "unit": "cup" },
+        { "id": "8", "name": "Saffron", "amount": "1", "unit": "pinch" },
+        { "id": "9", "name": "Ghee", "amount": "4", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Marinate mutton with yogurt and spices overnight",
+        "Pressure cook mutton until tender",
+        "Soak rice for 45 minutes",
+        "Parboil rice with whole spices",
+        "Layer mutton and rice in heavy-bottomed pot",
+        "Top with saffron soaked in warm milk",
+        "Cook on dum for 1.5 hours",
+        "Serve with shorba and pickle"
+      ]
+    },
+    {
+      "id": "308",
+      "title": "Fish Biryani",
+      "image": "/images/fish-biryani.webp",
+      "category": "Staple Rice",
+      "cookingTime": 60,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Basmati rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Fish fillets", "amount": "500", "unit": "g" },
+        { "id": "3", "name": "Yogurt", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Turmeric", "amount": "1/2", "unit": "tsp" },
+        { "id": "5", "name": "Red chili powder", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Garam masala", "amount": "1", "unit": "tsp" },
+        { "id": "7", "name": "Mint leaves", "amount": "1/4", "unit": "cup" },
+        { "id": "8", "name": "Coriander leaves", "amount": "1/4", "unit": "cup" }
+      ],
+      "instructions": [
+        "Marinate fish with turmeric and salt",
+        "Shallow fry fish pieces until golden",
+        "Cook rice with whole spices",
+        "Prepare masala with onions and spices",
+        "Layer rice and fish alternately",
+        "Top with herbs and fried onions",
+        "Cook on dum for 30 minutes",
+        "Serve with cucumber raita"
+      ]
+    },
+    {
+      "id": "309",
+      "title": "Curd Semiya",
+      "image": "/images/curd-semiya.webp",
+      "category": "Staple Rice",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.2,
+      "ingredients": [
+        { "id": "1", "name": "Vermicelli", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Yogurt", "amount": "2", "unit": "cups" },
+        { "id": "3", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "4", "name": "Urad dal", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "6", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "7", "name": "Coriander leaves", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Roast vermicelli until golden",
+        "Cook vermicelli in boiling water",
+        "Heat oil and add mustard seeds",
+        "Add urad dal, green chilies, curry leaves",
+        "Mix cooked vermicelli with seasoning",
+        "Add beaten yogurt and salt",
+        "Garnish with coriander leaves",
+        "Serve chilled"
+      ]
+    },
+    {
+      "id": "310",
+      "title": "Pongal (Ven Pongal)",
+      "image": "/images/ven-pongal.webp",
+      "category": "Staple Rice",
       "cookingTime": 40,
       "servings": 4,
       "difficulty": "Medium",
       "rating": 4.7,
       "ingredients": [
-        { "id": "1", "name": "Mixed vegetables", "amount": "3", "unit": "cups" },
-        { "id": "2", "name": "Pav bread", "amount": "8", "unit": "pieces" },
-        { "id": "3", "name": "Onions", "amount": "2", "unit": "large" },
-        { "id": "4", "name": "Tomatoes", "amount": "3", "unit": "medium" },
-        { "id": "5", "name": "Pav bhaji masala", "amount": "2", "unit": "tbsp" },
-        { "id": "6", "name": "Butter", "amount": "4", "unit": "tbsp" }
+        { "id": "1", "name": "Rice", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Moong dal", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Black pepper", "amount": "1", "unit": "tsp" },
+        { "id": "4", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Ginger", "amount": "1", "unit": "inch piece" },
+        { "id": "6", "name": "Curry leaves", "amount": "10", "unit": "leaves" },
+        { "id": "7", "name": "Ghee", "amount": "3", "unit": "tbsp" },
+        { "id": "8", "name": "Cashews", "amount": "10", "unit": "pieces" }
       ],
       "instructions": [
-        "Boil and mash mixed vegetables (potato, cauliflower, peas).",
-        "Heat butter in a large pan and sauté onions until golden.",
-        "Add tomatoes and cook until soft and mushy.",
-        "Add pav bhaji masala and cook for 2 minutes.",
-        "Add mashed vegetables and cook, mashing continuously.",
-        "Toast pav with butter and serve hot with bhaji and lemon."
+        "Pressure cook rice and dal together",
+        "Heat ghee in a pan",
+        "Add cumin, pepper, ginger, curry leaves",
+        "Add cashews and fry until golden",
+        "Add cooked rice-dal mixture",
+        "Mix well and add salt",
+        "Cook for 5 minutes",
+        "Serve hot with sambar and chutney"
+      ]
+    },
+    {
+      "id": "311",
+      "title": "Vada (Medu Vada)",
+      "image": "/images/medu-vada.webp",
+      "category": "Breakfast",
+      "cookingTime": 45,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Urad dal", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Green chilies", "amount": "3", "unit": "pieces" },
+        { "id": "3", "name": "Ginger", "amount": "1", "unit": "inch piece" },
+        { "id": "4", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "5", "name": "Asafoetida", "amount": "pinch", "unit": "" },
+        { "id": "6", "name": "Salt", "amount": "to taste", "unit": "" },
+        { "id": "7", "name": "Oil", "amount": "for frying", "unit": "" }
+      ],
+      "instructions": [
+        "Soak urad dal for 4 hours",
+        "Grind to smooth fluffy batter",
+        "Add green chilies, ginger, curry leaves",
+        "Add salt and asafoetida",
+        "Heat oil for deep frying",
+        "Shape batter into donuts and fry",
+        "Fry until golden brown",
+        "Serve hot with sambar and chutney"
+      ]
+    },
+    {
+      "id": "312",
+      "title": "Masala Dosa",
+      "image": "/images/masala-dosa.webp",
+      "category": "Breakfast",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Dosa batter", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Potatoes", "amount": "4", "unit": "medium" },
+        { "id": "3", "name": "Onions", "amount": "2", "unit": "large" },
+        { "id": "4", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Turmeric", "amount": "1/2", "unit": "tsp" },
+        { "id": "6", "name": "Curry leaves", "amount": "10", "unit": "leaves" },
+        { "id": "7", "name": "Green chilies", "amount": "3", "unit": "pieces" },
+        { "id": "8", "name": "Oil", "amount": "3", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Boil and mash potatoes",
+        "Heat oil and add mustard seeds",
+        "Add onions, green chilies, curry leaves",
+        "Add turmeric and mashed potatoes",
+        "Heat dosa pan and spread batter",
+        "Add potato filling in center",
+        "Fold dosa and serve hot",
+        "Serve with sambar and chutneys"
+      ]
+    },
+    {
+      "id": "313",
+      "title": "Rava Dosa",
+      "image": "/images/rava-dosa.webp",
+      "category": "Breakfast",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Rava (Semolina)", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Rice flour", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Maida", "amount": "2", "unit": "tbsp" },
+        { "id": "4", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "6", "name": "Ginger", "amount": "1", "unit": "inch piece" },
+        { "id": "7", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "8", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Mix rava, rice flour, and maida",
+        "Add water to make thin batter",
+        "Add cumin, green chilies, ginger",
+        "Add curry leaves and salt",
+        "Let batter rest for 30 minutes",
+        "Heat dosa pan with oil",
+        "Pour batter and spread quickly",
+        "Cook until crispy and serve hot"
+      ]
+    },
+    {
+      "id": "314",
+      "title": "Onion Uthappam",
+      "image": "/images/onion-uthappam.webp",
+      "category": "Breakfast",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Dosa batter", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Onions", "amount": "2", "unit": "large chopped" },
+        { "id": "3", "name": "Tomatoes", "amount": "1", "unit": "chopped" },
+        { "id": "4", "name": "Green chilies", "amount": "2", "unit": "chopped" },
+        { "id": "5", "name": "Coriander leaves", "amount": "2", "unit": "tbsp" },
+        { "id": "6", "name": "Curry leaves", "amount": "6", "unit": "leaves" },
+        { "id": "7", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Heat uthappam pan with oil",
+        "Pour thick dosa batter",
+        "Spread to form thick pancake",
+        "Sprinkle onions, tomatoes, chilies",
+        "Press gently into batter",
+        "Cook until bottom is golden",
+        "Flip and cook other side",
+        "Serve hot with sambar and chutney"
+      ]
+    },
+    {
+      "id": "315",
+      "title": "Kal Dosa",
+      "image": "/images/kal-dosa.webp",
+      "category": "Breakfast",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.3,
+      "ingredients": [
+        { "id": "1", "name": "Dosa batter", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Onions", "amount": "1", "unit": "finely chopped" },
+        { "id": "3", "name": "Green chilies", "amount": "2", "unit": "chopped" },
+        { "id": "4", "name": "Coriander leaves", "amount": "2", "unit": "tbsp" },
+        { "id": "5", "name": "Oil", "amount": "3", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Heat cast iron pan well",
+        "Mix batter with onions and chilies",
+        "Pour thick layer of batter",
+        "Add oil around edges",
+        "Cook on high heat until crispy",
+        "Fold and serve immediately",
+        "Serve with coconut chutney",
+        "Best enjoyed hot and crispy"
+      ]
+    },
+    {
+      "id": "316",
+      "title": "Kari Dosa (Madurai special)",
+      "image": "/images/kari-dosa.webp",
+      "category": "Breakfast",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Dosa batter", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Mutton curry", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Onions", "amount": "1", "unit": "chopped" },
+        { "id": "4", "name": "Coriander leaves", "amount": "2", "unit": "tbsp" },
+        { "id": "5", "name": "Ghee", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Heat dosa pan with ghee",
+        "Spread dosa batter thin",
+        "Add pre-cooked mutton curry",
+        "Sprinkle onions and coriander",
+        "Cook until edges are crispy",
+        "Fold and serve hot",
+        "Serve with spicy chutney",
+        "Popular street food of Madurai"
+      ]
+    },
+    {
+      "id": "317",
+      "title": "Appam",
+      "image": "/images/appam.webp",
+      "category": "Breakfast",
+      "cookingTime": 30,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Raw rice", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Cooked rice", "amount": "1/2", "unit": "cup" },
+        { "id": "3", "name": "Coconut", "amount": "1", "unit": "cup grated" },
+        { "id": "4", "name": "Toddy or yeast", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Sugar", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Salt", "amount": "1/2", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Soak raw rice for 4 hours",
+        "Grind rice with coconut and cooked rice",
+        "Add yeast and sugar to batter",
+        "Ferment overnight",
+        "Heat appam pan",
+        "Pour batter and swirl to coat",
+        "Cover and cook until edges are golden",
+        "Serve with stew or coconut milk"
+      ]
+    },
+    {
+      "id": "318",
+      "title": "Idiappam (String Hoppers)",
+      "image": "/images/idiappam.webp",
+      "category": "Breakfast",
+      "cookingTime": 40,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Rice flour", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Water", "amount": "2.5", "unit": "cups" },
+        { "id": "3", "name": "Salt", "amount": "1", "unit": "tsp" },
+        { "id": "4", "name": "Oil", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Coconut", "amount": "1/2", "unit": "cup grated" }
+      ],
+      "instructions": [
+        "Boil water with salt and oil",
+        "Add rice flour gradually while stirring",
+        "Cook until mixture forms dough",
+        "Cool slightly and knead",
+        "Press through idiappam maker",
+        "Steam for 10-15 minutes",
+        "Serve hot with coconut",
+        "Serve with curry or sweetened coconut milk"
+      ]
+    },
+    {
+      "id": "319",
+      "title": "Puttu (Rice Puttu)",
+      "image": "/images/rice-puttu.webp",
+      "category": "Breakfast",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Rice flour", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Coconut", "amount": "1", "unit": "cup grated" },
+        { "id": "3", "name": "Salt", "amount": "1/2", "unit": "tsp" },
+        { "id": "4", "name": "Water", "amount": "as needed", "unit": "" }
+      ],
+      "instructions": [
+        "Mix rice flour with salt",
+        "Sprinkle water to moisten flour",
+        "Rub flour until it forms breadcrumbs",
+        "Layer flour and coconut in puttu maker",
+        "Steam for 15-20 minutes",
+        "Remove carefully from mold",
+        "Serve hot with banana",
+        "Serve with jaggery or curry"
+      ]
+    },
+    {
+      "id": "320",
+      "title": "Adai (Lentil Crepe)",
+      "image": "/images/adai.webp",
+      "category": "Breakfast",
+      "cookingTime": 45,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Rice", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Toor dal", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Chana dal", "amount": "1/4", "unit": "cup" },
+        { "id": "4", "name": "Urad dal", "amount": "2", "unit": "tbsp" },
+        { "id": "5", "name": "Red chilies", "amount": "4", "unit": "pieces" },
+        { "id": "6", "name": "Asafoetida", "amount": "pinch", "unit": "" },
+        { "id": "7", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "8", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Soak rice and dals for 3 hours",
+        "Grind coarsely with red chilies",
+        "Add asafoetida and curry leaves",
+        "Add salt and mix well",
+        "Heat pan and spread batter thick",
+        "Drizzle oil around edges",
+        "Cook until golden brown",
+        "Serve with avial or jaggery"
+      ]
+    },
+    {
+      "id": "321",
+      "title": "Mutton Kuzhambu",
+      "image": "/images/mutton-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 90,
+      "servings": 4,
+      "difficulty": "Hard",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Mutton", "amount": "1", "unit": "kg" },
+        { "id": "2", "name": "Onions", "amount": "3", "unit": "large" },
+        { "id": "3", "name": "Tomatoes", "amount": "2", "unit": "large" },
+        { "id": "4", "name": "Coconut", "amount": "1/2", "unit": "cup" },
+        { "id": "5", "name": "Red chilies", "amount": "8", "unit": "pieces" },
+        { "id": "6", "name": "Coriander seeds", "amount": "2", "unit": "tbsp" },
+        { "id": "7", "name": "Fennel seeds", "amount": "1", "unit": "tsp" },
+        { "id": "8", "name": "Garam masala", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Pressure cook mutton with onions",
+        "Dry roast spices and coconut",
+        "Grind roasted spices to paste",
+        "Heat oil and add ground paste",
+        "Add tomatoes and cook until mushy",
+        "Add cooked mutton with stock",
+        "Simmer until thick gravy forms",
+        "Garnish with coriander and serve"
+      ]
+    },
+    {
+      "id": "322",
+      "title": "Nandu Kuzhambu (Crab Curry)",
+      "image": "/images/nandu-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 45,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Crab", "amount": "1", "unit": "kg" },
+        { "id": "2", "name": "Tamarind", "amount": "lemon size", "unit": "" },
+        { "id": "3", "name": "Sambar powder", "amount": "3", "unit": "tbsp" },
+        { "id": "4", "name": "Turmeric", "amount": "1/2", "unit": "tsp" },
+        { "id": "5", "name": "Onions", "amount": "2", "unit": "medium" },
+        { "id": "6", "name": "Tomatoes", "amount": "1", "unit": "large" },
+        { "id": "7", "name": "Curry leaves", "amount": "10", "unit": "leaves" },
+        { "id": "8", "name": "Coconut oil", "amount": "3", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Clean and cut crab into pieces",
+        "Extract tamarind juice",
+        "Heat coconut oil in heavy pan",
+        "Add onions and cook until golden",
+        "Add tomatoes and sambar powder",
+        "Add tamarind juice and turmeric",
+        "Add crab pieces and cook covered",
+        "Simmer until crab is cooked through"
+      ]
+    },
+    {
+      "id": "323",
+      "title": "Meen Kuzhambu (Fish Curry)",
+      "image": "/images/meen-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 35,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Fish", "amount": "500", "unit": "g" },
+        { "id": "2", "name": "Tamarind", "amount": "gooseberry size", "unit": "" },
+        { "id": "3", "name": "Sambar powder", "amount": "2", "unit": "tbsp" },
+        { "id": "4", "name": "Turmeric", "amount": "1/2", "unit": "tsp" },
+        { "id": "5", "name": "Onions", "amount": "1", "unit": "large" },
+        { "id": "6", "name": "Tomato", "amount": "1", "unit": "medium" },
+        { "id": "7", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "8", "name": "Sesame oil", "amount": "3", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Marinate fish with turmeric and salt",
+        "Extract thick tamarind juice",
+        "Heat oil and fry fish lightly",
+        "Remove fish and keep aside",
+        "In same oil, add onions and tomato",
+        "Add sambar powder and tamarind juice",
+        "Boil until oil separates",
+        "Add fish and simmer for 5 minutes"
+      ]
+    },
+    {
+      "id": "324",
+      "title": "Kozhi Milagu Kuzhambu (Pepper Chicken Curry)",
+      "image": "/images/kozhi-milagu-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 50,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Chicken", "amount": "1", "unit": "kg" },
+        { "id": "2", "name": "Black pepper", "amount": "2", "unit": "tbsp" },
+        { "id": "3", "name": "Coconut", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Fennel seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Poppy seeds", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Onions", "amount": "2", "unit": "large" },
+        { "id": "7", "name": "Ginger-garlic", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Curry leaves", "amount": "12", "unit": "leaves" }
+      ],
+      "instructions": [
+        "Cut chicken into medium pieces",
+        "Dry roast pepper, fennel, poppy seeds",
+        "Grind with coconut to fine paste",
+        "Marinate chicken with turmeric",
+        "Heat oil and fry chicken until golden",
+        "Add onions and ginger-garlic paste",
+        "Add ground paste and cook well",
+        "Add water and simmer until thick"
+      ]
+    },
+    {
+      "id": "325",
+      "title": "Vatha Kuzhambu",
+      "image": "/images/vatha-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 40,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Sundakkai (Turkey Berry)", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Brinjal", "amount": "2", "unit": "small" },
+        { "id": "3", "name": "Drumstick", "amount": "2", "unit": "pieces" },
+        { "id": "4", "name": "Tamarind", "amount": "lemon size", "unit": "" },
+        { "id": "5", "name": "Sambar powder", "amount": "2", "unit": "tbsp" },
+        { "id": "6", "name": "Turmeric", "amount": "1/2", "unit": "tsp" },
+        { "id": "7", "name": "Sesame oil", "amount": "3", "unit": "tbsp" },
+        { "id": "8", "name": "Mustard seeds", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Cut vegetables into small pieces",
+        "Extract thick tamarind water",
+        "Heat sesame oil and add mustard seeds",
+        "Add vegetables and fry well",
+        "Add sambar powder and turmeric",
+        "Add tamarind water and salt",
+        "Boil until vegetables are cooked",
+        "Simmer until oil floats on top"
+      ]
+    },
+    {
+      "id": "326",
+      "title": "Kara Kuzhambu",
+      "image": "/images/kara-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 35,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Mixed vegetables", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Tamarind", "amount": "gooseberry size", "unit": "" },
+        { "id": "3", "name": "Red chilies", "amount": "6", "unit": "pieces" },
+        { "id": "4", "name": "Coriander seeds", "amount": "2", "unit": "tbsp" },
+        { "id": "5", "name": "Coconut", "amount": "1/4", "unit": "cup" },
+        { "id": "6", "name": "Turmeric", "amount": "1/2", "unit": "tsp" },
+        { "id": "7", "name": "Oil", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Mustard seeds", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Dry roast red chilies and coriander",
+        "Grind with coconut to paste",
+        "Extract tamarind juice",
+        "Heat oil and add mustard seeds",
+        "Add vegetables and cook partially",
+        "Add ground paste and turmeric",
+        "Add tamarind juice and boil",
+        "Cook until vegetables are tender"
+      ]
+    },
+    {
+      "id": "327",
+      "title": "Puli Kuzhambu",
+      "image": "/images/puli-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.3,
+      "ingredients": [
+        { "id": "1", "name": "Tamarind", "amount": "lemon size", "unit": "" },
+        { "id": "2", "name": "Sambar powder", "amount": "2", "unit": "tbsp" },
+        { "id": "3", "name": "Turmeric", "amount": "1/4", "unit": "tsp" },
+        { "id": "4", "name": "Jaggery", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Drumstick", "amount": "2", "unit": "pieces" },
+        { "id": "6", "name": "Lady finger", "amount": "6", "unit": "pieces" },
+        { "id": "7", "name": "Sesame oil", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Mustard seeds", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Extract thick tamarind juice",
+        "Cut vegetables into pieces",
+        "Heat oil and add mustard seeds",
+        "Add vegetables and saute",
+        "Add tamarind juice and bring to boil",
+        "Add sambar powder and turmeric",
+        "Add jaggery and salt",
+        "Cook until vegetables are done"
+      ]
+    },
+    {
+      "id": "328",
+      "title": "Mor Kuzhambu (Curd Curry)",
+      "image": "/images/mor-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.2,
+      "ingredients": [
+        { "id": "1", "name": "Yogurt", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Coconut", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Green chilies", "amount": "3", "unit": "pieces" },
+        { "id": "4", "name": "Ginger", "amount": "1", "unit": "inch" },
+        { "id": "5", "name": "Cucumber", "amount": "1", "unit": "small" },
+        { "id": "6", "name": "Ash gourd", "amount": "1", "unit": "cup" },
+        { "id": "7", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "8", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Grind coconut with green chilies and ginger",
+        "Beat yogurt and mix with ground paste",
+        "Cut vegetables into small pieces",
+        "Cook vegetables with little water",
+        "Add yogurt mixture to cooked vegetables",
+        "Heat on low flame without boiling",
+        "Heat oil and add mustard seeds",
+        "Pour tempering over curry and serve"
+      ]
+    },
+    {
+      "id": "329",
+      "title": "Kadalai Kuzhambu (Chickpea Curry)",
+      "image": "/images/kadalai-kuzhambu.webp",
+      "category": "Curries",
+      "cookingTime": 45,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Chickpeas", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Coconut", "amount": "1/2", "unit": "cup" },
+        { "id": "3", "name": "Red chilies", "amount": "4", "unit": "pieces" },
+        { "id": "4", "name": "Coriander seeds", "amount": "1", "unit": "tbsp" },
+        { "id": "5", "name": "Onions", "amount": "1", "unit": "large" },
+        { "id": "6", "name": "Tomato", "amount": "1", "unit": "medium" },
+        { "id": "7", "name": "Tamarind", "amount": "small piece", "unit": "" },
+        { "id": "8", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Soak chickpeas overnight and pressure cook",
+        "Roast coconut, red chilies, coriander",
+        "Grind to smooth paste",
+        "Heat oil and saute onions",
+        "Add tomato and cook until soft",
+        "Add ground paste and cook",
+        "Add cooked chickpeas with water",
+        "Add tamarind juice and simmer"
+      ]
+    },
+    {
+      "id": "330",
+      "title": "Kuzhi Paniyaram",
+      "image": "/images/kuzhi-paniyaram.webp",
+      "category": "Breakfast",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Idli/Dosa batter", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Onions", "amount": "1", "unit": "chopped" },
+        { "id": "3", "name": "Green chilies", "amount": "2", "unit": "chopped" },
+        { "id": "4", "name": "Ginger", "amount": "1", "unit": "tsp chopped" },
+        { "id": "5", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "6", "name": "Mustard seeds", "amount": "1/2", "unit": "tsp" },
+        { "id": "7", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Heat oil in each cavity of paniyaram pan",
+        "Add mustard seeds and let them splutter",
+        "Add onions, green chilies, ginger, curry leaves",
+        "Pour batter into each cavity",
+        "Cook on medium heat until golden",
+        "Turn each paniyaram using a skewer",
+        "Cook until both sides are golden",
+        "Serve hot with chutney"
+      ]
+    },
+    {
+      "id": "331",
+      "title": "Upma (Rava Upma)",
+      "image": "/images/rava-upma.webp",
+      "category": "Breakfast",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.3,
+      "ingredients": [
+        { "id": "1", "name": "Semolina (Rava)", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Water", "amount": "2.5", "unit": "cups" },
+        { "id": "3", "name": "Onions", "amount": "1", "unit": "chopped" },
+        { "id": "4", "name": "Green chilies", "amount": "2", "unit": "slit" },
+        { "id": "5", "name": "Ginger", "amount": "1", "unit": "tsp chopped" },
+        { "id": "6", "name": "Mustard seeds", "amount": "1", "unit": "tsp" },
+        { "id": "7", "name": "Curry leaves", "amount": "8", "unit": "leaves" },
+        { "id": "8", "name": "Oil", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Dry roast semolina until aromatic",
+        "Heat oil and add mustard seeds",
+        "Add green chilies, ginger, curry leaves",
+        "Add onions and saute until translucent",
+        "Add water and bring to boil",
+        "Slowly add roasted semolina while stirring",
+        "Cook until water is absorbed",
+        "Serve hot with coconut chutney"
+      ]
+    },
+    {
+      "id": "332",
+      "title": "Thattai",
+      "image": "/images/thattai.webp",
+      "category": "Snacks",
+      "cookingTime": 45,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Rice flour", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Urad dal flour", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Roasted gram flour", "amount": "2", "unit": "tbsp" },
+        { "id": "4", "name": "Red chili powder", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Asafoetida", "amount": "pinch", "unit": "" },
+        { "id": "6", "name": "Curry leaves", "amount": "10", "unit": "leaves" },
+        { "id": "7", "name": "Sesame seeds", "amount": "1", "unit": "tbsp" },
+        { "id": "8", "name": "Oil", "amount": "for frying", "unit": "" }
+      ],
+      "instructions": [
+        "Mix all dry ingredients except oil",
+        "Add hot oil (2 tbsp) to the flour mixture",
+        "Add water gradually to form stiff dough",
+        "Add curry leaves and sesame seeds",
+        "Make small balls and flatten into discs",
+        "Heat oil for deep frying",
+        "Fry thattai until golden and crispy",
+        "Store in airtight container"
+      ]
+    },
+    {
+      "id": "333",
+      "title": "Seedai (Uppu Seedai & Vella Seedai)",
+      "image": "/images/seedai.webp",
+      "category": "Snacks",
+      "cookingTime": 60,
+      "servings": 8,
+      "difficulty": "Hard",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Rice flour", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Urad dal flour", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Coconut", "amount": "1/4", "unit": "cup grated" },
+        { "id": "4", "name": "Jaggery/Salt", "amount": "as needed", "unit": "" },
+        { "id": "5", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Sesame seeds", "amount": "2", "unit": "tbsp" },
+        { "id": "7", "name": "Ghee", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Oil", "amount": "for frying", "unit": "" }
+      ],
+      "instructions": [
+        "Dry roast rice flour until aromatic",
+        "Mix urad dal flour and coconut",
+        "For sweet version, melt jaggery with little water",
+        "For savory version, use salt and cumin",
+        "Mix all ingredients with hot ghee",
+        "Add liquid gradually to form tight dough",
+        "Shape into small balls",
+        "Deep fry until golden and puffed"
+      ]
+    },
+    {
+      "id": "334",
+      "title": "Mixture",
+      "image": "/images/mixture.webp",
+      "category": "Snacks",
+      "cookingTime": 40,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Gram flour", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Rice flour", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Peanuts", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Cashews", "amount": "1/4", "unit": "cup" },
+        { "id": "5", "name": "Curry leaves", "amount": "15", "unit": "leaves" },
+        { "id": "6", "name": "Red chili powder", "amount": "1", "unit": "tsp" },
+        { "id": "7", "name": "Turmeric", "amount": "1/4", "unit": "tsp" },
+        { "id": "8", "name": "Oil", "amount": "for frying", "unit": "" }
+      ],
+      "instructions": [
+        "Mix gram flour, rice flour with spices",
+        "Add water to make thick batter",
+        "Heat oil for deep frying",
+        "Make sev using sev maker",
+        "Fry peanuts and cashews separately",
+        "Fry curry leaves until crispy",
+        "Mix all fried components together",
+        "Store in airtight container"
+      ]
+    },
+    {
+      "id": "335",
+      "title": "Mysore Pak",
+      "image": "/images/mysore-pak.webp",
+      "category": "Sweets",
+      "cookingTime": 30,
+      "servings": 6,
+      "difficulty": "Hard",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Gram flour", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Sugar", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Ghee", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Water", "amount": "1/4", "unit": "cup" }
+      ],
+      "instructions": [
+        "Roast gram flour in 2 tbsp ghee until aromatic",
+        "Make sugar syrup with water",
+        "Add roasted flour to hot syrup",
+        "Keep stirring continuously",
+        "Add remaining ghee gradually",
+        "Cook until mixture leaves the pan",
+        "Pour into greased tray",
+        "Cut into squares when warm"
+      ]
+    },
+    {
+      "id": "336",
+      "title": "Jangiri",
+      "image": "/images/jangiri.webp",
+      "category": "Sweets",
+      "cookingTime": 45,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Urad dal", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Sugar", "amount": "2", "unit": "cups" },
+        { "id": "3", "name": "Water", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Orange food color", "amount": "few drops", "unit": "" },
+        { "id": "5", "name": "Cardamom", "amount": "3", "unit": "pods" },
+        { "id": "6", "name": "Oil", "amount": "for frying", "unit": "" }
+      ],
+      "instructions": [
+        "Soak urad dal for 4 hours",
+        "Grind to smooth fluffy batter",
+        "Make sugar syrup of one string consistency",
+        "Add cardamom and color to syrup",
+        "Heat oil for frying",
+        "Pipe batter in spiral shape and fry",
+        "Fry until golden and crispy",
+        "Dip hot jangiri in warm syrup"
+      ]
+    },
+    {
+      "id": "337",
+      "title": "Paal Payasam",
+      "image": "/images/paal-payasam.webp",
+      "category": "Sweets",
+      "cookingTime": 60,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Rice", "amount": "1/4", "unit": "cup" },
+        { "id": "2", "name": "Milk", "amount": "1", "unit": "liter" },
+        { "id": "3", "name": "Sugar", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Cardamom", "amount": "4", "unit": "pods" },
+        { "id": "5", "name": "Cashews", "amount": "10", "unit": "pieces" },
+        { "id": "6", "name": "Raisins", "amount": "2", "unit": "tbsp" },
+        { "id": "7", "name": "Ghee", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Wash and pressure cook rice until very soft",
+        "Mash rice to smooth paste",
+        "Boil milk in heavy-bottomed pan",
+        "Add mashed rice and cook",
+        "Stir continuously to avoid lumps",
+        "Add sugar and cardamom",
+        "Fry cashews and raisins in ghee",
+        "Garnish payasam and serve warm"
+      ]
+    },
+    {
+      "id": "338",
+      "title": "Semiya Payasam",
+      "image": "/images/semiya-payasam.webp",
+      "category": "Sweets",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Vermicelli", "amount": "1/2", "unit": "cup" },
+        { "id": "2", "name": "Milk", "amount": "3", "unit": "cups" },
+        { "id": "3", "name": "Sugar", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Cardamom", "amount": "3", "unit": "pods" },
+        { "id": "5", "name": "Cashews", "amount": "8", "unit": "pieces" },
+        { "id": "6", "name": "Raisins", "amount": "1", "unit": "tbsp" },
+        { "id": "7", "name": "Ghee", "amount": "2", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Roast vermicelli in ghee until golden",
+        "Boil milk in a heavy pan",
+        "Add roasted vermicelli to milk",
+        "Cook until vermicelli is soft",
+        "Add sugar and cardamom",
+        "Fry cashews and raisins in ghee",
+        "Add to payasam and mix",
+        "Serve warm or chilled"
+      ]
+    },
+    {
+      "id": "339",
+      "title": "Rava Kesari",
+      "image": "/images/rava-kesari.webp",
+      "category": "Sweets",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Semolina", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Sugar", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Water", "amount": "2", "unit": "cups" },
+        { "id": "4", "name": "Ghee", "amount": "4", "unit": "tbsp" },
+        { "id": "5", "name": "Cashews", "amount": "10", "unit": "pieces" },
+        { "id": "6", "name": "Raisins", "amount": "2", "unit": "tbsp" },
+        { "id": "7", "name": "Orange food color", "amount": "pinch", "unit": "" },
+        { "id": "8", "name": "Cardamom", "amount": "3", "unit": "pods" }
+      ],
+      "instructions": [
+        "Roast semolina in 2 tbsp ghee until aromatic",
+        "Boil water with food color",
+        "Add roasted semolina slowly while stirring",
+        "Cook until water is absorbed",
+        "Add sugar and mix well",
+        "Add remaining ghee gradually",
+        "Fry cashews and raisins separately",
+        "Garnish kesari and serve hot"
+      ]
+    },
+    {
+      "id": "340",
+      "title": "Sweet Pongal (Sakkarai Pongal)",
+      "image": "/images/sweet-pongal.webp",
+      "category": "Staple Rice",
+      "cookingTime": 45,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Rice", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Moong dal", "amount": "1/4", "unit": "cup" },
+        { "id": "3", "name": "Jaggery", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Milk", "amount": "1/2", "unit": "cup" },
+        { "id": "5", "name": "Ghee", "amount": "4", "unit": "tbsp" },
+        { "id": "6", "name": "Cashews", "amount": "15", "unit": "pieces" },
+        { "id": "7", "name": "Raisins", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Cardamom", "amount": "4", "unit": "pods" }
+      ],
+      "instructions": [
+        "Pressure cook rice and dal with milk",
+        "Mash the cooked rice-dal mixture",
+        "Melt jaggery with little water",
+        "Strain to remove impurities",
+        "Add jaggery syrup to rice mixture",
+        "Cook on low heat stirring continuously",
+        "Add ghee gradually",
+        "Fry cashews, raisins and add to pongal"
       ]
     }
   ]
