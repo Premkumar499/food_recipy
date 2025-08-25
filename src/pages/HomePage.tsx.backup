@@ -1,0 +1,715 @@
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import RecipeList from '../components/RecipeList';
+import { Recipe } from '../types';
+
+const HomePage = () => {
+  const [searchParams] = useSearchParams();
+  const [recipes, setRecipes] = useState<Recipe[]>(mockRecipes); // Show all 8 recipes
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string>('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [scrollY, setScrollY] = useState(0);
+  const [visibleElements, setVisibleElements] = useState<{[key: string]: boolean}>({
+    plate1: true,
+    plate2: true,
+    plate3: true,
+    food1: true,
+    food2: true,
+    food3: true,
+    food4: true
+  });
+
+  // Scroll event handler for interactive animations
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+      
+      // Knife cutting animation - remove elements as user scrolls
+      const newVisibleElements = { ...visibleElements };
+      
+      if (currentScrollY > 100) {
+        newVisibleElements.food1 = false; // First food gets "cut"
+      }
+      if (currentScrollY > 200) {
+        newVisibleElements.plate1 = false; // First plate rolls away
+      }
+      if (currentScrollY > 300) {
+        newVisibleElements.food2 = false; // Second food gets "cut"
+      }
+      if (currentScrollY > 400) {
+        newVisibleElements.plate2 = false; // Second plate rolls away
+      }
+      if (currentScrollY > 500) {
+        newVisibleElements.food3 = false; // Third food gets "cut"
+      }
+      if (currentScrollY > 600) {
+        newVisibleElements.plate3 = false; // Third plate rolls away
+      }
+      
+      setVisibleElements(newVisibleElements);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [visibleElements]);
+
+  // Get search query from URL parameters
+  useEffect(() => {
+    const searchQuery = searchParams.get('search');
+    if (searchQuery) {
+      setSearchTerm(searchQuery);
+    }
+  }, [searchParams]);
+
+  // Food API call - using category-specific food images
+  const fetchRecipes = async (search = '') => {
+    setError('');
+    
+    // Always use local mock data with your specific images
+    const enhancedMockRecipes = mockRecipes.map((recipe, index) => ({
+      ...recipe,
+      image: recipe.image // Keep the specific images from mockRecipes
+    }));
+    setRecipes(enhancedMockRecipes); // Show all 8 recipes
+    
+    /* Commented out API calls to ensure local images always show */
+  };
+
+  // Helper function to get category-specific images
+  const getCategoryImage = (category: string, index: number) => {
+    const categoryImages: { [key: string]: string[] } = {
+      'Vegetarian': [
+        '/images/veg-food.webp', // Vegetarian food
+        '/images/veg-1.webp' // Veg food variation
+      ],
+      'Meat & Seafood': [
+        '/images/non-veg.webp', // Non-veg food
+        '/images/non-veg-2.webp', // Non-veg variation 2
+        '/images/non-veg-3.webp'  // Non-veg variation 3
+      ],
+      'Healthy & Diet': [
+        '/images/veg-1.webp', // Healthy food
+        '/images/veg-food.webp' // Healthy variation
+      ],
+      'Popular': [
+        '/images/background-idea.webp' // Popular food background
+      ],
+      'Snacks': [
+        '/images/snack.jpg', // Snacks
+        '/images/snack-1.webp', // Snack variation
+        '/images/snack-3.webp' // Snack variation 3
+      ]
+    };
+    
+    const images = categoryImages[category] || categoryImages['Popular'];
+    return images[index % images.length];
+  };
+
+  useEffect(() => {
+    fetchRecipes(searchTerm);
+  }, [searchTerm]);
+
+  return (
+    <div className="min-h-screen bg-gray-50 overflow-hidden">
+      {/* Hero Section with Animated Background */}
+      <div className="relative bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 text-white overflow-hidden">
+        {/* Interactive Scroll-Based Food Animation */}
+        <div className="absolute inset-0">
+          {/* Dynamic Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-transparent to-orange-400/20" 
+               style={{
+                 transform: `translateX(${scrollY * 0.1}px)`,
+                 transition: 'transform 0.1s ease-out'
+               }}></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-red-400/15 via-transparent to-pink-400/15" 
+               style={{
+                 transform: `translateX(${-scrollY * 0.15}px)`,
+                 transition: 'transform 0.1s ease-out'
+               }}></div>
+          
+          {/* Plates in Background - Roll Away on Scroll */}
+          <div className="absolute inset-0">
+            {visibleElements.plate1 && (
+              <div className="absolute top-20 left-20 text-6xl opacity-40 transition-all duration-1000" 
+                   style={{
+                     transform: `rotate(${scrollY * 2}deg) translateX(${scrollY * 0.5}px)`,
+                     opacity: scrollY > 150 ? 0 : 0.4
+                   }}>🍽️</div>
+            )}
+            {visibleElements.plate2 && (
+              <div className="absolute top-1/2 right-20 text-5xl opacity-35 transition-all duration-1000" 
+                   style={{
+                     transform: `rotate(${-scrollY * 1.5}deg) translateX(${-scrollY * 0.3}px)`,
+                     opacity: scrollY > 350 ? 0 : 0.35
+                   }}>🍽️</div>
+            )}
+            {visibleElements.plate3 && (
+              <div className="absolute bottom-20 left-1/3 text-5xl opacity-30 transition-all duration-1000" 
+                   style={{
+                     transform: `rotate(${scrollY * 1.8}deg) translateY(${scrollY * 0.4}px)`,
+                     opacity: scrollY > 550 ? 0 : 0.3
+                   }}>🍽️</div>
+            )}
+          </div>
+          
+          {/* Moving Knives - Cut Through Food */}
+          <div className="absolute inset-0">
+            <div className="absolute top-16 left-1/4 text-4xl opacity-50 transition-all duration-500" 
+                 style={{
+                   transform: `translateX(${scrollY * 0.8}px) rotate(${scrollY * 0.5}deg)`,
+                   zIndex: 10
+                 }}>🔪</div>
+            <div className="absolute top-1/3 right-1/4 text-4xl opacity-45 transition-all duration-500" 
+                 style={{
+                   transform: `translateX(${-scrollY * 0.6}px) rotate(${-scrollY * 0.3}deg)`,
+                   zIndex: 10
+                 }}>🔪</div>
+            <div className="absolute bottom-1/3 left-1/2 text-4xl opacity-40 transition-all duration-500" 
+                 style={{
+                   transform: `translateY(${-scrollY * 0.4}px) rotate(${scrollY * 0.7}deg)`,
+                   zIndex: 10
+                 }}>🔪</div>
+          </div>
+          
+          {/* Food Items - Get Cut and Disappear */}
+          <div className="absolute inset-0">
+            {visibleElements.food1 && (
+              <div className="absolute top-24 left-32 text-5xl transition-all duration-800" 
+                   style={{
+                     transform: `scale(${scrollY > 80 ? 0.5 : 1}) rotate(${scrollY * 3}deg)`,
+                     opacity: scrollY > 100 ? 0 : 0.6
+                   }}>🍕</div>
+            )}
+            {visibleElements.food2 && (
+              <div className="absolute top-1/2 right-32 text-4xl transition-all duration-800" 
+                   style={{
+                     transform: `scale(${scrollY > 280 ? 0.3 : 1}) rotate(${-scrollY * 2}deg)`,
+                     opacity: scrollY > 300 ? 0 : 0.5
+                   }}>🍔</div>
+            )}
+            {visibleElements.food3 && (
+              <div className="absolute bottom-24 left-1/4 text-4xl transition-all duration-800" 
+                   style={{
+                     transform: `scale(${scrollY > 480 ? 0.2 : 1}) rotate(${scrollY * 2.5}deg)`,
+                     opacity: scrollY > 500 ? 0 : 0.55
+                   }}>🍝</div>
+            )}
+            {visibleElements.food4 && (
+              <div className="absolute bottom-32 right-1/3 text-5xl transition-all duration-800" 
+                   style={{
+                     transform: `scale(${scrollY > 680 ? 0.1 : 1}) rotate(${-scrollY * 1.8}deg)`,
+                     opacity: scrollY > 700 ? 0 : 0.5
+                   }}>🥗</div>
+            )}
+          </div>
+          
+          {/* Cooking Utensils - Dynamic Movement */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/6 text-3xl opacity-35 transition-all duration-300" 
+                 style={{
+                   transform: `translateY(${Math.sin(scrollY * 0.01) * 20}px) rotate(${scrollY * 0.2}deg)`
+                 }}>🍳</div>
+            <div className="absolute top-2/3 right-1/6 text-3xl opacity-30 transition-all duration-300" 
+                 style={{
+                   transform: `translateX(${Math.cos(scrollY * 0.008) * 15}px) rotate(${-scrollY * 0.3}deg)`
+                 }}>🥄</div>
+            <div className="absolute bottom-1/4 left-2/3 text-3xl opacity-40 transition-all duration-300" 
+                 style={{
+                   transform: `translateY(${Math.sin(scrollY * 0.012) * 25}px) rotate(${scrollY * 0.4}deg)`
+                 }}>🍴</div>
+          </div>
+          
+          {/* Ingredients - Floating and Reacting to Scroll */}
+          <div className="absolute inset-0">
+            <div className="absolute top-32 left-1/2 text-2xl opacity-40 transition-all duration-200" 
+                 style={{
+                   transform: `translateY(${scrollY * -0.2}px) rotate(${scrollY * 0.5}deg)`
+                 }}>🍅</div>
+            <div className="absolute top-1/3 right-1/3 text-xl opacity-35 transition-all duration-200" 
+                 style={{
+                   transform: `translateX(${scrollY * -0.1}px) rotate(${-scrollY * 0.3}deg)`
+                 }}>🥕</div>
+            <div className="absolute bottom-1/2 left-1/5 text-2xl opacity-30 transition-all duration-200" 
+                 style={{
+                   transform: `translateY(${scrollY * 0.15}px) rotate(${scrollY * 0.6}deg)`
+                 }}>🧄</div>
+            <div className="absolute bottom-1/4 right-1/2 text-xl opacity-35 transition-all duration-200" 
+                 style={{
+                   transform: `translateX(${scrollY * 0.12}px) rotate(${-scrollY * 0.4}deg)`
+                 }}>🌶️</div>
+          </div>
+          
+          {/* Cooking Steam - Intensifies with Scroll */}
+          <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black/30 to-transparent">
+            <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-r from-orange-500/40 via-red-500/40 to-pink-500/40" 
+                 style={{
+                   transform: `scaleY(${1 + scrollY * 0.001})`,
+                   opacity: Math.min(0.4 + scrollY * 0.0005, 0.8)
+                 }}></div>
+            {/* Steam Bubbles */}
+            {[...Array(8)].map((_, i) => (
+              <div key={i} 
+                   className="absolute bg-white/40 rounded-full animate-pulse" 
+                   style={{
+                     left: `${15 + i * 10}%`,
+                     bottom: `${10 + Math.sin(scrollY * 0.01 + i) * 5}px`,
+                     width: `${3 + Math.sin(scrollY * 0.005 + i) * 2}px`,
+                     height: `${3 + Math.sin(scrollY * 0.005 + i) * 2}px`,
+                     transform: `translateY(${-scrollY * 0.1}px)`,
+                     opacity: 0.3 + Math.sin(scrollY * 0.01 + i) * 0.2
+                   }}></div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+        
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 z-10">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight transform transition-all duration-1000 hover:scale-105">
+              Discover Amazing Recipes
+            </h1>
+            <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed transform transition-all duration-1000 hover:scale-102">
+              Find the perfect recipe for any occasion
+            </p>
+            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-1 transform transition-all duration-500 hover:bg-white/20 hover:scale-105">
+              <div className="bg-white/20 rounded-lg px-8 py-3 backdrop-blur-sm">
+                <span className="text-lg font-medium animate-pulse">Explore thousands of delicious recipes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content - Fixed 8 Recipe Grid */}
+      <div className="px-4 py-8">
+        <RecipeList recipes={recipes} loading={false} error={error} />
+      </div>
+    </div>
+  );
+};
+
+// Mock data for development with local category-specific food images - 8 containers}
+          <div className="absolute inset-0">
+            {/* Large Food Items with Rotation and Float */}
+            <div className="absolute top-12 left-16 text-5xl opacity-35 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'float 6s ease-in-out infinite, rotate 12s linear infinite',
+                   animationDelay: '0s'
+                 }}>🍕</div>
+            <div className="absolute top-20 right-20 text-4xl opacity-30 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'float 7s ease-in-out infinite reverse, rotate 15s linear infinite reverse',
+                   animationDelay: '1s'
+                 }}>🍔</div>
+            <div className="absolute bottom-20 left-20 text-4xl opacity-35 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'float 5s ease-in-out infinite, rotate 10s linear infinite',
+                   animationDelay: '2s'
+                 }}>🍝</div>
+            <div className="absolute bottom-32 right-32 text-5xl opacity-25 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'float 8s ease-in-out infinite reverse, rotate 18s linear infinite reverse',
+                   animationDelay: '0.5s'
+                 }}>🥗</div>
+            
+            {/* Medium Cooking Utensils with Swing Animation */}
+            <div className="absolute top-1/3 left-1/4 text-3xl opacity-30 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'swing 4s ease-in-out infinite, float 6s ease-in-out infinite',
+                   animationDelay: '1.5s'
+                 }}>🍳</div>
+            <div className="absolute top-1/2 right-1/3 text-3xl opacity-25 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'swing 5s ease-in-out infinite reverse, float 7s ease-in-out infinite reverse',
+                   animationDelay: '2.5s'
+                 }}>🥄</div>
+            <div className="absolute bottom-1/3 left-1/2 text-3xl opacity-30 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'swing 3.5s ease-in-out infinite, float 5.5s ease-in-out infinite',
+                   animationDelay: '0.8s'
+                 }}>🔪</div>
+            <div className="absolute top-1/4 left-1/3 text-3xl opacity-25 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'swing 4.5s ease-in-out infinite reverse, float 6.5s ease-in-out infinite reverse',
+                   animationDelay: '3s'
+                 }}>🍽️</div>
+            
+            {/* Small Food Items with Bounce and Glow */}
+            <div className="absolute top-20 left-1/2 text-2xl opacity-35 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'bounce 2s infinite, glow 3s ease-in-out infinite',
+                   animationDelay: '0s'
+                 }}>🍅</div>
+            <div className="absolute top-1/4 right-1/4 text-xl opacity-30 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'bounce 2.5s infinite, glow 3.5s ease-in-out infinite',
+                   animationDelay: '1s'
+                 }}>🥕</div>
+            <div className="absolute bottom-1/4 left-1/3 text-2xl opacity-35 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'bounce 2.2s infinite, glow 3.2s ease-in-out infinite',
+                   animationDelay: '2s'
+                 }}>🧄</div>
+            <div className="absolute bottom-20 right-1/2 text-xl opacity-30 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'bounce 2.8s infinite, glow 3.8s ease-in-out infinite',
+                   animationDelay: '1.5s'
+                 }}>🌶️</div>
+            <div className="absolute top-1/3 right-1/5 text-xl opacity-25 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'bounce 2.3s infinite, glow 3.3s ease-in-out infinite',
+                   animationDelay: '2.5s'
+                 }}>🥒</div>
+            <div className="absolute bottom-1/2 left-1/5 text-2xl opacity-30 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'bounce 2.6s infinite, glow 3.6s ease-in-out infinite',
+                   animationDelay: '3.5s'
+                 }}>🍄</div>
+            
+            {/* Desserts with Wiggle Animation */}
+            <div className="absolute top-16 right-1/3 text-3xl opacity-30 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'wiggle 3s ease-in-out infinite, float 5s ease-in-out infinite',
+                   animationDelay: '1.2s'
+                 }}>🧁</div>
+            <div className="absolute bottom-16 left-1/3 text-3xl opacity-25 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'wiggle 3.5s ease-in-out infinite reverse, float 5.5s ease-in-out infinite reverse',
+                   animationDelay: '2.8s'
+                 }}>🍰</div>
+            <div className="absolute top-2/3 left-1/6 text-2xl opacity-30 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'wiggle 2.8s ease-in-out infinite, float 4.8s ease-in-out infinite',
+                   animationDelay: '1.8s'
+                 }}>🍪</div>
+            <div className="absolute top-1/6 right-1/6 text-2xl opacity-25 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'wiggle 3.2s ease-in-out infinite reverse, float 5.2s ease-in-out infinite reverse',
+                   animationDelay: '3.2s'
+                 }}>🍩</div>
+            
+            {/* Beverages with Steam Effect */}
+            <div className="absolute top-1/2 left-1/6 text-3xl opacity-25 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'steam 4s ease-in-out infinite, float 6s ease-in-out infinite',
+                   animationDelay: '2.2s'
+                 }}>☕</div>
+            <div className="absolute bottom-1/3 right-1/5 text-3xl opacity-30 transform hover:scale-110 transition-all duration-300" 
+                 style={{
+                   animation: 'steam 4.5s ease-in-out infinite reverse, float 6.5s ease-in-out infinite reverse',
+                   animationDelay: '1.6s'
+                 }}>🥤</div>
+            
+            {/* Fruits with Spin Animation */}
+            <div className="absolute top-3/4 right-1/4 text-2xl opacity-30 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'spin 8s linear infinite, float 5s ease-in-out infinite',
+                   animationDelay: '0.5s'
+                 }}>🍎</div>
+            <div className="absolute top-1/5 left-2/3 text-xl opacity-25 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'spin 10s linear infinite reverse, float 6s ease-in-out infinite reverse',
+                   animationDelay: '2.3s'
+                 }}>🍊</div>
+            <div className="absolute bottom-1/5 right-2/3 text-2xl opacity-30 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'spin 7s linear infinite, float 4.5s ease-in-out infinite',
+                   animationDelay: '1.7s'
+                 }}>🍌</div>
+            <div className="absolute bottom-2/3 left-1/4 text-xl opacity-25 transform hover:scale-125 transition-all duration-300" 
+                 style={{
+                   animation: 'spin 9s linear infinite reverse, float 5.5s ease-in-out infinite reverse',
+                   animationDelay: '3.1s'
+                 }}>🍓</div>
+          </div>
+          
+          {/* Enhanced Cooking Steam Effect */}
+          <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black/25 to-transparent">
+            <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-r from-orange-500/35 via-red-500/35 to-pink-500/35" 
+                 style={{animation: 'wave 4s ease-in-out infinite'}}></div>
+            {/* Enhanced Steam bubbles */}
+            <div className="absolute bottom-10 left-1/4 w-3 h-3 bg-white/50 rounded-full" 
+                 style={{animation: 'bubble 3s ease-in-out infinite', animationDelay: '0s'}}></div>
+            <div className="absolute bottom-15 left-1/3 w-2 h-2 bg-white/40 rounded-full" 
+                 style={{animation: 'bubble 3.5s ease-in-out infinite', animationDelay: '0.5s'}}></div>
+            <div className="absolute bottom-8 left-1/2 w-4 h-4 bg-white/45 rounded-full" 
+                 style={{animation: 'bubble 2.8s ease-in-out infinite', animationDelay: '1s'}}></div>
+            <div className="absolute bottom-12 right-1/3 w-3 h-3 bg-white/50 rounded-full" 
+                 style={{animation: 'bubble 3.2s ease-in-out infinite', animationDelay: '1.5s'}}></div>
+            <div className="absolute bottom-18 right-1/4 w-2 h-2 bg-white/40 rounded-full" 
+                 style={{animation: 'bubble 3.8s ease-in-out infinite', animationDelay: '2s'}}></div>
+          </div>
+        </div>
+        
+        {/* Custom CSS Animations */}
+        <style jsx>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            25% { transform: translateY(-20px) translateX(10px); }
+            50% { transform: translateY(-10px) translateX(-5px); }
+            75% { transform: translateY(-15px) translateX(8px); }
+          }
+          
+          @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+          
+          @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(15deg); }
+            75% { transform: rotate(-15deg); }
+          }
+          
+          @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(5deg) scale(1.05); }
+            50% { transform: rotate(-5deg) scale(0.95); }
+            75% { transform: rotate(3deg) scale(1.02); }
+          }
+          
+          @keyframes glow {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 5px rgba(255,255,255,0.3)); }
+            50% { filter: brightness(1.2) drop-shadow(0 0 15px rgba(255,255,255,0.6)); }
+          }
+          
+          @keyframes steam {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-10px) scale(1.1); }
+          }
+          
+          @keyframes bubble {
+            0% { transform: translateY(0px) scale(0.8); opacity: 0.8; }
+            50% { transform: translateY(-30px) scale(1.2); opacity: 0.4; }
+            100% { transform: translateY(-60px) scale(0.6); opacity: 0; }
+          }
+          
+          @keyframes wave {
+            0%, 100% { transform: scaleX(1) scaleY(1); }
+            50% { transform: scaleX(1.1) scaleY(0.9); }
+          }
+        `}</style>
+        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+        
+        {/* Content */}
+        <div className="relative w-full px-4 sm:px-6 lg:px-8 py-24 z-10">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight transform transition-all duration-1000 hover:scale-105">
+              Discover Amazing Recipes
+            </h1>
+            <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed transform transition-all duration-1000 hover:scale-102">
+              Find the perfect recipe for any occasion
+            </p>
+            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-1 transform transition-all duration-500 hover:bg-white/20 hover:scale-105">
+              <div className="bg-white/20 rounded-lg px-8 py-3 backdrop-blur-sm">
+                <span className="text-lg font-medium animate-pulse">Explore thousands of delicious recipes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content - Fixed 8 Recipe Grid */}
+      <div className="w-full">
+        <RecipeList recipes={recipes} loading={false} error={error} />
+      </div>
+    </div>
+  );
+};
+
+// Mock data for development with local category-specific food images - 8 containers
+const mockRecipes: Recipe[] = [
+  {
+    id: '1',
+    title: 'Gourmet Snack Mix',
+    image: '/images/snack-3.webp',
+    category: 'Snacks',
+    cookingTime: 5,
+    servings: 4,
+    difficulty: 'Easy',
+    rating: 4.4,
+    ingredients: [
+      { id: '1', name: 'Premium nuts', amount: '150', unit: 'g' },
+      { id: '2', name: 'Artisan crackers', amount: '100', unit: 'g' },
+      { id: '3', name: 'Dried berries', amount: '80', unit: 'g' },
+      { id: '4', name: 'Dark chocolate', amount: '50', unit: 'g' },
+    ],
+    instructions: [
+      'Select premium ingredients',
+      'Arrange in elegant portions',
+      'Add chocolate pieces',
+      'Present on serving board',
+      'Enjoy with friends',
+    ],
+  },
+  {
+    id: '2',
+    title: 'Classic Snack Platter',
+    image: '/images/snack-1.webp',
+    category: 'Snacks',
+    cookingTime: 10,
+    servings: 6,
+    difficulty: 'Easy',
+    rating: 4.3,
+    ingredients: [
+      { id: '1', name: 'Mixed nuts', amount: '200', unit: 'g' },
+      { id: '2', name: 'Crackers', amount: '150', unit: 'g' },
+      { id: '3', name: 'Dried fruits', amount: '100', unit: 'g' },
+      { id: '4', name: 'Cheese cubes', amount: '100', unit: 'g' },
+    ],
+    instructions: [
+      'Arrange nuts in small bowls',
+      'Place crackers on serving plate',
+      'Add dried fruits and cheese',
+      'Garnish with fresh herbs',
+      'Serve immediately',
+    ],
+  },
+  {
+    id: '3',
+    title: 'Traditional Snacks',
+    image: '/images/snack.jpg',
+    category: 'Snacks',
+    cookingTime: 15,
+    servings: 8,
+    difficulty: 'Easy',
+    rating: 4.2,
+    ingredients: [
+      { id: '1', name: 'Roasted nuts', amount: '250', unit: 'g' },
+      { id: '2', name: 'Savory bites', amount: '200', unit: 'g' },
+      { id: '3', name: 'Spiced mix', amount: '150', unit: 'g' },
+      { id: '4', name: 'Crunchy treats', amount: '100', unit: 'g' },
+    ],
+    instructions: [
+      'Prepare traditional snack mix',
+      'Combine all ingredients',
+      'Season with spices',
+      'Mix well and serve',
+      'Store in airtight container',
+    ],
+  },
+  {
+    id: '4',
+    title: 'Grilled Meat Deluxe',
+    image: '/images/non-veg-3.webp',
+    category: 'Meat & Seafood',
+    cookingTime: 35,
+    servings: 4,
+    difficulty: 'Medium',
+    rating: 4.8,
+    ingredients: [
+      { id: '1', name: 'Premium meat cuts', amount: '800', unit: 'g' },
+      { id: '2', name: 'Special marinade', amount: '200', unit: 'ml' },
+      { id: '3', name: 'Herb blend', amount: '3', unit: 'tbsp' },
+      { id: '4', name: 'Olive oil', amount: '4', unit: 'tbsp' },
+    ],
+    instructions: [
+      'Marinate meat for 3 hours',
+      'Preheat grill to high heat',
+      'Grill meat to perfection',
+      'Check internal temperature',
+      'Let rest and serve hot',
+    ],
+  },
+  {
+    id: '5',
+    title: 'Seafood Meat Combo',
+    image: '/images/non-veg-2.webp',
+    category: 'Meat & Seafood',
+    cookingTime: 30,
+    servings: 4,
+    difficulty: 'Medium',
+    rating: 4.7,
+    ingredients: [
+      { id: '1', name: 'Mixed seafood', amount: '600', unit: 'g' },
+      { id: '2', name: 'Meat selection', amount: '400', unit: 'g' },
+      { id: '3', name: 'Garlic butter', amount: '100', unit: 'g' },
+      { id: '4', name: 'Fresh herbs', amount: '2', unit: 'tbsp' },
+    ],
+    instructions: [
+      'Prepare seafood and meat',
+      'Heat garlic butter in pan',
+      'Cook seafood first',
+      'Add meat and herbs',
+      'Serve with lemon wedges',
+    ],
+  },
+  {
+    id: '6',
+    title: 'Classic Meat Platter',
+    image: '/images/non-veg.webp',
+    category: 'Meat & Seafood',
+    cookingTime: 25,
+    servings: 4,
+    difficulty: 'Medium',
+    rating: 4.6,
+    ingredients: [
+      { id: '1', name: 'Chicken breast', amount: '600', unit: 'g' },
+      { id: '2', name: 'Beef strips', amount: '400', unit: 'g' },
+      { id: '3', name: 'Marinade sauce', amount: '150', unit: 'ml' },
+      { id: '4', name: 'Spice mix', amount: '2', unit: 'tbsp' },
+    ],
+    instructions: [
+      'Cut meat into portions',
+      'Apply marinade evenly',
+      'Let marinate for 1 hour',
+      'Grill until cooked through',
+      'Serve with vegetables',
+    ],
+  },
+  {
+    id: '7',
+    title: 'Fresh Vegetable Bowl',
+    image: '/images/veg-1.webp',
+    category: 'Vegetarian',
+    cookingTime: 20,
+    servings: 3,
+    difficulty: 'Easy',
+    rating: 4.5,
+    ingredients: [
+      { id: '1', name: 'Fresh vegetables', amount: '500', unit: 'g' },
+      { id: '2', name: 'Quinoa', amount: '200', unit: 'g' },
+      { id: '3', name: 'Avocado', amount: '1', unit: 'large' },
+      { id: '4', name: 'Lemon dressing', amount: '3', unit: 'tbsp' },
+    ],
+    instructions: [
+      'Cook quinoa until fluffy',
+      'Chop fresh vegetables',
+      'Slice avocado',
+      'Arrange in bowl',
+      'Drizzle with dressing',
+    ],
+  },
+  {
+    id: '8',
+    title: 'Garden Fresh Salad',
+    image: '/images/veg-food.webp',
+    category: 'Vegetarian',
+    cookingTime: 15,
+    servings: 4,
+    difficulty: 'Easy',
+    rating: 4.4,
+    ingredients: [
+      { id: '1', name: 'Mixed greens', amount: '400', unit: 'g' },
+      { id: '2', name: 'Cherry tomatoes', amount: '200', unit: 'g' },
+      { id: '3', name: 'Cucumber', amount: '1', unit: 'large' },
+      { id: '4', name: 'Olive oil dressing', amount: '4', unit: 'tbsp' },
+    ],
+    instructions: [
+      'Wash all vegetables thoroughly',
+      'Cut vegetables into bite sizes',
+      'Mix in large salad bowl',
+      'Add dressing and toss',
+      'Serve immediately',
+    ],
+  },
+];
+
+export default HomePage;

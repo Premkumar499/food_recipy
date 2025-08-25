@@ -1,0 +1,351 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Creamy Pasta Delight",
+      "image": "https://via.placeholder.com/300x200?text=Creamy+Pasta+Delight",
+      "category": "Popular",
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Pasta", "amount": "400", "unit": "g" },
+        { "id": "2", "name": "Eggs", "amount": "3", "unit": "large" },
+        { "id": "3", "name": "Cheese", "amount": "100", "unit": "g" },
+        { "id": "4", "name": "Cream", "amount": "150", "unit": "ml" },
+        { "id": "5", "name": "Black pepper", "amount": "1", "unit": "tsp" },
+        { "id": "6", "name": "Salt", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Cook pasta according to package instructions until al dente.",
+        "Prepare creamy sauce in a large skillet.",
+        "In a bowl, whisk together eggs, cheese, and pepper.",
+        "Reserve 1 cup of pasta cooking water before draining.",
+        "Add the hot, drained pasta to the skillet.",
+        "Remove from heat and quickly add the egg mixture, tossing constantly.",
+        "Add pasta water gradually if needed to achieve the right consistency.",
+        "Serve immediately with extra cheese and black pepper."
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Creamy Fettuccine",
+      "image": "https://via.placeholder.com/300x200?text=Creamy+Fettuccine",
+      "category": "Popular",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.3,
+      "ingredients": [
+        { "id": "1", "name": "Fettuccine pasta", "amount": "400", "unit": "g" },
+        { "id": "2", "name": "Heavy cream", "amount": "300", "unit": "ml" },
+        { "id": "3", "name": "Cheese", "amount": "150", "unit": "g" },
+        { "id": "4", "name": "Butter", "amount": "50", "unit": "g" }
+      ],
+      "instructions": [
+        "Cook fettuccine according to package directions",
+        "Heat cream and butter in a large pan",
+        "Add cooked pasta to the cream mixture",
+        "Toss with cheese until creamy",
+        "Serve immediately with black pepper"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Spicy Grilled Chicken",
+      "image": "https://via.placeholder.com/300x200?text=Spicy+Grilled+Chicken",
+      "category": "Meat & Seafood",
+      "cookingTime": 45,
+      "servings": 6,
+      "difficulty": "Medium",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Chicken breast", "amount": "800", "unit": "g" },
+        { "id": "2", "name": "Marinade", "amount": "200", "unit": "ml" },
+        { "id": "3", "name": "Spices", "amount": "2", "unit": "tbsp" },
+        { "id": "4", "name": "Oil", "amount": "3", "unit": "tbsp" },
+        { "id": "5", "name": "Onion", "amount": "1", "unit": "large" },
+        { "id": "6", "name": "Garlic", "amount": "4", "unit": "cloves" },
+        { "id": "7", "name": "Herbs", "amount": "2", "unit": "tbsp" },
+        { "id": "8", "name": "Seasoning", "amount": "2", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Cut chicken into bite-sized pieces and marinate with spices for at least 30 minutes.",
+        "Heat oil in a large skillet and cook marinated chicken until browned and cooked through.",
+        "Remove chicken and set aside. In the same pan, sauté diced onion until softened.",
+        "Add minced garlic and herbs, cook for another minute until fragrant.",
+        "Add seasoning and simmer for 10 minutes until sauce thickens.",
+        "Return chicken to the pan and toss to combine.",
+        "Simmer for 5-10 minutes until heated through and flavors combine.",
+        "Serve hot with rice and bread."
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Creamy Butter Chicken",
+      "image": "https://via.placeholder.com/300x200?text=Creamy+Butter+Chicken",
+      "category": "Meat & Seafood",
+      "cookingTime": 50,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Chicken thighs", "amount": "600", "unit": "g" },
+        { "id": "2", "name": "Butter", "amount": "100", "unit": "g" },
+        { "id": "3", "name": "Tomato puree", "amount": "300", "unit": "ml" },
+        { "id": "4", "name": "Heavy cream", "amount": "150", "unit": "ml" }
+      ],
+      "instructions": [
+        "Marinate chicken in spices overnight",
+        "Cook chicken until golden brown",
+        "Prepare rich tomato-butter sauce",
+        "Simmer chicken in sauce",
+        "Finish with cream and serve with bread"
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Spiced Rice Bowl",
+      "image": "https://via.placeholder.com/300x200?text=Spiced+Rice+Bowl",
+      "category": "Popular",
+      "cookingTime": 90,
+      "servings": 6,
+      "difficulty": "Hard",
+      "rating": 4.9,
+      "ingredients": [
+        { "id": "1", "name": "Rice", "amount": "500", "unit": "g" },
+        { "id": "2", "name": "Meat", "amount": "800", "unit": "g" },
+        { "id": "3", "name": "Marinade", "amount": "200", "unit": "ml" },
+        { "id": "4", "name": "Spices", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Soak rice for 30 minutes",
+        "Marinate meat with spices",
+        "Cook rice until 70% done",
+        "Layer rice and meat alternately",
+        "Cook on dum for 45 minutes",
+        "Serve with raita and shorba"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Caesar Salad",
+      "image": "https://via.placeholder.com/300x200?text=Caesar+Salad",
+      "category": "Salad",
+      "cookingTime": 15,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.2,
+      "ingredients": [
+        { "id": "1", "name": "Romaine lettuce", "amount": "2", "unit": "heads" },
+        { "id": "2", "name": "Parmesan cheese", "amount": "100", "unit": "g" },
+        { "id": "3", "name": "Croutons", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Caesar dressing", "amount": "1/2", "unit": "cup" }
+      ],
+      "instructions": [
+        "Wash and chop romaine lettuce into bite-sized pieces.",
+        "Place lettuce in a large salad bowl.",
+        "Add croutons and grated Parmesan cheese.",
+        "Drizzle with Caesar dressing and toss well.",
+        "Serve immediately."
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Beef Tacos",
+      "image": "https://via.placeholder.com/300x200?text=Beef+Tacos",
+      "category": "Mexican",
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Ground beef", "amount": "500", "unit": "g" },
+        { "id": "2", "name": "Taco shells", "amount": "8", "unit": "pieces" },
+        { "id": "3", "name": "Lettuce", "amount": "1", "unit": "head" },
+        { "id": "4", "name": "Tomatoes", "amount": "2", "unit": "large" },
+        { "id": "5", "name": "Cheese", "amount": "200", "unit": "g" },
+        { "id": "6", "name": "Sour cream", "amount": "200", "unit": "ml" }
+      ],
+      "instructions": [
+        "Brown ground beef in a large skillet over medium-high heat.",
+        "Add taco seasoning and cook according to package instructions.",
+        "Warm taco shells in the oven or microwave.",
+        "Prepare toppings: shred lettuce, dice tomatoes, grate cheese.",
+        "Fill taco shells with beef and desired toppings.",
+        "Serve with sour cream and salsa."
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Chocolate Chip Cookies",
+      "image": "https://via.placeholder.com/300x200?text=Chocolate+Chip+Cookies",
+      "category": "Dessert",
+      "cookingTime": 25,
+      "servings": 24,
+      "difficulty": "Easy",
+      "rating": 4.9,
+      "ingredients": [
+        { "id": "1", "name": "Flour", "amount": "2.25", "unit": "cups" },
+        { "id": "2", "name": "Butter", "amount": "1", "unit": "cup" },
+        { "id": "3", "name": "Brown sugar", "amount": "3/4", "unit": "cup" },
+        { "id": "4", "name": "White sugar", "amount": "3/4", "unit": "cup" },
+        { "id": "5", "name": "Eggs", "amount": "2", "unit": "large" },
+        { "id": "6", "name": "Chocolate chips", "amount": "2", "unit": "cups" }
+      ],
+      "instructions": [
+        "Preheat oven to 375°F (190°C).",
+        "Cream together butter and both sugars until light and fluffy.",
+        "Beat in eggs one at a time, then add vanilla.",
+        "Gradually mix in flour, baking soda, and salt.",
+        "Stir in chocolate chips.",
+        "Drop rounded tablespoons of dough onto ungreased baking sheets.",
+        "Bake for 9-11 minutes until golden brown.",
+        "Cool on baking sheet for 2 minutes before transferring to wire rack."
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Greek Salad",
+      "image": "https://via.placeholder.com/300x200?text=Greek+Salad",
+      "category": "Mediterranean",
+      "cookingTime": 10,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Cucumber", "amount": "2", "unit": "large" },
+        { "id": "2", "name": "Tomatoes", "amount": "4", "unit": "large" },
+        { "id": "3", "name": "Red onion", "amount": "1", "unit": "medium" },
+        { "id": "4", "name": "Feta cheese", "amount": "200", "unit": "g" },
+        { "id": "5", "name": "Olives", "amount": "1", "unit": "cup" },
+        { "id": "6", "name": "Olive oil", "amount": "1/4", "unit": "cup" }
+      ],
+      "instructions": [
+        "Cut cucumbers and tomatoes into chunks.",
+        "Slice red onion thinly.",
+        "Combine vegetables in a large bowl.",
+        "Add olives and crumbled feta cheese.",
+        "Drizzle with olive oil and lemon juice.",
+        "Season with salt, pepper, and oregano.",
+        "Toss gently and serve immediately."
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Grilled Salmon",
+      "image": "https://via.placeholder.com/300x200?text=Grilled+Salmon",
+      "category": "Meat-Seafood",
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Salmon fillets", "amount": "4", "unit": "pieces" },
+        { "id": "2", "name": "Lemon", "amount": "2", "unit": "large" },
+        { "id": "3", "name": "Olive oil", "amount": "3", "unit": "tbsp" },
+        { "id": "4", "name": "Garlic", "amount": "3", "unit": "cloves" }
+      ],
+      "instructions": [
+        "Preheat grill to medium-high heat",
+        "Season salmon with salt and pepper",
+        "Brush with olive oil and minced garlic",
+        "Grill for 4-5 minutes per side",
+        "Serve with fresh lemon slices"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Quinoa Buddha Bowl",
+      "image": "https://via.placeholder.com/300x200?text=Quinoa+Buddha+Bowl",
+      "category": "Healthy",
+      "cookingTime": 30,
+      "servings": 2,
+      "difficulty": "Easy",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "Quinoa", "amount": "1", "unit": "cup" },
+        { "id": "2", "name": "Sweet potato", "amount": "1", "unit": "large" },
+        { "id": "3", "name": "Chickpeas", "amount": "1", "unit": "can" },
+        { "id": "4", "name": "Avocado", "amount": "1", "unit": "large" }
+      ],
+      "instructions": [
+        "Cook quinoa according to package instructions",
+        "Roast sweet potato cubes at 400°F for 25 minutes",
+        "Drain and rinse chickpeas",
+        "Assemble bowl with quinoa, vegetables, and avocado",
+        "Drizzle with tahini dressing"
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Christmas Turkey",
+      "image": "https://via.placeholder.com/300x200?text=Christmas+Turkey",
+      "category": "Holidays",
+      "cookingTime": 240,
+      "servings": 10,
+      "difficulty": "Hard",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Whole turkey", "amount": "5", "unit": "kg" },
+        { "id": "2", "name": "Butter", "amount": "200", "unit": "g" },
+        { "id": "3", "name": "Fresh herbs", "amount": "1", "unit": "bunch" },
+        { "id": "4", "name": "Orange", "amount": "2", "unit": "large" }
+      ],
+      "instructions": [
+        "Preheat oven to 325°F",
+        "Prepare herb butter with fresh rosemary and thyme",
+        "Stuff turkey cavity with orange and herbs",
+        "Rub herb butter under and over skin",
+        "Roast for 3-4 hours until internal temp reaches 165°F"
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Pumpkin Spice Latte",
+      "image": "https://via.placeholder.com/300x200?text=Pumpkin+Spice+Latte",
+      "category": "Seasonal",
+      "cookingTime": 10,
+      "servings": 2,
+      "difficulty": "Easy",
+      "rating": 4.5,
+      "ingredients": [
+        { "id": "1", "name": "Strong coffee", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Pumpkin puree", "amount": "3", "unit": "tbsp" },
+        { "id": "3", "name": "Milk", "amount": "1", "unit": "cup" },
+        { "id": "4", "name": "Pumpkin pie spice", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Heat milk in a saucepan",
+        "Whisk in pumpkin puree and spices",
+        "Froth the milk mixture",
+        "Pour coffee into mugs",
+        "Top with spiced pumpkin milk foam"
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Avocado Toast",
+      "image": "https://via.placeholder.com/300x200?text=Avocado+Toast",
+      "category": "Popular",
+      "cookingTime": 5,
+      "servings": 2,
+      "difficulty": "Easy",
+      "rating": 4.4,
+      "ingredients": [
+        { "id": "1", "name": "Whole grain bread", "amount": "2", "unit": "slices" },
+        { "id": "2", "name": "Ripe avocado", "amount": "1", "unit": "large" },
+        { "id": "3", "name": "Cherry tomatoes", "amount": "6", "unit": "pieces" },
+        { "id": "4", "name": "Sea salt", "amount": "1", "unit": "pinch" }
+      ],
+      "instructions": [
+        "Toast bread until golden brown",
+        "Mash avocado with fork",
+        "Spread avocado on toast",
+        "Top with halved cherry tomatoes",
+        "Sprinkle with sea salt and black pepper"
+      ]
+    }
+  ]
+}
