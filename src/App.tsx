@@ -23,8 +23,6 @@ function App() {
   const navigationItems = [
     { 
       name: 'POPULAR', 
-      path: '/category/popular', 
-      isActive: location.pathname === '/category/popular',
       dropdownItems: [
         { name: 'Creamy Pasta Delight', id: '1' },
         { name: 'Creamy Fettuccine', id: '7' },
@@ -33,8 +31,6 @@ function App() {
     },
     { 
       name: 'MEAT & SEAFOOD', 
-      path: '/category/meat-seafood', 
-      isActive: location.pathname === '/category/meat-seafood',
       dropdownItems: [
         { name: 'Spicy Grilled Chicken', id: '2' },
         { name: 'Creamy Butter Chicken', id: '9' },
@@ -43,8 +39,6 @@ function App() {
     },
     { 
       name: 'VEGETARIAN', 
-      path: '/category/vegetarian', 
-      isActive: location.pathname === '/category/vegetarian',
       dropdownItems: [
         { name: 'Caesar Salad', id: '5' },
         { name: 'Mediterranean Bowl', id: '8' }
@@ -52,8 +46,6 @@ function App() {
     },
     { 
       name: 'HEALTHY & DIET', 
-      path: '/category/healthy', 
-      isActive: location.pathname === '/category/healthy',
       dropdownItems: [
         { name: 'Greek Salad', id: '10' },
         { name: 'Avocado Toast', id: '15' }
@@ -61,8 +53,6 @@ function App() {
     },
     { 
       name: 'SNACKS', 
-      path: '/category/snacks', 
-      isActive: location.pathname === '/category/snacks',
       dropdownItems: [
         { name: 'Crispy Samosa', id: '101' },
         { name: 'Pani Puri', id: '102' },
@@ -110,16 +100,11 @@ function App() {
             <div className="flex justify-between items-center">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link
-                    to={item.path}
-                    className={`py-4 px-4 text-sm font-medium tracking-wider text-center flex-1 border-b-2 transition-colors block ${
-                      item.isActive
-                        ? 'border-orange-400 text-orange-400'
-                        : 'border-transparent text-white hover:text-orange-400 hover:border-orange-400'
-                    }`}
+                  <div
+                    className="py-4 px-4 text-sm font-medium tracking-wider text-center flex-1 border-b-2 transition-colors cursor-default border-transparent text-white hover:text-orange-400 hover:border-orange-400"
                   >
                     {item.name}
-                  </Link>
+                  </div>
                   
                   {/* Dropdown Menu */}
                   <div className="absolute top-full left-0 w-64 bg-white shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
