@@ -22,8 +22,8 @@ const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
     if (onClick) {
       onClick(recipe);
     } else {
-      // Navigate to variations page showing different recipes of the same category
-      navigate(`/variations/${recipe.category.toLowerCase()}`);
+      // Navigate directly to the recipe detail page
+      navigate(`/recipe/${recipe.id}`);
     }
   };
 

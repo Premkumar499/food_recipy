@@ -346,6 +346,85 @@
         "Top with halved cherry tomatoes",
         "Sprinkle with sea salt and black pepper"
       ]
+    },
+    {
+      "id": "101",
+      "title": "Crispy Samosa",
+      "image": "/images/snack-1.webp",
+      "category": "Snacks",
+      "cookingTime": 45,
+      "servings": 12,
+      "difficulty": "Medium",
+      "rating": 4.6,
+      "ingredients": [
+        { "id": "1", "name": "All-purpose flour", "amount": "2", "unit": "cups" },
+        { "id": "2", "name": "Potatoes", "amount": "4", "unit": "medium" },
+        { "id": "3", "name": "Green peas", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Cumin seeds", "amount": "1", "unit": "tsp" },
+        { "id": "5", "name": "Ginger", "amount": "1", "unit": "tbsp" },
+        { "id": "6", "name": "Green chilies", "amount": "2", "unit": "pieces" },
+        { "id": "7", "name": "Oil for frying", "amount": "2", "unit": "cups" }
+      ],
+      "instructions": [
+        "Make dough with flour, salt, and water. Rest for 30 minutes.",
+        "Boil and mash potatoes. Mix with peas and spices.",
+        "Roll dough into small circles and cut in half.",
+        "Form cone shape and fill with potato mixture.",
+        "Seal edges with water and deep fry until golden brown.",
+        "Serve hot with mint chutney and tamarind sauce."
+      ]
+    },
+    {
+      "id": "102",
+      "title": "Pani Puri",
+      "image": "/images/snack-3.webp",
+      "category": "Snacks",
+      "cookingTime": 30,
+      "servings": 6,
+      "difficulty": "Easy",
+      "rating": 4.8,
+      "ingredients": [
+        { "id": "1", "name": "Puri shells", "amount": "30", "unit": "pieces" },
+        { "id": "2", "name": "Boiled potatoes", "amount": "2", "unit": "medium" },
+        { "id": "3", "name": "Chickpeas", "amount": "1/2", "unit": "cup" },
+        { "id": "4", "name": "Mint leaves", "amount": "1", "unit": "cup" },
+        { "id": "5", "name": "Tamarind paste", "amount": "2", "unit": "tbsp" },
+        { "id": "6", "name": "Chaat masala", "amount": "1", "unit": "tsp" }
+      ],
+      "instructions": [
+        "Prepare mint water by blending mint, cilantro, and spices.",
+        "Boil and dice potatoes into small cubes.",
+        "Make tamarind chutney with tamarind paste and jaggery.",
+        "Carefully crack a hole in each puri.",
+        "Fill with potato, chickpeas, and chutneys.",
+        "Dip in mint water and eat immediately in one bite."
+      ]
+    },
+    {
+      "id": "103",
+      "title": "Pav Bhaji",
+      "image": "/images/snack.jpg",
+      "category": "Snacks",
+      "cookingTime": 40,
+      "servings": 4,
+      "difficulty": "Medium",
+      "rating": 4.7,
+      "ingredients": [
+        { "id": "1", "name": "Mixed vegetables", "amount": "3", "unit": "cups" },
+        { "id": "2", "name": "Pav bread", "amount": "8", "unit": "pieces" },
+        { "id": "3", "name": "Onions", "amount": "2", "unit": "large" },
+        { "id": "4", "name": "Tomatoes", "amount": "3", "unit": "medium" },
+        { "id": "5", "name": "Pav bhaji masala", "amount": "2", "unit": "tbsp" },
+        { "id": "6", "name": "Butter", "amount": "4", "unit": "tbsp" }
+      ],
+      "instructions": [
+        "Boil and mash mixed vegetables (potato, cauliflower, peas).",
+        "Heat butter in a large pan and sauté onions until golden.",
+        "Add tomatoes and cook until soft and mushy.",
+        "Add pav bhaji masala and cook for 2 minutes.",
+        "Add mashed vegetables and cook, mashing continuously.",
+        "Toast pav with butter and serve hot with bhaji and lemon."
+      ]
     }
   ]
 }

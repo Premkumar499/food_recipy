@@ -31,11 +31,6 @@ const RecipeDetailPage = () => {
         setRecipe(data);
       } catch (err) {
         setError('Failed to load recipe');
-        // Fallback to mock data
-        const mockRecipe = mockRecipes.find(r => r.id === id);
-        if (mockRecipe) {
-          setRecipe(mockRecipe);
-        }
       } finally {
         setLoading(false);
       }
@@ -68,7 +63,7 @@ const RecipeDetailPage = () => {
     );
   }
 
-  return <RecipeDetails recipe={recipe} />;
+  return <RecipeDetails recipe={recipe || undefined} />;
 };
 
 // Mock data for development

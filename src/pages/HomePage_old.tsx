@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import RecipeList from '../components/RecipeList';
 import { Recipe } from '../types';
+import { getEnhancedRecipes, searchRecipes } from '../services/recipeApi';
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
@@ -18,27 +19,24 @@ const HomePage = () => {
     }
   }, [searchParams]);
 
-  // Fetch recipes from API
+  // Fetch recipes with API integration
   const fetchRecipes = async (search = '') => {
     setLoading(true);
     setError('');
     
     try {
-      let url = 'http://localhost:3002/recipes';
-      if (search) {
-        url += `?q=${encodeURIComponent(search)}`;
+      let fetchedRecipes: Recipe[];
+      
+      if (search.trim()) {
+        fetchedRecipes = await searchRecipes(search);
+      } else {
+        fetchedRecipes = await getEnhancedRecipes();
       }
       
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Failed to fetch recipes');
-      }
-      
-      const data = await response.json();
-      setRecipes(data);
+      setRecipes(fetchedRecipes);
     } catch (err) {
-      setError('Failed to load recipes');
       console.error('Error fetching recipes:', err);
+      setError('Failed to load recipes. Please try again.');
     } finally {
       setLoading(false);
     }

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import HomePage from './pages/HomePage'
 import RecipeDetailPage from './pages/RecipeDetailPage'
 import CategoryPage from './pages/CategoryPage'
-import RecipeVariationsPage from './pages/RecipeVariationsPage'
+import SearchResultsPage from './pages/SearchResultsPage'
 import './App.css'
 
 function App() {
@@ -15,8 +15,9 @@ function App() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/?search=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
       setShowSearch(false);
+      setSearchQuery('');
     }
   };
 
@@ -25,49 +26,31 @@ function App() {
       name: 'POPULAR', 
       path: '/category/popular', 
       isActive: location.pathname === '/category/popular',
-      dropdownItems: [
-        { name: 'Creamy Pasta Delight', id: '1' },
-        { name: 'Creamy Fettuccine', id: '7' },
-        { name: 'Avocado Toast', id: '15' }
-      ]
+      dropdownItems: ['Paratha', 'Biryani', 'Butter Chicken', 'Masala Dosa', 'Sambara']
     },
     { 
       name: 'MEAT & SEAFOOD', 
       path: '/category/meat-seafood', 
       isActive: location.pathname === '/category/meat-seafood',
-      dropdownItems: [
-        { name: 'Spicy Grilled Chicken', id: '2' },
-        { name: 'Creamy Butter Chicken', id: '9' },
-        { name: 'Fish Tacos', id: '11' }
-      ]
+      dropdownItems: ['Mutton Chops', 'Chicken Soup', 'Fish Fry', 'Fish Biryani', 'Crab Curry']
     },
     { 
       name: 'VEGETARIAN', 
       path: '/category/vegetarian', 
       isActive: location.pathname === '/category/vegetarian',
-      dropdownItems: [
-        { name: 'Caesar Salad', id: '5' },
-        { name: 'Mediterranean Bowl', id: '8' }
-      ]
+      dropdownItems: ['Paneer Butter Masala', 'Aloo Gobi', 'Vegetable Biryani', 'Dal Tadka', 'Rajma Chawal']
     },
     { 
       name: 'HEALTHY & DIET', 
       path: '/category/healthy', 
       isActive: location.pathname === '/category/healthy',
-      dropdownItems: [
-        { name: 'Greek Salad', id: '10' },
-        { name: 'Avocado Toast', id: '15' }
-      ]
+      dropdownItems: ['Quinoa Salad', 'Grilled Chicken', 'Steamed Vegetables', 'Green Smoothie', 'Oats Bowl']
     },
     { 
       name: 'SNACKS', 
       path: '/category/snacks', 
       isActive: location.pathname === '/category/snacks',
-      dropdownItems: [
-        { name: 'Crispy Samosa', id: '101' },
-        { name: 'Pani Puri', id: '102' },
-        { name: 'Pav Bhaji', id: '103' }
-      ]
+      dropdownItems: ['Samosa', 'Pani Puri', 'Pav Bhaji', 'Vada Pav', 'Bhel Puri']
     },
   ];
 
@@ -127,10 +110,10 @@ function App() {
                       {item.dropdownItems.map((dropdownItem, index) => (
                         <Link
                           key={index}
-                          to={`/recipe/${dropdownItem.id}`}
+                          to={`/recipe/${dropdownItem.toLowerCase().replace(/\s+/g, '-')}`}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                         >
-                          {dropdownItem.name}
+                          {dropdownItem}
                         </Link>
                       ))}
                     </div>
@@ -145,8 +128,8 @@ function App() {
       <main className="w-full max-w-full">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
-          <Route path="/variations/:category" element={<RecipeVariationsPage />} />
           <Route path="/recipe/:id" element={<RecipeDetailPage />} />
         </Routes>
       </main>

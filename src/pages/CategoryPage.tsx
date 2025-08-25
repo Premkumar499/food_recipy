@@ -17,8 +17,10 @@ const CategoryPage = () => {
   const getCategoryMapping = (navCategory: string) => {
     const mappings: { [key: string]: string[] } = {
       'popular': ['Popular'],
-      'meat-seafood': ['Meat-Seafood'],
+      'meat-seafood': ['Meat-Seafood', 'Meat & Seafood'],
+      'vegetarian': ['Vegetarian', 'Salad'],
       'healthy': ['Healthy'],
+      'snacks': ['Snacks'],
       'holidays': ['Holidays'],
       'cuisine': ['Italian', 'Indian', 'Mexican', 'Asian'],
       'seasonal': ['Seasonal'],
@@ -38,7 +40,9 @@ const CategoryPage = () => {
     const displayNames: { [key: string]: string } = {
       'popular': 'Popular Recipes',
       'meat-seafood': 'Meat & Seafood',
+      'vegetarian': 'Vegetarian Recipes',
       'healthy': 'Healthy & Diet',
+      'snacks': 'Snacks & Appetizers',
       'holidays': 'Holiday Recipes',
       'cuisine': 'Cuisine Varieties',
       'seasonal': 'Seasonal Recipes'
