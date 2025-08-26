@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import RecipeList from '../components/RecipeList';
+import ScrollReveal from '../components/animations/ScrollReveal';
+import AnimatedText from '../components/animations/AnimatedText';
+import FloatingFoodParticles from '../components/animations/FloatingFoodParticles';
+import CookingUtensilsAnimation from '../components/animations/CookingUtensilsAnimation';
+import CookingSteamEffect from '../components/animations/CookingSteamEffect';
 import { Recipe } from '../types';
 
 const HomePage = () => {
@@ -73,33 +79,157 @@ const HomePage = () => {
   }, [searchTerm]);
 
   return (
-    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 w-full overflow-x-hidden relative">
+      {/* Background Animations */}
+      <FloatingFoodParticles />
+      <CookingUtensilsAnimation />
+      <CookingSteamEffect />
+      
       {/* Hero Section - Full Screen */}
-      <div className="relative bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 text-white w-full h-screen">
+      <motion.div 
+        className="relative bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 text-white w-full h-screen overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      >
+        {/* Animated background pattern */}
+        <motion.div 
+          className="absolute inset-0 opacity-10"
+          animate={{
+            backgroundPosition: ['0% 0%', '100% 100%'],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: 'reverse',
+          }}
+          style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-8.837 7.163-16 16-16s16 7.163 16 16-7.163 16-16 16-16-7.163-16-16zM0 20c0-8.837 7.163-16 16-16s16 7.163 16 16-7.163 16-16 16S0 28.837 0 20z"/%3E%3C/g%3E%3C/svg%3E")',
+            backgroundSize: '40px 40px',
+          }}
+        />
+        
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <motion.div 
+          className="absolute inset-0 bg-black/20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        />
         
         {/* Content - Centered in full screen */}
         <div className="relative max-w-full px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center z-10">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Discover Amazing Recipes
-            </h1>
-            <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
-              Find the perfect recipe for any occasion
-            </p>
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ 
+                duration: 1.2, 
+                ease: [0.25, 0.46, 0.45, 0.94] as const,
+                delay: 0.3 
+              }}
+            >
+              <AnimatedText
+                text="Discover Amazing Recipes"
+                className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+                gradient={false}
+                delay={0.8}
+              />
+            </motion.div>
+            
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.5, duration: 0.8 }}
+            >
+              <AnimatedText
+                text="Find the perfect recipe for any occasion"
+                className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed"
+                delay={1.8}
+              />
+            </motion.div>
+
+            {/* Floating action button */}
+            <motion.button
+              className="mt-8 px-8 py-4 bg-white text-red-500 rounded-full font-bold text-lg shadow-2xl"
+              whileHover={{ 
+                scale: 1.1, 
+                boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+                y: -5
+              }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 2.2, duration: 0.8 }}
+              onClick={() => {
+                const recipesSection = document.getElementById('recipes-section');
+                recipesSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <motion.span
+                animate={{ 
+                  color: ['#ef4444', '#f97316', '#ef4444']
+                }}
+                transition={{ 
+                  duration: 3, 
+                  repeat: Infinity 
+                }}
+              >
+                🍳 Start Cooking 🍽️
+              </motion.span>
+            </motion.button>
           </div>
         </div>
-      </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <motion.div
+            className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+            whileHover={{ scale: 1.2 }}
+          >
+            <motion.div
+              className="w-1 h-3 bg-white rounded-full mt-2"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
       {/* Main Content - Fixed 8 Recipe Grid */}
-      <div className="w-full max-w-full">
-        <RecipeList 
-          recipes={recipes} 
-          loading={loading} 
-          error={error} 
-          onRetry={() => fetchRecipes(searchTerm, 0)}
-        />
+      <div id="recipes-section" className="w-full max-w-full relative">
+        <ScrollReveal direction="up" delay={0.2}>
+          <div className="py-16 px-4 sm:px-6 lg:px-8">
+            <AnimatedText
+              text="Featured Recipes"
+              className="text-4xl md:text-5xl font-bold text-center mb-4"
+              gradient={true}
+              delay={0.3}
+            />
+            <motion.p
+              className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              Handpicked delicious recipes just for you
+            </motion.p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay={0.4}>
+          <RecipeList 
+            recipes={recipes} 
+            loading={loading} 
+            error={error} 
+            onRetry={() => fetchRecipes(searchTerm, 0)}
+          />
+        </ScrollReveal>
       </div>
     </div>
   );
