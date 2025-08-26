@@ -85,6 +85,9 @@ export const categorizedRecipes = {
     "Potato Bonda"
   ],
   "Snacks": [
+    "Crispy Samosa",
+    "Pani Puri",
+    "Pav Bhaji",
     "Murukku",
     "Thattai",
     "Seedai (Uppu Seedai & Vella Seedai)",

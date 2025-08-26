@@ -33,6 +33,7 @@ export interface RecipeListProps {
   recipes: Recipe[];
   loading?: boolean;
   error?: string;
+  onRetry?: () => void;
 }
 
 export interface PaginationProps {

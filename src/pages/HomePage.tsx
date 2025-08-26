@@ -53,15 +53,29 @@ const HomePage = () => {
         url += `?q=${encodeURIComponent(search)}`;
       }
       
-      const response = await fetch(url);
+      console.log('Fetching from URL:', url); // Debug log
+      
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        cache: 'no-cache' // Prevent caching issues
+      });
+      
+      console.log('Response status:', response.status); // Debug log
+      
       if (!response.ok) {
-        throw new Error('Failed to fetch recipes');
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
       
       const data = await response.json();
+      console.log('Received data:', data.length, 'recipes'); // Debug log
       setRecipes(data);
     } catch (err) {
-      setError('Failed to load recipes');
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+      setError(`Failed to load recipes: ${errorMessage}`);
       console.error('Error fetching recipes:', err);
     } finally {
       setLoading(false);
@@ -102,7 +116,12 @@ const HomePage = () => {
 
       {/* Main Content - Fixed 8 Recipe Grid */}
       <div className="w-full max-w-full">
-        <RecipeList recipes={recipes} loading={loading} error={error} />
+        <RecipeList 
+          recipes={recipes} 
+          loading={loading} 
+          error={error} 
+          onRetry={() => fetchRecipes(searchTerm)}
+        />
       </div>
     </div>
   );
