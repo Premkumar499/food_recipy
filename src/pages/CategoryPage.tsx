@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import RecipeList from '../components/RecipeList';
 import Pagination from '../components/Pagination';
 import { Recipe } from '../types';
 
 const CategoryPage = () => {
   const { category } = useParams<{ category: string }>();
+  const navigate = useNavigate();
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>('');
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const recipesPerPage = 8;
+
+  const handleGoBack = () => {
+    navigate(-1); // Go back to previous page in browser history
+  };
 
   // Map navigation categories to database categories
   const getCategoryMapping = (navCategory: string) => {
@@ -115,6 +120,19 @@ const CategoryPage = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Back Button */}
+      <div className="mb-4">
+        <button
+          onClick={handleGoBack}
+          className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+        >
+          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back
+        </button>
+      </div>
+      
       {/* Header Section */}
       <div className="mb-8">
         <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-4">

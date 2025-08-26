@@ -75,19 +75,18 @@ const RecipeDetails = ({ recipe }: RecipeDetailsProps) => {
             {/* Ingredients */}
             <div>
               <h2 className="text-2xl font-semibold mb-4">Ingredients</h2>
-              <ul className="space-y-2">
-                {recipe.ingredients.map((ingredient) => (
-                  <li key={ingredient.id} className="flex items-center">
-                    <input 
-                      type="checkbox" 
-                      className="mr-3 h-4 w-4 text-blue-500 rounded border-gray-300"
-                    />
-                    <span className="text-gray-700">
+              <ol className="space-y-3">
+                {recipe.ingredients.map((ingredient, index) => (
+                  <li key={ingredient.id} className="flex">
+                    <span className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-1">
+                      {index + 1}
+                    </span>
+                    <span className="text-gray-700 leading-relaxed">
                       {ingredient.amount} {ingredient.unit} {ingredient.name}
                     </span>
                   </li>
                 ))}
-              </ul>
+              </ol>
             </div>
 
             {/* Instructions */}

@@ -10,6 +10,30 @@ const HomePage = () => {
   const [error, setError] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Function to scroll to search bar and focus it
+  const handleExploreClick = () => {
+    // Scroll to top where the search bar is located
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
+    // Focus on the search input after a short delay
+    setTimeout(() => {
+      const searchInput = document.querySelector('input[placeholder*="Search for recipes"]') as HTMLInputElement;
+      if (searchInput) {
+        searchInput.focus();
+        searchInput.click(); // Also trigger click to show any dropdowns
+        
+        // Add a temporary visual indicator
+        searchInput.style.animation = 'pulse 1s ease-in-out 3';
+        setTimeout(() => {
+          searchInput.style.animation = '';
+        }, 3000);
+      }
+    }, 500); // Wait for scroll to complete
+  };
+
   // Get search query from URL parameters
   useEffect(() => {
     const searchQuery = searchParams.get('search');
@@ -65,9 +89,12 @@ const HomePage = () => {
               Find the perfect recipe for any occasion
             </p>
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-1">
-              <div className="bg-white/20 rounded-lg px-8 py-3 backdrop-blur-sm">
+              <button 
+                onClick={handleExploreClick}
+                className="bg-white/20 rounded-lg px-8 py-3 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 cursor-pointer active:scale-95"
+              >
                 <span className="text-lg font-medium">Explore thousands of delicious recipes</span>
-              </div>
+              </button>
             </div>
           </div>
         </div>

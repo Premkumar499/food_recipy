@@ -1,13 +1,18 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import RecipeDetails from '../components/RecipeDetails';
 import { Recipe } from '../types';
 
 const RecipeDetailPage = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
+
+  const handleGoBack = () => {
+    navigate(-1); // Go back to previous page in browser history
+  };
 
   useEffect(() => {
     const fetchRecipe = async () => {
@@ -41,29 +46,76 @@ const RecipeDetailPage = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-96">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+      <div className="max-w-4xl mx-auto p-6">
+        {/* Back Button */}
+        <div className="mb-4">
+          <button
+            onClick={handleGoBack}
+            className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          >
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Back
+          </button>
+        </div>
+        
+        <div className="flex justify-center items-center min-h-96">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+        </div>
       </div>
     );
   }
 
   if (error && !recipe) {
     return (
-      <div className="text-center py-8">
-        <div className="text-red-500 text-lg font-medium mb-2">
-          {error}
+      <div className="max-w-4xl mx-auto p-6">
+        {/* Back Button */}
+        <div className="mb-4">
+          <button
+            onClick={handleGoBack}
+            className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          >
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Back
+          </button>
         </div>
-        <button 
-          onClick={() => window.location.reload()} 
-          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
-        >
-          Try Again
-        </button>
+        
+        <div className="text-center py-8">
+          <div className="text-red-500 text-lg font-medium mb-2">
+            {error}
+          </div>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+          >
+            Try Again
+          </button>
+        </div>
       </div>
     );
   }
 
-  return <RecipeDetails recipe={recipe || undefined} />;
+  return (
+    <div className="max-w-4xl mx-auto p-6">
+      {/* Back Button */}
+      <div className="mb-4">
+        <button
+          onClick={handleGoBack}
+          className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+        >
+          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back
+        </button>
+      </div>
+      
+      <RecipeDetails recipe={recipe || undefined} />
+    </div>
+  );
 };
 
 // Mock data for development
