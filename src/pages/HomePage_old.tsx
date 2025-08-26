@@ -268,3 +268,4 @@ const mockRecipes: Recipe[] = [
 ];
 
 export default HomePage;
+

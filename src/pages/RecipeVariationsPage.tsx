@@ -252,7 +252,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '1',
     title: 'Classic Spaghetti Carbonara',
-    image: 'https://via.placeholder.com/400x300?text=Spaghetti+Carbonara',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Italian',
     cookingTime: 30,
     servings: 4,
@@ -275,7 +275,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '7',
     title: 'Fettuccine Alfredo',
-    image: 'https://via.placeholder.com/400x300?text=Fettuccine+Alfredo',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Italian',
     cookingTime: 25,
     servings: 4,
@@ -298,7 +298,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '8',
     title: 'Margherita Pizza',
-    image: 'https://via.placeholder.com/400x300?text=Margherita+Pizza',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Italian',
     cookingTime: 40,
     servings: 2,
@@ -322,7 +322,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '2',
     title: 'Chicken Tikka Masala',
-    image: 'https://via.placeholder.com/400x300?text=Chicken+Tikka+Masala',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Indian',
     cookingTime: 45,
     servings: 6,
@@ -345,7 +345,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '9',
     title: 'Butter Chicken',
-    image: 'https://via.placeholder.com/400x300?text=Butter+Chicken',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Indian',
     cookingTime: 50,
     servings: 4,
@@ -368,7 +368,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '10',
     title: 'Biryani',
-    image: 'https://via.placeholder.com/400x300?text=Biryani',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Indian',
     cookingTime: 90,
     servings: 6,
@@ -392,3 +392,4 @@ const mockRecipes: Recipe[] = [
 ];
 
 export default RecipeVariationsPage;
+

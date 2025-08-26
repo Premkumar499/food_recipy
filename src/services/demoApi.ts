@@ -36,7 +36,7 @@ const DEMO_RECIPES_DB: { [key: string]: RecipeDetails[] } = {
     {
       id: "pizza-1",
       title: "Classic Margherita Pizza",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop",
+      image: " $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ",
       readyInMinutes: 25,
       servings: 4,
       dishTypes: ["italian", "main course"],
@@ -64,7 +64,7 @@ const DEMO_RECIPES_DB: { [key: string]: RecipeDetails[] } = {
     {
       id: "burger-1",
       title: "Classic Beef Burger",
-      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop",
+      image: " $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ",
       readyInMinutes: 20,
       servings: 4,
       dishTypes: ["american", "main course"],
@@ -93,7 +93,7 @@ const DEMO_RECIPES_DB: { [key: string]: RecipeDetails[] } = {
     {
       id: "pasta-1",
       title: "Spaghetti Carbonara",
-      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop",
+      image: " $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ",
       readyInMinutes: 20,
       servings: 4,
       dishTypes: ["italian", "main course"],
@@ -178,3 +178,4 @@ export const demoGetRecipeDetails = async (recipeId: string): Promise<RecipeDeta
   
   return null;
 };
+

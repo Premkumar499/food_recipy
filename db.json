@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "Creamy Pasta Delight",
-      "image": "https://spoonacular.com/recipeImages/715538-556x370.jpg",
+      "image": "food interface/1.jpg",
       "category": "Popular",
       "cookingTime": 30,
       "servings": 4,
@@ -31,7 +31,7 @@
     {
       "id": "7",
       "title": "Creamy Fettuccine",
-      "image": "https://spoonacular.com/recipeImages/715538-556x370.jpg",
+      "image": "food interface/2.jpg",
       "category": "Popular",
       "cookingTime": 25,
       "servings": 4,
@@ -54,7 +54,7 @@
     {
       "id": "2",
       "title": "Spicy Grilled Chicken",
-      "image": "https://spoonacular.com/recipeImages/715497-556x370.jpg",
+      "image": "food interface/3.jpeg",
       "category": "Meat & Seafood",
       "cookingTime": 45,
       "servings": 6,
@@ -84,7 +84,7 @@
     {
       "id": "9",
       "title": "Creamy Butter Chicken",
-      "image": "https://spoonacular.com/recipeImages/795751-556x370.jpg",
+      "image": "food interface/4.JPEG",
       "category": "Meat & Seafood",
       "cookingTime": 50,
       "servings": 4,
@@ -107,7 +107,7 @@
     {
       "id": "10",
       "title": "Spiced Rice Bowl",
-      "image": "https://foodish-api.com/images/biryani/biryani2.jpg",
+      "image": "food interface/5.jpeg",
       "category": "Popular",
       "cookingTime": 90,
       "servings": 6,
@@ -131,7 +131,7 @@
     {
       "id": "3",
       "title": "Caesar Salad",
-      "image": "https://foodish-api.com/images/pizza/pizza1.jpg",
+      "image": "food interface/6.jpeg",
       "category": "Salad",
       "cookingTime": 15,
       "servings": 4,
@@ -154,7 +154,7 @@
     {
       "id": "4",
       "title": "Beef Tacos",
-      "image": "https://spoonacular.com/recipeImages/715769-556x370.jpg",
+      "image": "food interface/7.jpeg",
       "category": "Mexican",
       "cookingTime": 25,
       "servings": 4,
@@ -180,7 +180,7 @@
     {
       "id": "5",
       "title": "Chocolate Chip Cookies",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "food interface/8.webp",
       "category": "Dessert",
       "cookingTime": 25,
       "servings": 24,
@@ -208,7 +208,7 @@
     {
       "id": "6",
       "title": "Greek Salad",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Mediterranean",
       "cookingTime": 10,
       "servings": 4,
@@ -235,7 +235,7 @@
     {
       "id": "11",
       "title": "Grilled Salmon",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Meat-Seafood",
       "cookingTime": 20,
       "servings": 4,
@@ -258,7 +258,7 @@
     {
       "id": "12",
       "title": "Quinoa Buddha Bowl",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Healthy",
       "cookingTime": 30,
       "servings": 2,
@@ -281,7 +281,7 @@
     {
       "id": "13",
       "title": "Christmas Turkey",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Holidays",
       "cookingTime": 240,
       "servings": 10,
@@ -304,7 +304,7 @@
     {
       "id": "14",
       "title": "Pumpkin Spice Latte",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Seasonal",
       "cookingTime": 10,
       "servings": 2,
@@ -327,7 +327,7 @@
     {
       "id": "15",
       "title": "Avocado Toast",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Popular",
       "cookingTime": 5,
       "servings": 2,
@@ -350,7 +350,7 @@
     {
       "id": "201",
       "title": "Sambar",
-      "image": "https://www.theindianfoodapi.com/images/sambar.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 45,
       "servings": 4,
@@ -379,7 +379,7 @@
     {
       "id": "202",
       "title": "Rasam",
-      "image": "https://www.theindianfoodapi.com/images/rasam.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Tamil Cuisine",
       "cookingTime": 30,
       "servings": 4,
@@ -408,7 +408,7 @@
     {
       "id": "203",
       "title": "Curd Rice (Thayir Sadam)",
-      "image": "https://www.theindianfoodapi.com/images/curd-rice.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Tamil Cuisine",
       "cookingTime": 20,
       "servings": 4,
@@ -437,7 +437,7 @@
     {
       "id": "204",
       "title": "Lemon Rice",
-      "image": "https://www.theindianfoodapi.com/images/lemon-rice.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Tamil Cuisine",
       "cookingTime": 25,
       "servings": 4,
@@ -466,7 +466,7 @@
     {
       "id": "205",
       "title": "Idli",
-      "image": "https://www.theindianfoodapi.com/images/idli.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 480,
       "servings": 6,
@@ -492,7 +492,7 @@
     {
       "id": "206",
       "title": "Dosa",
-      "image": "https://www.theindianfoodapi.com/images/dosa.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Tamil Cuisine",
       "cookingTime": 30,
       "servings": 4,
@@ -516,7 +516,7 @@
     {
       "id": "207",
       "title": "Chicken Chettinad",
-      "image": "https://www.theindianfoodapi.com/images/chicken-chettinad.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 60,
       "servings": 4,
@@ -546,7 +546,7 @@
     {
       "id": "208",
       "title": "Murukku",
-      "image": "https://www.theindianfoodapi.com/images/murukku.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 45,
       "servings": 6,
@@ -576,7 +576,7 @@
     {
       "id": "209",
       "title": "Mysore Pak",
-      "image": "https://www.theindianfoodapi.com/images/mysore-pak.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 30,
       "servings": 8,
@@ -603,7 +603,7 @@
     {
       "id": "210",
       "title": "Filter Coffee",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Tamil Cuisine",
       "cookingTime": 15,
       "servings": 2,
@@ -628,7 +628,7 @@
     {
       "id": "211",
       "title": "Vada (Medu Vada)",
-      "image": "https://www.theindianfoodapi.com/images/medu-vada.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Tamil Cuisine",
       "cookingTime": 45,
       "servings": 6,
@@ -657,7 +657,7 @@
     {
       "id": "212",
       "title": "Vegetable Biryani",
-      "image": "https://www.theindianfoodapi.com/images/vegetable-biryani.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Tamil Cuisine",
       "cookingTime": 90,
       "servings": 6,
@@ -687,7 +687,7 @@
     {
       "id": "213",
       "title": "Tamarind Rice (Puli Sadam)",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 35,
       "servings": 4,
@@ -717,7 +717,7 @@
     {
       "id": "214",
       "title": "Coconut Rice",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Tamil Cuisine",
       "cookingTime": 25,
       "servings": 4,
@@ -747,7 +747,7 @@
     {
       "id": "215",
       "title": "Pongal (Ven Pongal)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 40,
       "servings": 4,
@@ -777,7 +777,7 @@
     {
       "id": "216",
       "title": "Beans Poriyal",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 20,
       "servings": 4,
@@ -807,7 +807,7 @@
     {
       "id": "217",
       "title": "Jigarthanda",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Tamil Cuisine",
       "cookingTime": 20,
       "servings": 2,
@@ -836,7 +836,7 @@
     {
       "id": "301",
       "title": "Lemon Rice",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Staple Rice",
       "cookingTime": 20,
       "servings": 4,
@@ -866,7 +866,7 @@
     {
       "id": "302",
       "title": "Tamarind Rice (Puli Sadam)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Staple Rice",
       "cookingTime": 30,
       "servings": 4,
@@ -898,7 +898,7 @@
     {
       "id": "303",
       "title": "Coconut Rice",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Staple Rice",
       "cookingTime": 25,
       "servings": 4,
@@ -929,7 +929,7 @@
     {
       "id": "304",
       "title": "Tomato Rice",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Staple Rice",
       "cookingTime": 30,
       "servings": 4,
@@ -960,7 +960,7 @@
     {
       "id": "305",
       "title": "Vegetable Biryani",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Staple Rice",
       "cookingTime": 60,
       "servings": 6,
@@ -991,7 +991,7 @@
     {
       "id": "306",
       "title": "Chicken Biryani",
-      "image": "https://www.theindianfoodapi.com/images/chicken-biryani.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Staple Rice",
       "cookingTime": 90,
       "servings": 6,
@@ -1023,7 +1023,7 @@
     {
       "id": "307",
       "title": "Mutton Biryani",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Staple Rice",
       "cookingTime": 120,
       "servings": 6,
@@ -1054,7 +1054,7 @@
     {
       "id": "308",
       "title": "Fish Biryani",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Staple Rice",
       "cookingTime": 60,
       "servings": 4,
@@ -1084,7 +1084,7 @@
     {
       "id": "309",
       "title": "Curd Semiya",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Staple Rice",
       "cookingTime": 20,
       "servings": 4,
@@ -1114,7 +1114,7 @@
     {
       "id": "310",
       "title": "Pongal (Ven Pongal)",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Staple Rice",
       "cookingTime": 40,
       "servings": 4,
@@ -1144,7 +1144,7 @@
     {
       "id": "311",
       "title": "Vada (Medu Vada)",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Breakfast",
       "cookingTime": 45,
       "servings": 4,
@@ -1173,7 +1173,7 @@
     {
       "id": "312",
       "title": "Masala Dosa",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Breakfast",
       "cookingTime": 30,
       "servings": 4,
@@ -1203,7 +1203,7 @@
     {
       "id": "313",
       "title": "Rava Dosa",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Breakfast",
       "cookingTime": 20,
       "servings": 4,
@@ -1233,7 +1233,7 @@
     {
       "id": "314",
       "title": "Onion Uthappam",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 4,
@@ -1262,7 +1262,7 @@
     {
       "id": "315",
       "title": "Kal Dosa",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Breakfast",
       "cookingTime": 20,
       "servings": 4,
@@ -1289,7 +1289,7 @@
     {
       "id": "316",
       "title": "Kari Dosa (Madurai special)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 4,
@@ -1316,7 +1316,7 @@
     {
       "id": "317",
       "title": "Appam",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Breakfast",
       "cookingTime": 30,
       "servings": 6,
@@ -1344,7 +1344,7 @@
     {
       "id": "318",
       "title": "Idiappam (String Hoppers)",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Breakfast",
       "cookingTime": 40,
       "servings": 4,
@@ -1371,7 +1371,7 @@
     {
       "id": "319",
       "title": "Puttu (Rice Puttu)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Breakfast",
       "cookingTime": 30,
       "servings": 4,
@@ -1397,7 +1397,7 @@
     {
       "id": "320",
       "title": "Adai (Lentil Crepe)",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Breakfast",
       "cookingTime": 45,
       "servings": 4,
@@ -1427,7 +1427,7 @@
     {
       "id": "321",
       "title": "Mutton Kuzhambu",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Curries",
       "cookingTime": 90,
       "servings": 4,
@@ -1457,7 +1457,7 @@
     {
       "id": "322",
       "title": "Nandu Kuzhambu (Crab Curry)",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Curries",
       "cookingTime": 45,
       "servings": 4,
@@ -1487,7 +1487,7 @@
     {
       "id": "323",
       "title": "Meen Kuzhambu (Fish Curry)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Curries",
       "cookingTime": 35,
       "servings": 4,
@@ -1517,7 +1517,7 @@
     {
       "id": "324",
       "title": "Kozhi Milagu Kuzhambu (Pepper Chicken Curry)",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Curries",
       "cookingTime": 50,
       "servings": 4,
@@ -1547,7 +1547,7 @@
     {
       "id": "325",
       "title": "Vatha Kuzhambu",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Curries",
       "cookingTime": 40,
       "servings": 4,
@@ -1577,7 +1577,7 @@
     {
       "id": "326",
       "title": "Kara Kuzhambu",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Curries",
       "cookingTime": 35,
       "servings": 4,
@@ -1607,7 +1607,7 @@
     {
       "id": "327",
       "title": "Puli Kuzhambu",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Curries",
       "cookingTime": 30,
       "servings": 4,
@@ -1637,7 +1637,7 @@
     {
       "id": "328",
       "title": "Mor Kuzhambu (Curd Curry)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Curries",
       "cookingTime": 25,
       "servings": 4,
@@ -1667,7 +1667,7 @@
     {
       "id": "329",
       "title": "Kadalai Kuzhambu (Chickpea Curry)",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Curries",
       "cookingTime": 45,
       "servings": 4,
@@ -1697,7 +1697,7 @@
     {
       "id": "330",
       "title": "Kuzhi Paniyaram",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 4,
@@ -1726,7 +1726,7 @@
     {
       "id": "331",
       "title": "Upma (Rava Upma)",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Breakfast",
       "cookingTime": 20,
       "servings": 4,
@@ -1756,7 +1756,7 @@
     {
       "id": "332",
       "title": "Thattai",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Snacks",
       "cookingTime": 45,
       "servings": 6,
@@ -1786,7 +1786,7 @@
     {
       "id": "333",
       "title": "Seedai (Uppu Seedai & Vella Seedai)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Snacks",
       "cookingTime": 60,
       "servings": 8,
@@ -1816,7 +1816,7 @@
     {
       "id": "334",
       "title": "Mixture",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Snacks",
       "cookingTime": 40,
       "servings": 6,
@@ -1846,7 +1846,7 @@
     {
       "id": "335",
       "title": "Mysore Pak",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Sweets",
       "cookingTime": 30,
       "servings": 6,
@@ -1872,7 +1872,7 @@
     {
       "id": "336",
       "title": "Jangiri",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 4,
@@ -1900,7 +1900,7 @@
     {
       "id": "337",
       "title": "Paal Payasam",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Sweets",
       "cookingTime": 60,
       "servings": 6,
@@ -1929,7 +1929,7 @@
     {
       "id": "338",
       "title": "Semiya Payasam",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Sweets",
       "cookingTime": 30,
       "servings": 4,
@@ -1958,7 +1958,7 @@
     {
       "id": "339",
       "title": "Rava Kesari",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Sweets",
       "cookingTime": 25,
       "servings": 4,
@@ -1988,7 +1988,7 @@
     {
       "id": "340",
       "title": "Sweet Pongal (Sakkarai Pongal)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Staple Rice",
       "cookingTime": 45,
       "servings": 6,
@@ -2018,7 +2018,7 @@
     {
       "id": "341",
       "title": "Arisi Upma",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Staple Rice",
       "cookingTime": 25,
       "servings": 4,
@@ -2048,7 +2048,7 @@
     {
       "id": "342",
       "title": "Kuthiraivali Upma (Barnyard Millet)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Staple Rice",
       "cookingTime": 30,
       "servings": 4,
@@ -2078,7 +2078,7 @@
     {
       "id": "343",
       "title": "Varagu Upma (Kodo Millet)",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Staple Rice",
       "cookingTime": 35,
       "servings": 4,
@@ -2108,7 +2108,7 @@
     {
       "id": "344",
       "title": "Thinai Pongal (Foxtail Millet Pongal)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Staple Rice",
       "cookingTime": 40,
       "servings": 4,
@@ -2138,7 +2138,7 @@
     {
       "id": "345",
       "title": "Bisibele Bath",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Staple Rice",
       "cookingTime": 50,
       "servings": 6,
@@ -2168,7 +2168,7 @@
     {
       "id": "346",
       "title": "Rava Kichadi",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 4,
@@ -2198,7 +2198,7 @@
     {
       "id": "347",
       "title": "Poori with Potato Masala",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Breakfast",
       "cookingTime": 45,
       "servings": 4,
@@ -2228,7 +2228,7 @@
     {
       "id": "348",
       "title": "Chapati with Kurma",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Breakfast",
       "cookingTime": 40,
       "servings": 4,
@@ -2258,7 +2258,7 @@
     {
       "id": "349",
       "title": "Parotta (Tamil style)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Breakfast",
       "cookingTime": 60,
       "servings": 4,
@@ -2285,7 +2285,7 @@
     {
       "id": "350",
       "title": "Kothu Parotta",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Breakfast",
       "cookingTime": 30,
       "servings": 4,
@@ -2315,7 +2315,7 @@
     {
       "id": "351",
       "title": "Mutta Parotta (Egg Parotta)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 2,
@@ -2345,7 +2345,7 @@
     {
       "id": "352",
       "title": "Vazhaipoo Vadai (Banana Flower Vada)",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Snacks",
       "cookingTime": 60,
       "servings": 4,
@@ -2375,7 +2375,7 @@
     {
       "id": "353",
       "title": "Vazhaikkai Varuval (Raw Banana Fry)",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Vegetable Side Dishes",
       "cookingTime": 25,
       "servings": 4,
@@ -2405,7 +2405,7 @@
     {
       "id": "354",
       "title": "Kathirikai Varuval (Brinjal Fry)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 30,
       "servings": 4,
@@ -2435,7 +2435,7 @@
     {
       "id": "355",
       "title": "Vendakkai Poriyal (Ladies Finger Fry)",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 20,
       "servings": 4,
@@ -2465,7 +2465,7 @@
     {
       "id": "356",
       "title": "Keerai Kootu (Spinach Kootu)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 30,
       "servings": 4,
@@ -2495,7 +2495,7 @@
     {
       "id": "357",
       "title": "Pakoda",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Snacks",
       "cookingTime": 30,
       "servings": 4,
@@ -2525,7 +2525,7 @@
     {
       "id": "358",
       "title": "Onion Bajji",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Snacks",
       "cookingTime": 25,
       "servings": 4,
@@ -2555,7 +2555,7 @@
     {
       "id": "359",
       "title": "Milagai Bajji (Chili Bajji)",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Snacks",
       "cookingTime": 20,
       "servings": 4,
@@ -2585,7 +2585,7 @@
     {
       "id": "360",
       "title": "Vazhakkai Bajji (Banana Bajji)",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Snacks",
       "cookingTime": 25,
       "servings": 4,
@@ -2615,7 +2615,7 @@
     {
       "id": "361",
       "title": "Sundal (Navaratri special)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Snacks",
       "cookingTime": 20,
       "servings": 4,
@@ -2645,7 +2645,7 @@
     {
       "id": "362",
       "title": "Masala Vadai",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Snacks",
       "cookingTime": 45,
       "servings": 4,
@@ -2675,7 +2675,7 @@
     {
       "id": "363",
       "title": "Paruppu Vadai",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Snacks",
       "cookingTime": 40,
       "servings": 4,
@@ -2705,7 +2705,7 @@
     {
       "id": "364",
       "title": "Samosa (Tamil style)",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Snacks",
       "cookingTime": 60,
       "servings": 6,
@@ -2735,7 +2735,7 @@
     {
       "id": "365",
       "title": "Kaara Sev",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Snacks",
       "cookingTime": 45,
       "servings": 6,
@@ -2765,7 +2765,7 @@
     {
       "id": "366",
       "title": "Gulab Jamun",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 6,
@@ -2794,7 +2794,7 @@
     {
       "id": "367",
       "title": "Rasagulla",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Sweets",
       "cookingTime": 60,
       "servings": 6,
@@ -2821,7 +2821,7 @@
     {
       "id": "368",
       "title": "Aval Payasam",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Sweets",
       "cookingTime": 30,
       "servings": 4,
@@ -2851,7 +2851,7 @@
     {
       "id": "369",
       "title": "Kasi Halwa (Poosanikai Halwa)",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Sweets",
       "cookingTime": 60,
       "servings": 6,
@@ -2880,7 +2880,7 @@
     {
       "id": "370",
       "title": "Ashoka Halwa (Thiruvaiyaru special)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 6,
@@ -2909,7 +2909,7 @@
     {
       "id": "371",
       "title": "Karupatti Halwa (Palm Jaggery Halwa)",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Sweets",
       "cookingTime": 40,
       "servings": 4,
@@ -2937,7 +2937,7 @@
     {
       "id": "372",
       "title": "Adhirasam",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Sweets",
       "cookingTime": 120,
       "servings": 8,
@@ -2964,7 +2964,7 @@
     {
       "id": "373",
       "title": "Nei Appam",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Sweets",
       "cookingTime": 30,
       "servings": 6,
@@ -2992,7 +2992,7 @@
     {
       "id": "374",
       "title": "Poli (Paruppu Poli)",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Sweets",
       "cookingTime": 60,
       "servings": 6,
@@ -3021,7 +3021,7 @@
     {
       "id": "375",
       "title": "Coconut Poli",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 4,
@@ -3049,7 +3049,7 @@
     {
       "id": "376",
       "title": "Boondi Laddu",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 6,
@@ -3079,7 +3079,7 @@
     {
       "id": "377",
       "title": "Ellu Urundai (Sesame Balls)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Sweets",
       "cookingTime": 25,
       "servings": 4,
@@ -3105,7 +3105,7 @@
     {
       "id": "378",
       "title": "Pori Urundai",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Sweets",
       "cookingTime": 20,
       "servings": 4,
@@ -3131,7 +3131,7 @@
     {
       "id": "379",
       "title": "Kadalai Urundai (Peanut Balls)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Sweets",
       "cookingTime": 30,
       "servings": 4,
@@ -3157,7 +3157,7 @@
     {
       "id": "380",
       "title": "Coconut Burfi",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Sweets",
       "cookingTime": 30,
       "servings": 6,
@@ -3185,7 +3185,7 @@
     {
       "id": "381",
       "title": "Milk Kova",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 4,
@@ -3211,7 +3211,7 @@
     {
       "id": "382",
       "title": "Paruthi Paal (Cotton Seed Milk)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Street Foods",
       "cookingTime": 20,
       "servings": 2,
@@ -3238,7 +3238,7 @@
     {
       "id": "383",
       "title": "Sukku Coffee (Dry Ginger Coffee)",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Street Foods",
       "cookingTime": 15,
       "servings": 2,
@@ -3265,7 +3265,7 @@
     {
       "id": "384",
       "title": "Panakam (Jaggery Drink)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Street Foods",
       "cookingTime": 10,
       "servings": 4,
@@ -3293,7 +3293,7 @@
     {
       "id": "385",
       "title": "Kara Boondi",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Snacks",
       "cookingTime": 30,
       "servings": 4,
@@ -3323,7 +3323,7 @@
     {
       "id": "386",
       "title": "Paniyaram (Sweet/Spicy)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Snacks",
       "cookingTime": 25,
       "servings": 4,
@@ -3352,7 +3352,7 @@
     {
       "id": "387",
       "title": "Cabbage Poriyal",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 20,
       "servings": 4,
@@ -3382,7 +3382,7 @@
     {
       "id": "388",
       "title": "Carrot Poriyal",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 18,
       "servings": 4,
@@ -3412,7 +3412,7 @@
     {
       "id": "389",
       "title": "Potato Poriyal",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Vegetable Side Dishes",
       "cookingTime": 25,
       "servings": 4,
@@ -3442,7 +3442,7 @@
     {
       "id": "390",
       "title": "Drumstick Poriyal",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 30,
       "servings": 4,
@@ -3472,7 +3472,7 @@
     {
       "id": "391",
       "title": "Puliyodarai (Temple style Tamarind Rice)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Staple Rice",
       "cookingTime": 40,
       "servings": 6,
@@ -3506,7 +3506,7 @@
     {
       "id": "392",
       "title": "Kuzhambu Varieties - Sambar",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Curries",
       "cookingTime": 45,
       "servings": 6,
@@ -3540,7 +3540,7 @@
     {
       "id": "393",
       "title": "Traditional Rasam",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Curries",
       "cookingTime": 25,
       "servings": 4,
@@ -3574,7 +3574,7 @@
     {
       "id": "394",
       "title": "Kootu Varieties - Pumpkin Kootu",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 30,
       "servings": 4,
@@ -3606,7 +3606,7 @@
     {
       "id": "395",
       "title": "Aviyal",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 35,
       "servings": 6,
@@ -3636,7 +3636,7 @@
     {
       "id": "396",
       "title": "Karakozhambu",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Curries",
       "cookingTime": 40,
       "servings": 4,
@@ -3668,7 +3668,7 @@
     {
       "id": "397",
       "title": "Varuval Varieties - Fish Varuval",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Curries",
       "cookingTime": 25,
       "servings": 4,
@@ -3698,7 +3698,7 @@
     {
       "id": "398",
       "title": "Chicken Varuval",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Curries",
       "cookingTime": 35,
       "servings": 4,
@@ -3728,7 +3728,7 @@
     {
       "id": "399",
       "title": "Mutton Varuval",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Curries",
       "cookingTime": 60,
       "servings": 4,
@@ -3758,7 +3758,7 @@
     {
       "id": "400",
       "title": "Poricha Kootu",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 35,
       "servings": 4,
@@ -3790,7 +3790,7 @@
     {
       "id": "401",
       "title": "Coconut Chutney",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Chutneys",
       "cookingTime": 10,
       "servings": 4,
@@ -3820,7 +3820,7 @@
     {
       "id": "402",
       "title": "Tomato Chutney",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Chutneys",
       "cookingTime": 15,
       "servings": 4,
@@ -3850,7 +3850,7 @@
     {
       "id": "403",
       "title": "Mint Chutney",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Chutneys",
       "cookingTime": 10,
       "servings": 4,
@@ -3880,7 +3880,7 @@
     {
       "id": "404",
       "title": "Peanut Chutney",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Chutneys",
       "cookingTime": 15,
       "servings": 4,
@@ -3910,7 +3910,7 @@
     {
       "id": "405",
       "title": "Ginger Chutney",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Chutneys",
       "cookingTime": 12,
       "servings": 4,
@@ -3939,7 +3939,7 @@
     {
       "id": "406",
       "title": "Mango Pickle",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Pickles",
       "cookingTime": 30,
       "servings": 10,
@@ -3969,7 +3969,7 @@
     {
       "id": "407",
       "title": "Lemon Pickle",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Pickles",
       "cookingTime": 25,
       "servings": 8,
@@ -3998,7 +3998,7 @@
     {
       "id": "408",
       "title": "Garlic Pickle",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Pickles",
       "cookingTime": 20,
       "servings": 6,
@@ -4027,7 +4027,7 @@
     {
       "id": "409",
       "title": "Mixed Vegetable Pickle",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Pickles",
       "cookingTime": 45,
       "servings": 12,
@@ -4057,7 +4057,7 @@
     {
       "id": "410",
       "title": "Fish Pickle",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Pickles",
       "cookingTime": 40,
       "servings": 8,
@@ -4087,7 +4087,7 @@
     {
       "id": "411",
       "title": "Chicken Pickle",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Pickles",
       "cookingTime": 50,
       "servings": 8,
@@ -4117,7 +4117,7 @@
     {
       "id": "412",
       "title": "Mutton Pickle",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Pickles",
       "cookingTime": 70,
       "servings": 10,
@@ -4147,7 +4147,7 @@
     {
       "id": "413",
       "title": "Appam",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Breakfast",
       "cookingTime": 120,
       "servings": 6,
@@ -4175,7 +4175,7 @@
     {
       "id": "414",
       "title": "Puttu",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 4,
@@ -4201,7 +4201,7 @@
     {
       "id": "415",
       "title": "Ragi Mudde",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Staple Foods",
       "cookingTime": 20,
       "servings": 4,
@@ -4226,7 +4226,7 @@
     {
       "id": "416",
       "title": "Kambu Koozh",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Drinks",
       "cookingTime": 30,
       "servings": 4,
@@ -4255,7 +4255,7 @@
     {
       "id": "417",
       "title": "Kollu Rasam",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Soups",
       "cookingTime": 40,
       "servings": 4,
@@ -4285,7 +4285,7 @@
     {
       "id": "418",
       "title": "Neer More",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Drinks",
       "cookingTime": 10,
       "servings": 4,
@@ -4315,7 +4315,7 @@
     {
       "id": "419",
       "title": "Ellu Sadam",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Rice Dishes",
       "cookingTime": 20,
       "servings": 4,
@@ -4345,7 +4345,7 @@
     {
       "id": "420",
       "title": "Vendhaya Keerai Masiyal",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Vegetable Dishes",
       "cookingTime": 25,
       "servings": 4,
@@ -4375,7 +4375,7 @@
     {
       "id": "421",
       "title": "Murungai Keerai Soup",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Soups",
       "cookingTime": 20,
       "servings": 4,
@@ -4405,7 +4405,7 @@
     {
       "id": "422",
       "title": "Vazhaipoo Vadai",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Snacks",
       "cookingTime": 45,
       "servings": 6,
@@ -4435,7 +4435,7 @@
     {
       "id": "423",
       "title": "Thengai Burfi",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Sweets",
       "cookingTime": 25,
       "servings": 8,
@@ -4462,7 +4462,7 @@
     {
       "id": "424",
       "title": "Ragi Dosa",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Breakfast",
       "cookingTime": 30,
       "servings": 4,
@@ -4491,7 +4491,7 @@
     {
       "id": "425",
       "title": "Pesarattu",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 4,
@@ -4521,7 +4521,7 @@
     {
       "id": "426",
       "title": "Idiappam (String Hoppers)",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Breakfast",
       "cookingTime": 35,
       "servings": 4,
@@ -4548,7 +4548,7 @@
     {
       "id": "427",
       "title": "Wheat Rava Upma",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Breakfast",
       "cookingTime": 25,
       "servings": 4,
@@ -4578,7 +4578,7 @@
     {
       "id": "428",
       "title": "Chettinad Chicken Curry",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Meat & Seafood",
       "cookingTime": 50,
       "servings": 4,
@@ -4612,7 +4612,7 @@
     {
       "id": "429",
       "title": "Chettinad Mutton Curry",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Meat & Seafood",
       "cookingTime": 75,
       "servings": 4,
@@ -4646,7 +4646,7 @@
     {
       "id": "430",
       "title": "Thenkuzhal",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Snacks",
       "cookingTime": 40,
       "servings": 6,
@@ -4676,7 +4676,7 @@
     {
       "id": "431",
       "title": "Ribbon Pakoda",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Snacks",
       "cookingTime": 35,
       "servings": 6,
@@ -4706,7 +4706,7 @@
     {
       "id": "432",
       "title": "Kai Murukku",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Snacks",
       "cookingTime": 45,
       "servings": 6,
@@ -4736,7 +4736,7 @@
     {
       "id": "433",
       "title": "Banana Chips",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Snacks",
       "cookingTime": 30,
       "servings": 4,
@@ -4762,7 +4762,7 @@
     {
       "id": "434",
       "title": "Meen Varuval (Fish Fry)",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Meat & Seafood",
       "cookingTime": 30,
       "servings": 4,
@@ -4792,7 +4792,7 @@
     {
       "id": "435",
       "title": "Nethili Fry (Anchovy Fry)",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Meat & Seafood",
       "cookingTime": 20,
       "servings": 4,
@@ -4822,7 +4822,7 @@
     {
       "id": "436",
       "title": "Prawn Masala",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Meat & Seafood",
       "cookingTime": 35,
       "servings": 4,
@@ -4855,7 +4855,7 @@
     {
       "id": "437",
       "title": "Crab Curry",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Meat & Seafood",
       "cookingTime": 40,
       "servings": 4,
@@ -4887,7 +4887,7 @@
     {
       "id": "438",
       "title": "Vanjaram Fish Fry (Seer Fish)",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Meat & Seafood",
       "cookingTime": 25,
       "servings": 4,
@@ -4917,7 +4917,7 @@
     {
       "id": "439",
       "title": "Karuvadu Kuzhambu (Dry Fish Curry)",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Meat & Seafood",
       "cookingTime": 35,
       "servings": 4,
@@ -4949,7 +4949,7 @@
     {
       "id": "440",
       "title": "Squid Fry",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Meat & Seafood",
       "cookingTime": 30,
       "servings": 4,
@@ -4979,7 +4979,7 @@
     {
       "id": "441",
       "title": "Fish 65",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Meat & Seafood",
       "cookingTime": 35,
       "servings": 4,
@@ -5009,7 +5009,7 @@
     {
       "id": "442",
       "title": "Prawn Biryani",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Staple Rice",
       "cookingTime": 70,
       "servings": 6,
@@ -5039,7 +5039,7 @@
     {
       "id": "443",
       "title": "Nandu Rasam (Crab Rasam)",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Soups",
       "cookingTime": 35,
       "servings": 4,
@@ -5070,7 +5070,7 @@
     {
       "id": "444",
       "title": "Paniyaram (Sweet)",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Snacks",
       "cookingTime": 30,
       "servings": 4,
@@ -5099,7 +5099,7 @@
     {
       "id": "445",
       "title": "Potato Bonda",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Snacks",
       "cookingTime": 30,
       "servings": 4,
@@ -5129,7 +5129,7 @@
     {
       "id": "446",
       "title": "Akkaravadisal",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Sweets",
       "cookingTime": 60,
       "servings": 6,
@@ -5160,7 +5160,7 @@
     {
       "id": "447",
       "title": "Jangiri",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 6,
@@ -5189,7 +5189,7 @@
     {
       "id": "448",
       "title": "Masala Chai",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Drinks",
       "cookingTime": 15,
       "servings": 2,
@@ -5217,7 +5217,7 @@
     {
       "id": "449",
       "title": "Tirunelveli Halwa",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Sweets",
       "cookingTime": 90,
       "servings": 8,
@@ -5247,7 +5247,7 @@
     {
       "id": "450",
       "title": "Egg Curry",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Vegetable Side Dishes",
       "cookingTime": 30,
       "servings": 4,
@@ -5280,7 +5280,7 @@
     {
       "id": "425",
       "title": "Paneer Butter Masala",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Curries",
       "cookingTime": 35,
       "servings": 4,
@@ -5310,7 +5310,7 @@
     {
       "id": "426",
       "title": "Mutton Kuzhambu",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Curries",
       "cookingTime": 80,
       "servings": 6,
@@ -5340,7 +5340,7 @@
     {
       "id": "427",
       "title": "Chicken Chettinad",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Curries",
       "cookingTime": 45,
       "servings": 4,
@@ -5370,7 +5370,7 @@
     {
       "id": "428",
       "title": "Fish Molee",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Curries",
       "cookingTime": 30,
       "servings": 4,
@@ -5400,7 +5400,7 @@
     {
       "id": "429",
       "title": "Prawn Curry",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Curries",
       "cookingTime": 25,
       "servings": 4,
@@ -5430,7 +5430,7 @@
     {
       "id": "430",
       "title": "Egg Curry",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Curries",
       "cookingTime": 30,
       "servings": 4,
@@ -5460,7 +5460,7 @@
     {
       "id": "431",
       "title": "Vendakkai Puli Kuzhambu",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Curries",
       "cookingTime": 35,
       "servings": 4,
@@ -5490,7 +5490,7 @@
     {
       "id": "432",
       "title": "Karuvattu Kuzhambu",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Curries",
       "cookingTime": 40,
       "servings": 4,
@@ -5520,7 +5520,7 @@
     {
       "id": "433",
       "title": "Mor Kuzhambu",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Curries",
       "cookingTime": 25,
       "servings": 4,
@@ -5550,7 +5550,7 @@
     {
       "id": "434",
       "title": "Keerai Molagootal",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Vegetable Dishes",
       "cookingTime": 30,
       "servings": 4,
@@ -5580,7 +5580,7 @@
     {
       "id": "435",
       "title": "Arai Keerai Masiyal",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Vegetable Dishes",
       "cookingTime": 25,
       "servings": 4,
@@ -5610,7 +5610,7 @@
     {
       "id": "436",
       "title": "Mullangi Sambar",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Sambar",
       "cookingTime": 40,
       "servings": 6,
@@ -5640,7 +5640,7 @@
     {
       "id": "437",
       "title": "Kara Kozhambu",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Curries",
       "cookingTime": 35,
       "servings": 4,
@@ -5670,7 +5670,7 @@
     {
       "id": "438",
       "title": "Paruppu Urundai Kuzhambu",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Curries",
       "cookingTime": 50,
       "servings": 4,
@@ -5700,7 +5700,7 @@
     {
       "id": "439",
       "title": "Nei Payasam",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Sweets",
       "cookingTime": 45,
       "servings": 6,
@@ -5729,7 +5729,7 @@
     {
       "id": "440",
       "title": "Paruppu Payasam",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Sweets",
       "cookingTime": 40,
       "servings": 6,
@@ -5757,7 +5757,7 @@
     {
       "id": "441",
       "title": "Carrot Halwa",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Sweets",
       "cookingTime": 50,
       "servings": 6,
@@ -5785,7 +5785,7 @@
     {
       "id": "442",
       "title": "Kesari",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Sweets",
       "cookingTime": 25,
       "servings": 4,
@@ -5814,7 +5814,7 @@
     {
       "id": "443",
       "title": "Adhirasam",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Sweets",
       "cookingTime": 60,
       "servings": 8,
@@ -5841,7 +5841,7 @@
     {
       "id": "444",
       "title": "Banana Bajji",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Snacks",
       "cookingTime": 20,
       "servings": 4,
@@ -5871,7 +5871,7 @@
     {
       "id": "445",
       "title": "Onion Pakoda",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Snacks",
       "cookingTime": 25,
       "servings": 4,
@@ -5901,7 +5901,7 @@
     {
       "id": "446",
       "title": "Potato Bonda",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Snacks",
       "cookingTime": 30,
       "servings": 6,
@@ -5931,7 +5931,7 @@
     {
       "id": "447",
       "title": "Mysore Pak",
-      "image": "https://foodish-api.com/images/pizza/pizza2.jpg",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Sweets",
       "cookingTime": 35,
       "servings": 8,
@@ -5957,7 +5957,7 @@
     {
       "id": "448",
       "title": "Filter Coffee",
-      "image": "https://foodish-api.com/images/burger/burger1.jpg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Drinks",
       "cookingTime": 10,
       "servings": 2,
@@ -5983,7 +5983,7 @@
     {
       "id": "449",
       "title": "Masala Chai",
-      "image": "https://foodish-api.com/images/dessert/dessert1.jpg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Drinks",
       "cookingTime": 15,
       "servings": 2,
@@ -6011,7 +6011,7 @@
     {
       "id": "450",
       "title": "Coconut Rice",
-      "image": "https://foodish-api.com/images/rice/rice1.jpg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Rice Dishes",
       "cookingTime": 20,
       "servings": 4,
@@ -6041,7 +6041,7 @@
     {
       "id": "101",
       "title": "Crispy Samosa",
-      "image": "https://foodish-api.com/images/samosa/samosa1.jpg",
+      "image": "/images/food-interface/8.webp",
       "category": "Snacks",
       "cookingTime": 45,
       "servings": 6,
@@ -6080,7 +6080,7 @@
     {
       "id": "102",
       "title": "Pani Puri",
-      "image": "https://foodish-api.com/images/dosa/dosa1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Snacks",
       "cookingTime": 60,
       "servings": 4,
@@ -6120,7 +6120,7 @@
     {
       "id": "103",
       "title": "Pav Bhaji",
-      "image": "https://foodish-api.com/images/pasta/pasta3.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Snacks",
       "cookingTime": 40,
       "servings": 4,
@@ -6164,4 +6164,8 @@
     }
   ]
 }
+
+
+
+
 

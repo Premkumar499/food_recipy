@@ -123,7 +123,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '1',
     title: 'Spaghetti Carbonara',
-    image: 'https://via.placeholder.com/800x400?text=Spaghetti+Carbonara',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Italian',
     cookingTime: 30,
     servings: 4,
@@ -151,7 +151,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '2',
     title: 'Chicken Tikka Masala',
-    image: 'https://via.placeholder.com/800x400?text=Chicken+Tikka+Masala',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Indian',
     cookingTime: 45,
     servings: 6,
@@ -181,3 +181,4 @@ const mockRecipes: Recipe[] = [
 ];
 
 export default RecipeDetailPage;
+

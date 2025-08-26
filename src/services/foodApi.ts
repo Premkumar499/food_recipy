@@ -61,7 +61,7 @@ export interface APIRecipe {
 }
 
 // Free API alternative using TheMealDB
-const MEAL_DB_BASE_URL = 'https://www.themealdb.com/api/json/v1/1';
+const MEAL_DB_BASE_URL = 'http://localhost:3002';
 
 // Category mappings for TheMealDB
 export const CATEGORIES = {
@@ -264,3 +264,4 @@ export class FoodAPIService {
     }
   }
 }
+

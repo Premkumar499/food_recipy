@@ -3,7 +3,6 @@ import { RecipeCardProps } from '../types';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { getSpoonacularImageByDishType } from '../utils/spoonacularApi';
 
 const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
   const navigate = useNavigate();
@@ -15,10 +14,10 @@ const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
   });
 
   const fallbackImages = [
-    getSpoonacularImageByDishType(recipe.title, recipe.category),
-    'https://spoonacular.com/recipeImages/716195-556x370.jpg',
-    'https://spoonacular.com/recipeImages/715538-556x370.jpg',
-    'https://via.placeholder.com/400x300/f3f4f6/64748b?text=🍽️+Recipe'
+    '/images/food-interface/1.jpg',
+    '/images/food-interface/2.jpg',
+    '/images/food-interface/3.jpeg',
+    '/images/food-interface/4.JPEG'
   ];
 
   const handleClick = () => {

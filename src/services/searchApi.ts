@@ -44,3 +44,4 @@ export const searchRecipeByName = async (query: string): Promise<Recipe | null> 
     return null;
   }
 };
+

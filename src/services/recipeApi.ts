@@ -1,33 +1,25 @@
-// Recipe API service with real API integration
+// Recipe API service with local data only
 import { Recipe, Ingredient } from '../types';
 import { demoSearchRecipes, demoGetRecipeDetails } from './demoApi';
 
-// Spoonacular API configuration (for production)
-const SPOONACULAR_API_KEY = 'demo'; // Replace with your actual API key
-const SPOONACULAR_BASE_URL = 'https://api.spoonacular.com/recipes';
+// Use local data only - no external APIs
+const USE_DEMO_API = true;
 
-// Use demo API when API key is 'demo'
-const USE_DEMO_API = SPOONACULAR_API_KEY === 'demo';
-
-// Fallback random food images (free to use)
-const FALLBACK_IMAGES = [
-  'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop', // Pizza
-  'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop', // Burger
-  'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop', // Pancakes
-  'https://images.unsplash.com/photo-1546554137-f86b9593a222?w=800&h=600&fit=crop', // Salad
-  'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&h=600&fit=crop', // Soup
-  'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&h=600&fit=crop', // Tacos
-  'https://images.unsplash.com/photo-1563379091339-03246963d51a?w=800&h=600&fit=crop', // Steak
-  'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop', // Pasta
-  'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&h=600&fit=crop', // Chicken
-  'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=600&fit=crop', // Fish
-  'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop', // Bread
-  'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&h=600&fit=crop'  // Dessert
+// Local food images
+const LOCAL_IMAGES = [
+  '/images/food-interface/1.jpg',
+  '/images/food-interface/2.jpg',
+  '/images/food-interface/3.jpeg',
+  '/images/food-interface/4.JPEG',
+  '/images/food-interface/5.jpeg',
+  '/images/food-interface/6.jpeg',
+  '/images/food-interface/7.jpeg',
+  '/images/food-interface/8.webp'
 ];
 
-// Get random fallback image
-const getRandomFallbackImage = (): string => {
-  return FALLBACK_IMAGES[Math.floor(Math.random() * FALLBACK_IMAGES.length)];
+// Get random local image
+const getRandomLocalImage = (): string => {
+  return LOCAL_IMAGES[Math.floor(Math.random() * LOCAL_IMAGES.length)];
 };
 
 // Enhanced search function that tries API first, then falls back to local data
@@ -143,7 +135,7 @@ const generateFallbackRecipeFromSearch = async (searchQuery: string): Promise<Re
   return {
     id: randomId,
     title: `${foodName.charAt(0).toUpperCase() + foodName.slice(1)} Recipe`,
-    image: getRandomFallbackImage(),
+    image: getRandomLocalImage(),
     category: 'Other',
     cookingTime: 30,
     servings: 4,
@@ -173,7 +165,7 @@ const generateFallbackRecipes = (query: string): Recipe[] => {
   const recipe: Recipe = {
     id: Date.now().toString(),
     title: `${query.charAt(0).toUpperCase() + query.slice(1)} Recipe`,
-    image: getRandomFallbackImage(),
+    image: getRandomLocalImage(),
     category: 'Other',
     cookingTime: Math.floor(Math.random() * 45) + 15,
     servings: Math.floor(Math.random() * 6) + 2,
@@ -203,7 +195,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '1',
     title: 'Classic Margherita Pizza',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Italian',
     cookingTime: 25,
     servings: 4,
@@ -226,7 +218,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '2',
     title: 'Grilled Chicken Salad',
-    image: 'https://images.unsplash.com/photo-1546554137-f86b9593a222?w=800&h=600&fit=crop',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Healthy',
     cookingTime: 20,
     servings: 2,
@@ -273,16 +265,10 @@ export const getRecipesByCategory = async (category: string): Promise<Recipe[]> 
 import { Recipe, Ingredient } from '../types';
 import { demoSearchRecipes, demoGetRecipeDetails } from './demoApi';
 
-// Spoonacular API configuration (for production)
-const SPOONACULAR_API_KEY = 'demo'; // Replace with your actual API key
-const SPOONACULAR_BASE_URL = 'https://api.spoonacular.com/recipes';
+// Clean API service - Local data only, no external dependencies
 
-// Use demo API when API key is 'demo'
-const USE_DEMO_API = SPOONACULAR_API_KEY === 'demo';
-
-// Unsplash API for high-quality food images
-const UNSPLASH_ACCESS_KEY = 'demo'; // Replace with your key
-const UNSPLASH_BASE_URL = 'https://api.unsplash.com';
+// Use local data only
+const USE_DEMO_API = true;
 
 // Fallback recipe database for when API is not available
 const FALLBACK_RECIPES = {
@@ -361,18 +347,18 @@ const FALLBACK_RECIPES = {
 
 // Fallback random food images (free to use)
 const FALLBACK_IMAGES = [
-  'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop', // Pizza
-  'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop', // Burger
-  'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop', // Pancakes
-  'https://images.unsplash.com/photo-1546554137-f86b9593a222?w=800&h=600&fit=crop', // Salad
-  'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&h=600&fit=crop', // Soup
-  'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&h=600&fit=crop', // Tacos
-  'https://images.unsplash.com/photo-1563379091339-03246963d51a?w=800&h=600&fit=crop', // Steak
-  'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop', // Pasta
-  'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&h=600&fit=crop', // Chicken
-  'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=600&fit=crop', // Fish
-  'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop', // Bread
-  'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&h=600&fit=crop'  // Dessert
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Pizza
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Burger
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Pancakes
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Salad
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Soup
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Tacos
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Steak
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Pasta
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Chicken
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Fish
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ', // Bread
+  ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] '  // Dessert
 ];
 
 // API Functions for fetching real recipe data
@@ -409,7 +395,7 @@ export const fetchRecipesFromAPI = async (query: string, number: number = 12): P
     return data.results.map((recipe: any) => ({
       id: recipe.id.toString(),
       title: recipe.title,
-      image: recipe.image || getRandomFallbackImage(),
+      image: recipe.image || getRandomLocalImage(),
       category: recipe.dishTypes?.[0] || 'Other',
       cookingTime: recipe.readyInMinutes || 30,
       servings: recipe.servings || 4,
@@ -485,7 +471,7 @@ export const fetchRecipeDetailsFromAPI = async (recipeId: string): Promise<Recip
     return {
       id: data.id.toString(),
       title: data.title,
-      image: data.image || getRandomFallbackImage(),
+      image: data.image || getRandomLocalImage(),
       category: data.dishTypes?.[0] || 'Other',
       cookingTime: data.readyInMinutes || 30,
       servings: data.servings || 4,
@@ -501,7 +487,7 @@ export const fetchRecipeDetailsFromAPI = async (recipeId: string): Promise<Recip
 };
 
 // Get random fallback image
-const getRandomFallbackImage = (): string => {
+const getRandomLocalImage = (): string => {
   return FALLBACK_IMAGES[Math.floor(Math.random() * FALLBACK_IMAGES.length)];
 };
 
@@ -642,7 +628,7 @@ const generateFallbackRecipeFromSearch = async (searchQuery: string): Promise<Re
     return {
       id: randomId,
       title: `${foodName} Recipe`,
-      image: getRandomFallbackImage(),
+      image: getRandomLocalImage(),
       category: 'Other',
       cookingTime: 30,
       servings: 4,
@@ -824,7 +810,7 @@ export const getRandomFoodImage = async (category: string, index: number): Promi
   } catch (error) {
     console.error('Error fetching random image:', error);
     // Return a default food image if all else fails
-    return 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop';
+    return ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ';
   }
 };
 
@@ -975,3 +961,5 @@ export default {
   generateRecipeFromSearch,
   getRandomFoodImage
 };
+
+

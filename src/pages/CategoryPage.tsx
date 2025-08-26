@@ -238,7 +238,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '1',
     title: 'Spaghetti Carbonara',
-    image: 'https://via.placeholder.com/300x200?text=Spaghetti+Carbonara',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Italian',
     cookingTime: 30,
     servings: 4,
@@ -261,7 +261,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '2',
     title: 'Chicken Tikka Masala',
-    image: 'https://via.placeholder.com/300x200?text=Chicken+Tikka+Masala',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Indian',
     cookingTime: 45,
     servings: 6,
@@ -284,7 +284,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '3',
     title: 'Chocolate Chip Cookies',
-    image: 'https://via.placeholder.com/300x200?text=Chocolate+Chip+Cookies',
+    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
     category: 'Dessert',
     cookingTime: 25,
     servings: 24,
@@ -308,3 +308,4 @@ const mockRecipes: Recipe[] = [
 ];
 
 export default CategoryPage;
+

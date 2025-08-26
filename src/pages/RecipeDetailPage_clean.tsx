@@ -266,3 +266,4 @@ const RecipeDetailPage = () => {
 };
 
 export default RecipeDetailPage;
+
