@@ -18,7 +18,7 @@ const CategorizedSearchDropdown: React.FC<CategorizedSearchDropdownProps> = ({
   }
 
   return (
-    <div className="absolute top-full left-0 w-80 bg-gray-800 shadow-lg rounded-lg mt-1 z-50 max-h-96 overflow-y-auto">
+    <div className="absolute top-full left-0 w-full sm:w-80 bg-gray-800 shadow-lg rounded-lg mt-1 z-50 max-h-96 overflow-y-auto">
       <div className="p-2">
         {results.length === 0 ? (
           // No results found

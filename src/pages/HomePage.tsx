@@ -74,15 +74,15 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 text-white w-full">
+      {/* Hero Section - Full Screen */}
+      <div className="relative bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 text-white w-full h-screen">
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/30"></div>
         
-        {/* Content */}
-        <div className="relative max-w-full px-4 sm:px-6 lg:px-8 py-24 z-10">
+        {/* Content - Centered in full screen */}
+        <div className="relative max-w-full px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center z-10">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Discover Amazing Recipes
             </h1>
             <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
