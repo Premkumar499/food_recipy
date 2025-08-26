@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Recipe } from '../types';
+import { getImageByTitle } from '../utils/imageUtils';
 
 interface RecipeDetailsProps {
   recipe?: Recipe;
@@ -15,7 +16,9 @@ const RecipeDetails = ({ recipe }: RecipeDetailsProps) => {
           Recipe not found
         </div>
         <button 
-          onClick={() => navigate('/')} 
+          onClick={() => {
+            navigate('/');
+          }} 
           className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
         >
           Back to Home
@@ -30,12 +33,12 @@ const RecipeDetails = ({ recipe }: RecipeDetailsProps) => {
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="relative h-64 md:h-96">
           <img
-            src={recipe.image}
+            src={recipe.image || getImageByTitle(recipe.title, recipe.category)}
             alt={recipe.title}
             className="w-full h-full object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = 'https://via.placeholder.com/800x400?text=Recipe+Image';
+              target.src = getImageByTitle(recipe.title, recipe.category);
             }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">

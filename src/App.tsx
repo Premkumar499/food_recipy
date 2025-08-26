@@ -62,24 +62,30 @@ function App() {
 
   // Handle input change and filter suggestions
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearchQuery(value);
-    
-    if (value.trim()) {
-      // Get categorized search results
-      const categoryResults = searchInCategories(value);
-      setCategorizedResults(categoryResults);
-      setShowCategorizedSearch(true); // Always show if there's a query
+    try {
+      const value = e.target.value;
+      setSearchQuery(value);
       
-      // Also get history suggestions
-      const filtered = searchHistory.filter(item => 
-        item.toLowerCase().includes(value.toLowerCase())
-      );
-      setFilteredSuggestions(filtered);
-      setShowSuggestions(false); // Prioritize categorized search
-    } else {
-      setShowSuggestions(false);
-      setShowCategorizedSearch(false);
+      if (value.trim()) {
+        // Get categorized search results
+        const categoryResults = searchInCategories(value);
+        setCategorizedResults(categoryResults);
+        setShowCategorizedSearch(true); // Always show if there's a query
+        
+        // Also get history suggestions
+        const filtered = searchHistory.filter(item => 
+          item.toLowerCase().includes(value.toLowerCase())
+        );
+        setFilteredSuggestions(filtered);
+        setShowSuggestions(false); // Prioritize categorized search
+      } else {
+        setShowSuggestions(false);
+        setShowCategorizedSearch(false);
+      }
+    } catch (error) {
+      console.error('Error in input change handler:', error);
+      // Still update the search query even if there's an error
+      setSearchQuery(e.target.value);
     }
   };
 
@@ -102,11 +108,10 @@ function App() {
           saveToHistory(query.trim());
           navigate(`/recipe/${recipe.id}`);
         } else {
-          alert(`No recipe found for "${query.trim()}". Please try another search.`);
+          console.log(`No recipe found for "${query.trim()}"`);
         }
       } catch (error) {
         console.error('Search error:', error);
-        alert('Search failed. Please try again.');
       } finally {
         setIsSearching(false);
         setShowSearch(false);
@@ -119,6 +124,8 @@ function App() {
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!searchQuery.trim() || isSearching) return;
+    
     await handleSearchWithQuery(searchQuery);
   };
 
@@ -191,76 +198,71 @@ function App() {
             
             {/* Search Box */}
             <div ref={searchRef} className="relative">
-              {/* Focus Indicator */}
-              {isSearchFocused && (
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-50">
-                  <div className="bg-orange-400 text-black px-3 py-1 rounded-full text-xs font-medium shadow-lg">
-                    <div className="flex items-center space-x-1">
-                      <div className="w-2 h-3 bg-black animate-pulse rounded-sm"></div>
-                      <span>Cursor is active - Start typing!</span>
-                    </div>
+              <form onSubmit={handleSearch} className="relative">
+                {/* Simple search container */}
+                <div className={`flex items-center bg-white rounded-lg border-2 transition-all duration-300 ${
+                  isSearchFocused 
+                    ? 'border-orange-400 shadow-lg' 
+                    : 'border-gray-300 hover:border-gray-400'
+                }`}>
+                  
+                  {/* Search icon */}
+                  <div className="pl-4 pr-3">
+                    <svg className={`w-5 h-5 transition-colors duration-300 ${
+                      isSearchFocused ? 'text-orange-500' : 'text-gray-400'
+                    }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
                   </div>
-                  {/* Arrow pointing down */}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-                    <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-orange-400"></div>
-                  </div>
-                </div>
-              )}
-              
-              <form onSubmit={handleSearch} className="flex items-center rounded-lg overflow-hidden">
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={handleInputChange}
-                  onFocus={() => {
-                    setIsSearchFocused(true);
-                    if (searchQuery.trim()) {
-                      // Show categorized results if there's a query
-                      const categoryResults = searchInCategories(searchQuery);
-                      setCategorizedResults(categoryResults);
-                      setShowCategorizedSearch(categoryResults.length > 0);
-                      
-                      // Show history if no categorized results
-                      if (categoryResults.length === 0) {
-                        const filtered = searchHistory.filter(item => 
-                          item.toLowerCase().includes(searchQuery.toLowerCase())
-                        );
-                        setFilteredSuggestions(filtered);
-                        setShowSuggestions(filtered.length > 0);
+                  
+                  {/* Input field */}
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={handleInputChange}
+                    onFocus={() => {
+                      setIsSearchFocused(true);
+                      if (searchQuery.trim()) {
+                        // Show categorized results if there's a query
+                        const categoryResults = searchInCategories(searchQuery);
+                        setCategorizedResults(categoryResults);
+                        setShowCategorizedSearch(categoryResults.length > 0);
+                        
+                        // Show history if no categorized results
+                        if (categoryResults.length === 0) {
+                          const filtered = searchHistory.filter(item => 
+                            item.toLowerCase().includes(searchQuery.toLowerCase())
+                          );
+                          setFilteredSuggestions(filtered);
+                          setShowSuggestions(filtered.length > 0);
+                        }
                       }
-                    }
-                  }}
-                  onBlur={() => {
-                    // Small delay to allow dropdown clicks
-                    setTimeout(() => setIsSearchFocused(false), 150);
-                  }}
-                  placeholder="Search for recipes..."
-                  disabled={isSearching}
-                  className={`bg-gray-800 text-white px-4 py-3 focus:outline-none border-0 w-80 disabled:opacity-50 placeholder-gray-400 transition-all duration-200 ${
-                    isSearchFocused 
-                      ? 'ring-2 ring-orange-400 bg-gray-700 shadow-lg' 
-                      : 'focus:ring-2 focus:ring-orange-400'
-                  }`}
-                />
-                <button
-                  type="submit"
-                  disabled={isSearching || !searchQuery.trim()}
-                  className="bg-orange-400 hover:bg-orange-500 text-black px-6 py-3 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[60px]"
-                >
-                  {isSearching ? (
-                    <>
-                      <svg className="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    }}
+                    onBlur={() => {
+                      // Small delay to allow dropdown clicks
+                      setTimeout(() => setIsSearchFocused(false), 150);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault();
+                        handleSearch(e);
+                      }
+                    }}
+                    placeholder="Search for recipes..."
+                    disabled={isSearching}
+                    className="flex-1 px-3 py-3 bg-transparent text-gray-700 placeholder-gray-500 focus:outline-none disabled:opacity-50 text-base w-80"
+                  />
+                  
+                  {/* Loading indicator (only when searching) */}
+                  {isSearching && (
+                    <div className="pr-4">
+                      <svg className="animate-spin h-5 w-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      <span className="sr-only">Searching...</span>
-                    </>
-                  ) : (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
+                    </div>
                   )}
-                </button>
+                </div>
               </form>
               
               {/* Categorized Search Dropdown */}
@@ -273,16 +275,16 @@ function App() {
               
               {/* Search History Dropdown - Only show when no categorized results */}
               {showSuggestions && filteredSuggestions.length > 0 && !showCategorizedSearch && (
-                <div className="absolute top-full left-0 w-80 bg-gray-800 shadow-lg rounded-lg mt-1 z-50 max-h-48 overflow-y-auto">
+                <div className="absolute top-full left-0 w-96 bg-white border border-gray-200 shadow-lg rounded-lg mt-2 z-50 max-h-60 overflow-y-auto">
                   <div className="py-1">
-                    <div className="text-orange-400 text-xs font-semibold uppercase tracking-wider px-3 py-2 border-b border-gray-700">
+                    <div className="text-gray-600 text-sm font-medium px-4 py-2 border-b border-gray-100 bg-gray-50">
                       Recent Searches
                     </div>
                     {filteredSuggestions.map((suggestion, index) => (
                       <button
                         key={index}
                         onClick={() => handleSuggestionClick(suggestion)}
-                        className="w-full text-left px-4 py-3 text-white hover:bg-gray-700 transition-colors flex items-center border-b border-gray-700 last:border-b-0"
+                        className="w-full text-left px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200 flex items-center border-b border-gray-100 last:border-b-0"
                       >
                         <svg className="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />

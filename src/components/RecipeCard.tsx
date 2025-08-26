@@ -1,19 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { RecipeCardProps } from '../types';
-
-// Helper function to get food images by category
-const getFoodImageByCategory = (category: string) => {
-  const categoryMap: { [key: string]: string[] } = {
-    'Vegetarian': ['/images/veg-food.webp', '/images/veg-1.webp'], // Vegetarian food
-    'Meat & Seafood': ['/images/non-veg.webp', '/images/non-veg-2.webp', '/images/non-veg-3.webp'], // Non-veg food
-    'Healthy & Diet': ['/images/veg-1.webp', '/images/veg-food.webp'], // Healthy food
-    'Popular': ['/images/background-idea.webp'], // Popular food
-    'Snacks': ['/images/snack.jpg', '/images/snack-1.webp', '/images/snack-3.webp'] // Snacks
-  };
-  
-  const images = categoryMap[category] || categoryMap['Popular'];
-  return images[Math.floor(Math.random() * images.length)];
-};
+import { getImageByTitle } from '../utils/imageUtils';
 
 const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
   const navigate = useNavigate();
@@ -39,15 +26,15 @@ const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
     >
       <div className="relative h-48">
         <img
-          src={recipe.image || getFoodImageByCategory(recipe.category)}
-          alt=""
+          src={recipe.image || getImageByTitle(recipe.title, recipe.category)}
+          alt={recipe.title}
           className="w-full h-full object-cover"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            target.src = getFoodImageByCategory(recipe.category);
+            target.src = getImageByTitle(recipe.title, recipe.category);
           }}
         />
-        {/* Food images by category */}
+        {/* Images selected based on recipe title */}
       </div>
       
       <div className="p-4">

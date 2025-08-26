@@ -10,30 +10,6 @@ const HomePage = () => {
   const [error, setError] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Function to scroll to search bar and focus it
-  const handleExploreClick = () => {
-    // Scroll to top where the search bar is located
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-    
-    // Focus on the search input after a short delay
-    setTimeout(() => {
-      const searchInput = document.querySelector('input[placeholder*="Search for recipes"]') as HTMLInputElement;
-      if (searchInput) {
-        searchInput.focus();
-        searchInput.click(); // Also trigger click to show any dropdowns
-        
-        // Add a temporary visual indicator
-        searchInput.style.animation = 'pulse 1s ease-in-out 3';
-        setTimeout(() => {
-          searchInput.style.animation = '';
-        }, 3000);
-      }
-    }, 500); // Wait for scroll to complete
-  };
-
   // Get search query from URL parameters
   useEffect(() => {
     const searchQuery = searchParams.get('search');
@@ -42,8 +18,8 @@ const HomePage = () => {
     }
   }, [searchParams]);
 
-  // Fetch recipes from API
-  const fetchRecipes = async (search = '') => {
+  // Fetch recipes from API with retry mechanism
+  const fetchRecipes = async (search = '', retryCount = 0) => {
     setLoading(true);
     setError('');
     
@@ -74,9 +50,19 @@ const HomePage = () => {
       console.log('Received data:', data.length, 'recipes'); // Debug log
       setRecipes(data);
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
-      setError(`Failed to load recipes: ${errorMessage}`);
       console.error('Error fetching recipes:', err);
+      
+      // Retry mechanism - try up to 2 times
+      if (retryCount < 2) {
+        console.log(`Retrying... attempt ${retryCount + 1}`);
+        setTimeout(() => {
+          fetchRecipes(search, retryCount + 1);
+        }, 1000 * (retryCount + 1)); // Exponential backoff
+        return;
+      }
+      
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+      setError(`Failed to load recipes: ${errorMessage}. Make sure the API server is running on port 3002.`);
     } finally {
       setLoading(false);
     }
@@ -102,14 +88,6 @@ const HomePage = () => {
             <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
               Find the perfect recipe for any occasion
             </p>
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-1">
-              <button 
-                onClick={handleExploreClick}
-                className="bg-white/20 rounded-lg px-8 py-3 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 cursor-pointer active:scale-95"
-              >
-                <span className="text-lg font-medium">Explore thousands of delicious recipes</span>
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -120,7 +98,7 @@ const HomePage = () => {
           recipes={recipes} 
           loading={loading} 
           error={error} 
-          onRetry={() => fetchRecipes(searchTerm)}
+          onRetry={() => fetchRecipes(searchTerm, 0)}
         />
       </div>
     </div>
