@@ -46,22 +46,22 @@ const RecipeDetailPage = () => {
 
   if (loading) {
     return (
-      <div className="max-w-4xl mx-auto p-6">
-        {/* Back Button */}
-        <div className="mb-4">
+      <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col">
+        {/* Compact Back Button */}
+        <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
           <button
             onClick={handleGoBack}
-            className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
           >
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back
+            ← Back
           </button>
         </div>
         
-        <div className="flex justify-center items-center min-h-96">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+        <div className="flex justify-center items-center flex-1">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-orange-500"></div>
         </div>
       </div>
     );
@@ -69,27 +69,27 @@ const RecipeDetailPage = () => {
 
   if (error && !recipe) {
     return (
-      <div className="max-w-4xl mx-auto p-6">
-        {/* Back Button */}
-        <div className="mb-4">
+      <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col">
+        {/* Compact Back Button */}
+        <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
           <button
             onClick={handleGoBack}
-            className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
           >
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back
+            ← Back
           </button>
         </div>
         
-        <div className="text-center py-8">
+        <div className="text-center flex-1 flex flex-col justify-center">
           <div className="text-red-500 text-lg font-medium mb-2">
             {error}
           </div>
           <button 
             onClick={() => window.location.reload()} 
-            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+            className="px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-lg transform hover:scale-105"
           >
             Try Again
           </button>
@@ -99,21 +99,23 @@ const RecipeDetailPage = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      {/* Back Button */}
-      <div className="mb-4">
+    <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col overflow-hidden">
+      {/* Compact Back Button */}
+      <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
         <button
           onClick={handleGoBack}
-          className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Back
+          ← Back
         </button>
       </div>
       
-      <RecipeDetails recipe={recipe || undefined} />
+      <div className="flex-1 overflow-hidden">
+        <RecipeDetails recipe={recipe || undefined} />
+      </div>
     </div>
   );
 };
