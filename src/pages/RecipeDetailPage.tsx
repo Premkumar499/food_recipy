@@ -25,15 +25,14 @@ const RecipeDetailPage = () => {
         // Simulate API delay
         await new Promise(resolve => setTimeout(resolve, 300));
         
-        // In a real app, this would be an actual API call
-        const response = await fetch(`http://localhost:3002/recipes/${id}`);
+        // Use local mock data for production
+        const foundRecipe = mockRecipes.find(recipe => recipe.id === id);
         
-        if (!response.ok) {
+        if (foundRecipe) {
+          setRecipe(foundRecipe);
+        } else {
           throw new Error('Recipe not found');
         }
-        
-        const data = await response.json();
-        setRecipe(data);
       } catch (err) {
         setError('Failed to load recipe');
       } finally {
