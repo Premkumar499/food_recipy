@@ -27,6 +27,11 @@ function App() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const searchRef = useRef<HTMLDivElement>(null);
 
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   // Load search history from localStorage on component mount
   useEffect(() => {
     const savedHistory = localStorage.getItem('searchHistory');

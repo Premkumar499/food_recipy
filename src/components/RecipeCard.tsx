@@ -3,6 +3,7 @@ import { RecipeCardProps } from '../types';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { getFoodImage } from '../utils/imageImports';
 
 const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
   };
 
   const handleImageError = () => {
+    console.log('Image failed to load:', imageSrc, 'Recipe:', recipe.title);
     if (retryCount < fallbackImages.length - 1) {
       setRetryCount(retryCount + 1);
     } else {
@@ -42,12 +44,27 @@ const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
     }
   };
 
-  // Use recipe image or fallback to food-related images
+  
+  const resolveImagePath = (img?: string) => {
+    if (!img) return '/images/food-interface/1.jpg';
+
+    // Extract filename from path like 'images/food-interface/1.jpg'
+    const filename = img.split('/').pop();
+    if (filename) {
+      return getFoodImage(filename);
+    }
+
+    return '/images/food-interface/1.jpg';
+  };
+
   const imageSrc = imageError 
-    ? fallbackImages[fallbackImages.length - 1]
+    ? '/images/food-interface/1.jpg'
     : retryCount > 0 
       ? fallbackImages[retryCount]
-      : recipe.image || fallbackImages[0];
+      : resolveImagePath(recipe.image);
+
+  // Debug logging
+  console.log('Recipe:', recipe.title, 'Image path:', recipe.image, 'Resolved:', imageSrc);
 
   return (
     <motion.div
@@ -88,16 +105,13 @@ const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.6 }}
       >
-        <motion.img
+        <img
           src={imageSrc}
           alt={recipe.title}
           className="w-full h-full object-cover"
           onError={handleImageError}
           onLoad={() => setImageError(false)}
           loading="lazy"
-          initial={{ scale: 1.2, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8 }}
         />
         
         {/* Animated overlay */}
@@ -124,27 +138,7 @@ const RecipeCard = ({ recipe, onClick }: RecipeCardProps) => {
           {recipe.category}
         </motion.button>
 
-        {/* Loading placeholder with animation */}
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <motion.div 
-            className="text-orange-400 text-2xl"
-            animate={{ 
-              rotate: 360,
-              scale: [1, 1.2, 1]
-            }}
-            transition={{
-              rotate: { duration: 2, repeat: Infinity, ease: "linear" },
-              scale: { duration: 1, repeat: Infinity }
-            }}
-          >
-            🍽️
-          </motion.div>
-        </motion.div>
+
       </motion.div>
       
       <motion.div 

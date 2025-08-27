@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import RecipeCard from './RecipeCard';
 import RecipeCardSkeleton from './animations/RecipeCardSkeleton';
 import ScrollReveal from './animations/ScrollReveal';
+import { useState } from 'react';
 
 const RecipeList = ({ recipes, loading, error, onRetry }: RecipeListProps) => {
+  const [displayCount, setDisplayCount] = useState(8); // Start with 8 recipes
+  const recipesPerLoad = 8; // Load 8 more recipes each time
   if (loading) {
     return (
       <div className="w-full max-w-full overflow-hidden px-4 py-4">
@@ -128,7 +131,7 @@ const RecipeList = ({ recipes, loading, error, onRetry }: RecipeListProps) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        {recipes.slice(0, 8).map((recipe, index) => (
+        {recipes.slice(0, displayCount).map((recipe, index) => (
           <motion.div
             key={recipe.id}
             initial={{ opacity: 0, y: 60, scale: 0.8 }}

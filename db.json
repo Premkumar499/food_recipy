@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "Creamy Pasta Delight",
-      "image": "food interface/1.jpg",
+      "image": "/images/food-interface/1.jpg",
       "category": "Popular",
       "cookingTime": 30,
       "servings": 4,
@@ -31,7 +31,7 @@
     {
       "id": "7",
       "title": "Creamy Fettuccine",
-      "image": "food interface/2.jpg",
+      "image": "/images/food-interface/2.jpg",
       "category": "Popular",
       "cookingTime": 25,
       "servings": 4,
@@ -54,7 +54,7 @@
     {
       "id": "2",
       "title": "Spicy Grilled Chicken",
-      "image": "food interface/3.jpeg",
+      "image": "/images/food-interface/3.jpeg",
       "category": "Meat & Seafood",
       "cookingTime": 45,
       "servings": 6,
@@ -84,7 +84,7 @@
     {
       "id": "9",
       "title": "Creamy Butter Chicken",
-      "image": "food interface/4.JPEG",
+      "image": "/images/food-interface/4.JPEG",
       "category": "Meat & Seafood",
       "cookingTime": 50,
       "servings": 4,
@@ -107,7 +107,7 @@
     {
       "id": "10",
       "title": "Spiced Rice Bowl",
-      "image": "food interface/5.jpeg",
+      "image": "/images/food-interface/5.jpeg",
       "category": "Popular",
       "cookingTime": 90,
       "servings": 6,
@@ -131,7 +131,7 @@
     {
       "id": "3",
       "title": "Caesar Salad",
-      "image": "food interface/6.jpeg",
+      "image": "/images/food-interface/6.jpeg",
       "category": "Salad",
       "cookingTime": 15,
       "servings": 4,
@@ -154,7 +154,7 @@
     {
       "id": "4",
       "title": "Beef Tacos",
-      "image": "food interface/7.jpeg",
+      "image": "/images/food-interface/7.jpeg",
       "category": "Mexican",
       "cookingTime": 25,
       "servings": 4,
@@ -180,7 +180,7 @@
     {
       "id": "5",
       "title": "Chocolate Chip Cookies",
-      "image": "food interface/8.webp",
+      "image": "/images/food-interface/8.webp",
       "category": "Dessert",
       "cookingTime": 25,
       "servings": 24,

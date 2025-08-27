@@ -45,7 +45,7 @@ const RecipeListPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex items-center justify-center">
         <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-orange-500"></div>
       </div>
     );
@@ -53,7 +53,7 @@ const RecipeListPage: React.FC = () => {
 
   if (error) {
     return (
-      <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col items-center justify-center">
         <div className="text-xl text-red-600 mb-4">{error}</div>
         <button 
           onClick={() => window.location.reload()} 
@@ -68,9 +68,9 @@ const RecipeListPage: React.FC = () => {
   // Show recipe details when a recipe is selected
   if (selectedRecipe) {
     return (
-      <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
         {/* Compact Back Button */}
-        <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
+        <div className="max-w-6xl mx-auto pt-2 px-4">
           <button
             onClick={handleBackToList}
             className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
@@ -91,9 +91,9 @@ const RecipeListPage: React.FC = () => {
 
   // Show recipe list
   return (
-    <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
       {/* Compact Back Button */}
-      <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
+      <div className="max-w-6xl mx-auto pt-2 px-4">
         <button
           onClick={handleGoBack}
           className="flex items-center px-4 py-2 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg hover:from-gray-600 hover:to-gray-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
@@ -105,9 +105,9 @@ const RecipeListPage: React.FC = () => {
         </button>
       </div>
       
-      <div className="flex-1 overflow-hidden">
+      <div className="w-full">
         {/* Compact recipe list container */}
-        <div className="max-w-7xl mx-auto px-4 h-full">
+        <div className="max-w-7xl mx-auto px-4">
           {/* Compact recipe card with sophisticated gradient */}
           <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm border border-white/20 h-full flex flex-col">
             
@@ -127,7 +127,7 @@ const RecipeListPage: React.FC = () => {
             </div>
 
             {/* Compact content section */}
-            <div className="flex-1 overflow-y-auto px-4 pb-4">
+            <div className="w-full px-4 pb-4">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 pr-2">
                 {recipes.map((recipe, index) => (
                   <div

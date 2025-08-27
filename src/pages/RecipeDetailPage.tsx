@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import RecipeDetails from '../components/RecipeDetails';
 import { Recipe } from '../types';
+import { fetchRecipeById } from '../config/api';
 
 const RecipeDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -25,14 +26,11 @@ const RecipeDetailPage = () => {
         // Simulate API delay
         await new Promise(resolve => setTimeout(resolve, 300));
         
-        // In a real app, this would be an actual API call
-        const response = await fetch(`http://localhost:3002/recipes/${id}`);
-        
-        if (!response.ok) {
+        // Use unified API helper (dev -> JSON server, prod -> static recipes.json)
+        const data = await fetchRecipeById(id);
+        if (!data) {
           throw new Error('Recipe not found');
         }
-        
-        const data = await response.json();
         setRecipe(data);
       } catch (err) {
         setError('Failed to load recipe');
@@ -46,9 +44,9 @@ const RecipeDetailPage = () => {
 
   if (loading) {
     return (
-      <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
         {/* Compact Back Button */}
-        <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
+        <div className="max-w-6xl mx-auto pt-2 px-4">
           <button
             onClick={handleGoBack}
             className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
@@ -69,9 +67,9 @@ const RecipeDetailPage = () => {
 
   if (error && !recipe) {
     return (
-      <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
         {/* Compact Back Button */}
-        <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
+        <div className="max-w-6xl mx-auto pt-2 px-4">
           <button
             onClick={handleGoBack}
             className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
@@ -99,9 +97,9 @@ const RecipeDetailPage = () => {
   }
 
   return (
-    <div className="h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex flex-col overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
       {/* Compact Back Button */}
-      <div className="max-w-6xl mx-auto pt-2 px-4 flex-shrink-0">
+      <div className="max-w-6xl mx-auto pt-2 px-4">
         <button
           onClick={handleGoBack}
           className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg transform hover:scale-105 mb-2"
@@ -113,7 +111,7 @@ const RecipeDetailPage = () => {
         </button>
       </div>
       
-      <div className="flex-1 overflow-hidden">
+      <div>
         <RecipeDetails recipe={recipe || undefined} />
       </div>
     </div>
@@ -125,7 +123,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '1',
     title: 'Spaghetti Carbonara',
-    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
+    image: '/images/pasta.jpg',
     category: 'Italian',
     cookingTime: 30,
     servings: 4,
@@ -153,7 +151,7 @@ const mockRecipes: Recipe[] = [
   {
     id: '2',
     title: 'Chicken Tikka Masala',
-    image: ' $script:localImages[(Get-Random -Maximum $script:localImages.Length)] ',
+    image: '/images/indian-curry.jpg',
     category: 'Indian',
     cookingTime: 45,
     servings: 6,

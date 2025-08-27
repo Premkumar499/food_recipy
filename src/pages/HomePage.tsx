@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import RecipeList from '../components/RecipeList';
 import ScrollReveal from '../components/animations/ScrollReveal';
@@ -8,9 +8,198 @@ import FloatingFoodParticles from '../components/animations/FloatingFoodParticle
 import CookingUtensilsAnimation from '../components/animations/CookingUtensilsAnimation';
 import CookingSteamEffect from '../components/animations/CookingSteamEffect';
 import { Recipe } from '../types';
+import { fetchRecipes as fetchRecipesAPI } from '../config/api';
+
+const mockRecipes: Recipe[] = [
+  {
+    id: '1',
+    title: 'Creamy Pasta Delight',
+    image: '/images/food-interface/1.jpg',
+    category: 'Popular',
+    cookingTime: 30,
+    servings: 4,
+    difficulty: 'Medium' as const,
+    rating: 4.5,
+    ingredients: [
+      { id: '1', name: 'Pasta', amount: '400', unit: 'g' },
+      { id: '2', name: 'Heavy cream', amount: '300', unit: 'ml' },
+      { id: '3', name: 'Garlic', amount: '3', unit: 'cloves' },
+      { id: '4', name: 'Parmesan', amount: '100', unit: 'g' },
+    ],
+    instructions: [
+      'Cook pasta according to package directions',
+      'Heat cream in a large pan',
+      'Add garlic and cook until fragrant',
+      'Stir in cheese until melted',
+      'Combine with cooked pasta',
+    ],
+  },
+  {
+    id: '2',
+    title: 'Creamy Fettuccine',
+    image: '/images/food-interface/2.jpg',
+    category: 'Popular',
+    cookingTime: 25,
+    servings: 4,
+    difficulty: 'Easy' as const,
+    rating: 4.3,
+    ingredients: [
+      { id: '1', name: 'Fettuccine', amount: '400', unit: 'g' },
+      { id: '2', name: 'Butter', amount: '100', unit: 'g' },
+      { id: '3', name: 'Heavy cream', amount: '250', unit: 'ml' },
+      { id: '4', name: 'Parmesan', amount: '150', unit: 'g' },
+    ],
+    instructions: [
+      'Cook fettuccine until al dente',
+      'Melt butter in large pan',
+      'Add cream and bring to simmer',
+      'Stir in cheese gradually',
+      'Toss with cooked pasta',
+    ],
+  },
+  {
+    id: '3',
+    title: 'Spicy Grilled Chicken',
+    image: '/images/food-interface/3.jpeg',
+    category: 'Meat & Seafood',
+    cookingTime: 45,
+    servings: 6,
+    difficulty: 'Medium' as const,
+    rating: 4.8,
+    ingredients: [
+      { id: '1', name: 'Chicken breast', amount: '800', unit: 'g' },
+      { id: '2', name: 'Spice blend', amount: '3', unit: 'tbsp' },
+      { id: '3', name: 'Olive oil', amount: '4', unit: 'tbsp' },
+      { id: '4', name: 'Lemon juice', amount: '2', unit: 'tbsp' },
+    ],
+    instructions: [
+      'Marinate chicken with spices and oil',
+      'Let rest for 30 minutes',
+      'Preheat grill to high heat',
+      'Grill chicken until cooked through',
+      'Serve with lemon juice',
+    ],
+  },
+  {
+    id: '4',
+    title: 'Creamy Butter Chicken',
+    image: '/images/food-interface/4.JPEG',
+    category: 'Meat & Seafood',
+    cookingTime: 50,
+    servings: 4,
+    difficulty: 'Medium' as const,
+    rating: 4.6,
+    ingredients: [
+      { id: '1', name: 'Chicken breast', amount: '600', unit: 'g' },
+      { id: '2', name: 'Butter', amount: '50', unit: 'g' },
+      { id: '3', name: 'Tomato sauce', amount: '300', unit: 'ml' },
+      { id: '4', name: 'Cream', amount: '200', unit: 'ml' },
+    ],
+    instructions: [
+      'Cut chicken into pieces',
+      'Cook chicken in butter until golden',
+      'Add tomato sauce and spices',
+      'Simmer for 20 minutes',
+      'Stir in cream and serve',
+    ],
+  },
+  {
+    id: '5',
+    title: 'Spiced Rice Bowl',
+    image: '/images/food-interface/5.jpeg',
+    category: 'Popular',
+    cookingTime: 35,
+    servings: 4,
+    difficulty: 'Easy' as const,
+    rating: 4.4,
+    ingredients: [
+      { id: '1', name: 'Basmati rice', amount: '300', unit: 'g' },
+      { id: '2', name: 'Mixed vegetables', amount: '400', unit: 'g' },
+      { id: '3', name: 'Spices', amount: '2', unit: 'tbsp' },
+      { id: '4', name: 'Vegetable oil', amount: '3', unit: 'tbsp' },
+    ],
+    instructions: [
+      'Cook rice until fluffy',
+      'Sauté vegetables with spices',
+      'Combine rice and vegetables',
+      'Season to taste',
+      'Serve hot',
+    ],
+  },
+  {
+    id: '6',
+    title: 'Caesar Salad',
+    image: '/images/food-interface/6.jpeg',
+    category: 'Salad',
+    cookingTime: 15,
+    servings: 4,
+    difficulty: 'Easy' as const,
+    rating: 4.2,
+    ingredients: [
+      { id: '1', name: 'Romaine lettuce', amount: '300', unit: 'g' },
+      { id: '2', name: 'Caesar dressing', amount: '100', unit: 'ml' },
+      { id: '3', name: 'Croutons', amount: '100', unit: 'g' },
+      { id: '4', name: 'Parmesan cheese', amount: '50', unit: 'g' },
+    ],
+    instructions: [
+      'Wash and chop lettuce',
+      'Toss with Caesar dressing',
+      'Add croutons and cheese',
+      'Mix well and serve',
+      'Enjoy fresh',
+    ],
+  },
+  {
+    id: '7',
+    title: 'Beef Tacos',
+    image: '/images/food-interface/7.jpeg',
+    category: 'Mexican',
+    cookingTime: 30,
+    servings: 6,
+    difficulty: 'Medium' as const,
+    rating: 4.7,
+    ingredients: [
+      { id: '1', name: 'Ground beef', amount: '500', unit: 'g' },
+      { id: '2', name: 'Taco shells', amount: '12', unit: 'pieces' },
+      { id: '3', name: 'Lettuce', amount: '200', unit: 'g' },
+      { id: '4', name: 'Cheese', amount: '150', unit: 'g' },
+    ],
+    instructions: [
+      'Cook ground beef with spices',
+      'Warm taco shells',
+      'Assemble tacos with beef',
+      'Add lettuce and cheese',
+      'Serve immediately',
+    ],
+  },
+  {
+    id: '8',
+    title: 'Chocolate Chip Cookies',
+    image: '/images/food-interface/8.webp',
+    category: 'Dessert',
+    cookingTime: 25,
+    servings: 24,
+    difficulty: 'Easy' as const,
+    rating: 4.9,
+    ingredients: [
+      { id: '1', name: 'Flour', amount: '300', unit: 'g' },
+      { id: '2', name: 'Chocolate chips', amount: '200', unit: 'g' },
+      { id: '3', name: 'Butter', amount: '150', unit: 'g' },
+      { id: '4', name: 'Sugar', amount: '200', unit: 'g' },
+    ],
+    instructions: [
+      'Mix dry ingredients',
+      'Cream butter and sugar',
+      'Combine wet and dry ingredients',
+      'Add chocolate chips',
+      'Bake for 12 minutes',
+    ],
+  },
+];
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
@@ -24,58 +213,50 @@ const HomePage = () => {
     }
   }, [searchParams]);
 
-  // Fetch recipes from API with retry mechanism
+  // Fetch recipes from API with retry mechanism (uses config/api to handle prod vs dev)
   const fetchRecipes = async (search = '', retryCount = 0) => {
     setLoading(true);
     setError('');
-    
+
     try {
-      let url = 'http://localhost:3002/recipes';
-      if (search) {
-        url += `?q=${encodeURIComponent(search)}`;
-      }
-      
-      console.log('Fetching from URL:', url); // Debug log
-      
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-        cache: 'no-cache' // Prevent caching issues
-      });
-      
-      console.log('Response status:', response.status); // Debug log
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      console.log('Received data:', data.length, 'recipes'); // Debug log
-      setRecipes(data);
+      const data = await fetchRecipesAPI(search);
+      // Ensure Home page shows 8 unique interface images for the first 8 cards
+      const interfaceImages = [
+        '/images/food-interface/1.jpg',
+        '/images/food-interface/2.jpg',
+        '/images/food-interface/3.jpeg',
+        '/images/food-interface/4.JPEG',
+        '/images/food-interface/5.jpeg',
+        '/images/food-interface/6.jpeg',
+        '/images/food-interface/7.jpeg',
+        '/images/food-interface/8.webp',
+      ];
+      const mapped = data.map((r, i) => (i < 8 ? { ...r, image: interfaceImages[i] } : r));
+      setRecipes(mapped);
     } catch (err) {
       console.error('Error fetching recipes:', err);
-      
+
       // Retry mechanism - try up to 2 times
       if (retryCount < 2) {
-        console.log(`Retrying... attempt ${retryCount + 1}`);
         setTimeout(() => {
           fetchRecipes(search, retryCount + 1);
-        }, 1000 * (retryCount + 1)); // Exponential backoff
+        }, 1000 * (retryCount + 1));
         return;
       }
-      
+
       const errorMessage = err instanceof Error ? err.message : 'Unknown error';
-      setError(`Failed to load recipes: ${errorMessage}. Make sure the API server is running on port 3002.`);
+      // Generic error (no localhost hint in production)
+      setError(`Failed to load recipes: ${errorMessage}.`);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchRecipes(searchTerm);
+    // Use mock data with working images immediately
+    setRecipes(mockRecipes);
+    setLoading(false);
+    setError('');
   }, [searchTerm]);
 
   return (
@@ -87,7 +268,7 @@ const HomePage = () => {
       
       {/* Hero Section - Full Screen */}
       <motion.div 
-        className="relative bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 text-white w-full h-screen overflow-hidden"
+        className="relative bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 text-white w-full min-h-screen"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -118,7 +299,7 @@ const HomePage = () => {
         />
         
         {/* Content - Centered in full screen */}
-        <div className="relative max-w-full px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center z-10">
+        <div className="relative max-w-full px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center z-10">
           <div className="text-center">
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
@@ -162,8 +343,58 @@ const HomePage = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 2.2, duration: 0.8 }}
               onClick={() => {
-                const recipesSection = document.getElementById('recipes-section');
-                recipesSection?.scrollIntoView({ behavior: 'smooth' });
+                // Immediate feedback
+                console.log('Start Cooking button clicked - SUCCESS!');
+                
+                // Visual feedback for debugging
+                const button = document.activeElement;
+                if (button) {
+                  button.style.background = 'lightgreen';
+                  setTimeout(() => {
+                    button.style.background = '';
+                  }, 500);
+                }
+                
+                console.log('Current URL:', window.location.href);
+                console.log('Document ready state:', document.readyState);
+                
+                // Try multiple approaches to ensure functionality
+                const tryScroll = () => {
+                  const recipesSection = document.getElementById('recipes-section');
+                  console.log('Recipes section found:', recipesSection);
+                  
+                  if (recipesSection) {
+                    console.log('Scrolling to recipes section...');
+                    recipesSection.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                    return true;
+                  }
+                  return false;
+                };
+                
+                // Immediate attempt
+                if (!tryScroll()) {
+                  // Retry after a short delay
+                  setTimeout(() => {
+                    if (!tryScroll()) {
+                      console.log('Fallback: Scrolling to estimated position');
+                      // Fallback: scroll to approximate recipes position
+                      window.scrollTo({
+                        top: window.innerHeight * 0.8,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }, 100);
+                }
+                
+                // Additional option: Navigate to recipes page if scroll fails
+                setTimeout(() => {
+                  console.log('Alternative: Navigate to all recipes');
+                  // You can uncomment this line if you want navigation fallback
+                  // navigate('/recipes');
+                }, 2000);
               }}
             >
               <motion.span
@@ -234,194 +465,6 @@ const HomePage = () => {
     </div>
   );
 };
-
-// Mock data for development with local category-specific food images - 8 containers
-const mockRecipes: Recipe[] = [
-  {
-    id: '1',
-    title: 'Gourmet Snack Mix',
-    image: '/images/snack-3.webp',
-    category: 'Snacks',
-    cookingTime: 5,
-    servings: 4,
-    difficulty: 'Easy',
-    rating: 4.4,
-    ingredients: [
-      { id: '1', name: 'Premium nuts', amount: '150', unit: 'g' },
-      { id: '2', name: 'Artisan crackers', amount: '100', unit: 'g' },
-      { id: '3', name: 'Dried berries', amount: '80', unit: 'g' },
-      { id: '4', name: 'Dark chocolate', amount: '50', unit: 'g' },
-    ],
-    instructions: [
-      'Select premium ingredients',
-      'Arrange in elegant portions',
-      'Add chocolate pieces',
-      'Present on serving board',
-      'Enjoy with friends',
-    ],
-  },
-  {
-    id: '2',
-    title: 'Classic Snack Platter',
-    image: '/images/snack-1.webp',
-    category: 'Snacks',
-    cookingTime: 10,
-    servings: 6,
-    difficulty: 'Easy',
-    rating: 4.3,
-    ingredients: [
-      { id: '1', name: 'Mixed nuts', amount: '200', unit: 'g' },
-      { id: '2', name: 'Crackers', amount: '150', unit: 'g' },
-      { id: '3', name: 'Dried fruits', amount: '100', unit: 'g' },
-      { id: '4', name: 'Cheese cubes', amount: '100', unit: 'g' },
-    ],
-    instructions: [
-      'Arrange nuts in small bowls',
-      'Place crackers on serving plate',
-      'Add dried fruits and cheese',
-      'Garnish with fresh herbs',
-      'Serve immediately',
-    ],
-  },
-  {
-    id: '3',
-    title: 'Traditional Snacks',
-    image: '/images/snack.jpg',
-    category: 'Snacks',
-    cookingTime: 15,
-    servings: 8,
-    difficulty: 'Easy',
-    rating: 4.2,
-    ingredients: [
-      { id: '1', name: 'Roasted nuts', amount: '250', unit: 'g' },
-      { id: '2', name: 'Savory bites', amount: '200', unit: 'g' },
-      { id: '3', name: 'Spiced mix', amount: '150', unit: 'g' },
-      { id: '4', name: 'Crunchy treats', amount: '100', unit: 'g' },
-    ],
-    instructions: [
-      'Prepare traditional snack mix',
-      'Combine all ingredients',
-      'Season with spices',
-      'Mix well and serve',
-      'Store in airtight container',
-    ],
-  },
-  {
-    id: '4',
-    title: 'Grilled Meat Deluxe',
-    image: '/images/non-veg-3.webp',
-    category: 'Meat & Seafood',
-    cookingTime: 35,
-    servings: 4,
-    difficulty: 'Medium',
-    rating: 4.8,
-    ingredients: [
-      { id: '1', name: 'Premium meat cuts', amount: '800', unit: 'g' },
-      { id: '2', name: 'Special marinade', amount: '200', unit: 'ml' },
-      { id: '3', name: 'Herb blend', amount: '3', unit: 'tbsp' },
-      { id: '4', name: 'Olive oil', amount: '4', unit: 'tbsp' },
-    ],
-    instructions: [
-      'Marinate meat for 3 hours',
-      'Preheat grill to high heat',
-      'Grill meat to perfection',
-      'Check internal temperature',
-      'Let rest and serve hot',
-    ],
-  },
-  {
-    id: '5',
-    title: 'Seafood Meat Combo',
-    image: '/images/non-veg-2.webp',
-    category: 'Meat & Seafood',
-    cookingTime: 30,
-    servings: 4,
-    difficulty: 'Medium',
-    rating: 4.7,
-    ingredients: [
-      { id: '1', name: 'Mixed seafood', amount: '600', unit: 'g' },
-      { id: '2', name: 'Meat selection', amount: '400', unit: 'g' },
-      { id: '3', name: 'Garlic butter', amount: '100', unit: 'g' },
-      { id: '4', name: 'Fresh herbs', amount: '2', unit: 'tbsp' },
-    ],
-    instructions: [
-      'Prepare seafood and meat',
-      'Heat garlic butter in pan',
-      'Cook seafood first',
-      'Add meat and herbs',
-      'Serve with lemon wedges',
-    ],
-  },
-  {
-    id: '6',
-    title: 'Classic Meat Platter',
-    image: '/images/non-veg.webp',
-    category: 'Meat & Seafood',
-    cookingTime: 25,
-    servings: 4,
-    difficulty: 'Medium',
-    rating: 4.6,
-    ingredients: [
-      { id: '1', name: 'Chicken breast', amount: '600', unit: 'g' },
-      { id: '2', name: 'Beef strips', amount: '400', unit: 'g' },
-      { id: '3', name: 'Marinade sauce', amount: '150', unit: 'ml' },
-      { id: '4', name: 'Spice mix', amount: '2', unit: 'tbsp' },
-    ],
-    instructions: [
-      'Cut meat into portions',
-      'Apply marinade evenly',
-      'Let marinate for 1 hour',
-      'Grill until cooked through',
-      'Serve with vegetables',
-    ],
-  },
-  {
-    id: '7',
-    title: 'Fresh Vegetable Bowl',
-    image: '/images/veg-1.webp',
-    category: 'Vegetarian',
-    cookingTime: 20,
-    servings: 3,
-    difficulty: 'Easy',
-    rating: 4.5,
-    ingredients: [
-      { id: '1', name: 'Fresh vegetables', amount: '500', unit: 'g' },
-      { id: '2', name: 'Quinoa', amount: '200', unit: 'g' },
-      { id: '3', name: 'Avocado', amount: '1', unit: 'large' },
-      { id: '4', name: 'Lemon dressing', amount: '3', unit: 'tbsp' },
-    ],
-    instructions: [
-      'Cook quinoa until fluffy',
-      'Chop fresh vegetables',
-      'Slice avocado',
-      'Arrange in bowl',
-      'Drizzle with dressing',
-    ],
-  },
-  {
-    id: '8',
-    title: 'Garden Fresh Salad',
-    image: '/images/veg-food.webp',
-    category: 'Vegetarian',
-    cookingTime: 15,
-    servings: 4,
-    difficulty: 'Easy',
-    rating: 4.4,
-    ingredients: [
-      { id: '1', name: 'Mixed greens', amount: '400', unit: 'g' },
-      { id: '2', name: 'Cherry tomatoes', amount: '200', unit: 'g' },
-      { id: '3', name: 'Cucumber', amount: '1', unit: 'large' },
-      { id: '4', name: 'Olive oil dressing', amount: '4', unit: 'tbsp' },
-    ],
-    instructions: [
-      'Wash all vegetables thoroughly',
-      'Cut vegetables into bite sizes',
-      'Mix in large salad bowl',
-      'Add dressing and toss',
-      'Serve immediately',
-    ],
-  },
-];
 
 export default HomePage;
 

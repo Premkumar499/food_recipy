@@ -29,14 +29,14 @@ const RecipeDetails = ({ recipe }: RecipeDetailsProps) => {
   }
 
   return (
-    <div className="h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50 overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
       {/* Compact recipe container */}
-      <div className="max-w-7xl mx-auto px-4 py-2 h-full">
+      <div className="max-w-7xl mx-auto px-4 py-2">
         {/* Compact recipe card with sophisticated gradient */}
-        <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm border border-white/20 h-full flex flex-col">
+        <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl shadow-2xl backdrop-blur-sm border border-white/20 flex flex-col">
           
           {/* Compact header section */}
-          <div className="relative px-6 py-4 text-center flex-shrink-0">
+          <div className="relative px-6 py-4 text-center">
             {/* Subtle pattern overlay */}
             <div className="absolute inset-0 bg-black/5 rounded-t-2xl"></div>
             
@@ -81,10 +81,10 @@ const RecipeDetails = ({ recipe }: RecipeDetailsProps) => {
           </div>
 
           {/* Compact content sections */}
-          <div className="grid lg:grid-cols-2 gap-4 px-4 flex-1 overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-4 px-4 pb-6">
             
             {/* Ingredients Section */}
-            <div className="space-y-2 overflow-y-auto">
+            <div className="space-y-2">
               <div className="flex items-center mb-3">
                 <div className="w-6 h-0.5 bg-white/40 rounded-full mr-2"></div>
                 <h2 className="text-2xl font-bold text-white">Ingredients</h2>
@@ -113,7 +113,7 @@ const RecipeDetails = ({ recipe }: RecipeDetailsProps) => {
             </div>
 
             {/* Instructions Section */}
-            <div className="space-y-2 overflow-y-auto">
+            <div className="space-y-2">
               <div className="flex items-center mb-3">
                 <div className="w-6 h-0.5 bg-white/40 rounded-full mr-2"></div>
                 <h2 className="text-2xl font-bold text-white">Instructions</h2>
